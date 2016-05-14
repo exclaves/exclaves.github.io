@@ -7,4 +7,4 @@ categories: technical update
 
 This is a new test post.
 
-![A comparison between wavelet compression and downsampling, with roughly the same number of bytes.]({{ site.url }}/images/wavelet-sparsity-comparison.png)
+![A comparison between wavelet compression and downsampling, with roughly the same number of bytes.]({{ site.url }}/images/wavelet_sparsity_comparison.png)
