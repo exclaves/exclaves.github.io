@@ -6,7 +6,7 @@ Apparently, the problem I was trying to solve last Thursday, loading local resou
 
 With Python serving up the images, I now was able to get up and running on building a website that pulls images from the database and displays them. A few hours later, and I had this:
 
-![Timeline app, as of tuesday]({{site.baseurl}}/timeline_monday.png)
+![Timeline app, as of tuesday]({{site.baseurl}}/images/timeline_monday.png)
 
 Pretty basic, but it's working. Now, I need to figure out how to paginate my database subscriptions and get some fancy CSS transitions in there.
 
