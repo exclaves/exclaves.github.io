@@ -38,18 +38,22 @@ body, html {
 
 function fadeIn() {
 	$(".second").addClass("vis");
-	setTimeout(function() { fadeOut(); }, 20000);
+	setTimeout(fadeOut, 20000);
 }
 
 function fadeOut() {
 	$(".second").removeClass("vis");
-	setTimeout(function() { fadeIn(); }, 20000);
+	setTimeout(fadeIn, 20000);
+}
+
+function delayStart() {
+	setTimeout(fadeOut, 2000);
 }
 
 </script>
 
 </head>
-<body onload="fadeOut()">
+<body onload="delayStart()">
 <main>
 
 <div class="second vis">
