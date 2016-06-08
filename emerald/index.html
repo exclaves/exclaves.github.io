@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Emerald Lake</title>
+<style>
+main, .second {
+	background-image: url('afternoon.jpg');
+	background-size: contain;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	margin: auto;
+}
+
+.second {
+	background-image: url('morning.jpg');
+	background-color: none;
+	opacity: 0.01;
+	transition: opacity 20s ease-in;
+}
+
+.vis {
+	opacity: 1;
+	transition: opacity 20s ease-in;
+	background-color: black;
+}
+
+body, html {
+	margin: 0px;
+	padding: 0px;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+
+function fadeIn() {
+	$(".second").addClass("vis");
+	setTimeout(function() { fadeOut(); }, 20000);
+}
+
+function fadeOut() {
+	$(".second").removeClass("vis");
+	setTimeout(function() { fadeIn(); }, 20000);
+}
+
+</script>
+
+</head>
+<body onload="fadeOut()">
+<main>
+
+<div class="second vis">
+</div>
+
+</main>
+</body>
