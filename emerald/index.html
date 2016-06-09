@@ -39,7 +39,7 @@ body, html {
 function toggleVisibility() {
 	var overlay = $(".second");
 	overlay.toggleClass("vis");
-	overlay.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', delayStart);
+	overlay.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', toggleVisibility);
 }
 
 </script>
