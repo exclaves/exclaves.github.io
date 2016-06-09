@@ -3,7 +3,7 @@
 <title>Emerald Lake</title>
 <style>
 main, .second {
-	background-image: url('afternoon.jpg');
+	background-image: url('morning.jpg');
 	background-size: contain;
 	background-color: black;
 	background-repeat: no-repeat;
@@ -14,7 +14,7 @@ main, .second {
 }
 
 .second {
-	background-image: url('morning.jpg');
+	background-image: url('afternoon.jpg');
 	background-color: none;
 	opacity: 0.01;
 	transition: opacity 20s ease-in;
@@ -36,27 +36,19 @@ body, html {
 
 <script>
 
-function fadeIn() {
-	$(".second").addClass("vis");
-	setTimeout(fadeOut, 20000);
-}
-
-function fadeOut() {
-	$(".second").removeClass("vis");
-	setTimeout(fadeIn, 20000);
-}
-
-function delayStart() {
-	setTimeout(fadeOut, 2000);
+function toggleVisibility() {
+	var overlay = $(".second");
+	overlay.toggleClass("vis");
+	overlay.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', delayStart);
 }
 
 </script>
 
 </head>
-<body onload="delayStart()">
+<body onload="toggleVisibility()">
 <main>
 
-<div class="second vis">
+<div class="second">
 </div>
 
 </main>
