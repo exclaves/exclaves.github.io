@@ -9,6 +9,8 @@ using ColorTypes
 using Pyramids
 using Interpolations
 
+FFTW.set_num_threads(2)
+
 type PhasePyramid <: PyramidType
 end
 
@@ -65,8 +67,17 @@ function shift_correction(phi_delta::ImagePyramid; shift_limit=0.5)
 end
 
 function adjust_phase(phase_delta::ImagePyramid, corrected_phase_delta::ImagePyramid)
-    adjusted_phase = adjust_phase(phase_delta.pyr, corrected_phase_delta.pyr)
-    return ImagePyramid(adjusted_phase, phase_delta.pind, phase_delta.scale, PhasePyramid())
+    adjusted_phase = ImagePyramid(phase_delta)
+
+    update_subband!(adjusted_phase, 0, adjust_phase(subband(phase_delta, 0), subband(corrected_phase_delta, 0)))
+
+    for l = 1:phase_delta.num_levels
+        for o = 1:phase_delta.num_orientations
+            update_subband!(adjusted_phase, l, adjust_phase(subband(phase_delta, l, orientation=o), subband(corrected_phase_delta, l, orientation=o)), orientation=o)
+        end
+    end
+
+    return adjusted_phase
 end
 
 function adjust_phase(phase_delta::Array, corrected_phase_delta)
@@ -85,34 +96,53 @@ function adjust_phase(phase_delta::Array, corrected_phase_delta)
     return adjusted_phase_delta
 end
 
+
 function blend_and_interpolate(pyramid1::ImagePyramid, pyramid2::ImagePyramid, phase_delta::ImagePyramid, alpha)
-    A1 = abs(pyramid1.pyr)
-    A2 = abs(pyramid2.pyr)
-    phase1 = angle(pyramid1.pyr)
-    phi_delta = phase_delta.pyr
+    blended_pyramid = ImagePyramid(pyramid1)
 
-    new_A = A1 * (1 - alpha) + A2 * alpha
-    new_phase = phase1 + alpha * phi_delta
-    new_pyr = new_A .* exp(complex(0,1) * new_phase)
-
-    new_pyramid = ImagePyramid(new_pyr, pyramid1.pind, pyramid1.scale, ComplexSteerablePyramid())
-
-    update_subband!(new_pyramid, 0, subband(pyramid2, 0)*0)
-
-    if (alpha > 0.5)
-        update_subband!(new_pyramid, 0, subband(pyramid2, 0))
-    else
-        update_subband!(new_pyramid, 0, subband(pyramid1, 0))
+    for l = 1:pyramid1.num_levels
+        for o = 1:pyramid1.num_orientations
+            new_band = ((1 - alpha) * abs(subband(pyramid1, l, orientation=o)) + alpha * abs(subband(pyramid2, l, orientation=o))) .* exp(complex(0,1) * (angle(subband(pyramid1, l, orientation=o)) + alpha * subband(phase_delta, l, orientation=o)))
+            update_subband!(blended_pyramid, l, new_band, orientation=o)
+        end
     end
 
-    return new_pyramid
+    # blend low frequency residuals
+    update_subband!(blended_pyramid, pyramid1.num_levels+1, subband(pyramid1, pyramid1.num_levels+1) * (1 - alpha) + alpha * subband(pyramid2, pyramid2.num_levels+1))
 
+    # choose one high frequency residual
+    if (alpha > 0.5)
+        update_subband!(blended_pyramid, 0, subband(pyramid2, 0))
+    else
+        update_subband!(blended_pyramid, 0, subband(pyramid1, 0))
+    end
+
+    return blended_pyramid
+
+end
+
+function phase_difference(pyramid1::ImagePyramid, pyramid2::ImagePyramid)
+    phase_bands = Dict{Int, Union{Array,Dict{Int, Array}}}()
+
+    phase_bands[0] = angle(subband(pyramid2, 0)) - angle(subband(pyramid1, 0))
+
+    for l = 1:pyramid1.num_levels
+        this_band = Dict{Int, Array}()
+
+        for o = 1:pyramid1.num_orientations
+            this_band[o] = angle(subband(pyramid2, l, orientation=o)) - angle(subband(pyramid1, l, orientation=o))
+        end
+
+        phase_bands[l] = copy(this_band)
+    end
+
+    return ImagePyramid(phase_bands, pyramid1.scale, PhasePyramid(), pyramid1.num_levels, pyramid1.num_orientations)
 end
 
 println("Loading image 0")
 
-im2 = load("/Users/loganw/Desktop/Parallax/matched hires/forest_0.jpg")
-im2 = convert(Image{Lab}, float32(im2))
+im2 = load("forest_0.jpg")
+im2 = convert(Image{Lab}, im2)
 im2 = convert(Array, separate(im2))
 
 println("Converting image 0 to complex steerable pyramid")
@@ -123,8 +153,8 @@ for frame = 1:4
     im1 = im2
 
     println("Loading image $(frame)")
-    im2 = load("/Users/loganw/Desktop/Parallax/matched hires/forest_$(frame).jpg")
-    im2 = convert(Image{Lab}, float32(im2))
+    im2 = load("forest_$(frame).jpg")
+    im2 = convert(Image{Lab}, im2)
     im2 = convert(Array, separate(im2))
 
     L1 = L2
@@ -135,15 +165,21 @@ for frame = 1:4
     pyramid1 = pyramid2
     pyramid2 = ImagePyramid(L2, ComplexSteerablePyramid(), scale=0.5^0.25, max_levels=30)
 
-    phase_delta = ImagePyramid(mod(angle(pyramid2.pyr) - angle(pyramid1.pyr) + π, 2*π) - π, pyramid1.pind, 0.5^0.25, PhasePyramid())
+    println("\tCalculating phase difference")
+    phase_delta = phase_difference(pyramid1, pyramid2)
+
+    println("\tCorrecting phase shift using lower pyramid levels")
     corrected_phase_delta = shift_correction(phase_delta, shift_limit=1)
+
+    println("\tAdjusting phase shift for coherence")
     adjusted_phase_delta = adjust_phase(phase_delta, corrected_phase_delta)
 
     for alpha = 0.1:0.1:0.9
-        println("Generating image with alpha $(alpha)")
+        println("\t\tGenerating image with alpha $(alpha)")
         newpyr = blend_and_interpolate(pyramid1, pyramid2, adjusted_phase_delta, alpha)
         newim = toimage(newpyr)
 
+        println("\t\tSaving frame $(alpha + frame - 1)")
         newLabIm = zeros(im1)
         newLabIm[:,:,1] = newim
         newLabIm[:,:,2] = (1 - alpha) * im1[:,:,2] + alpha * im2[:,:,2]
@@ -152,6 +188,6 @@ for frame = 1:4
         newLabIm = convert(Image, newLabIm)
         newLabIm.properties["colorspace"] = "Lab"
         newLabIm = convert(Image{RGB}, newLabIm)
-        save("/Users/loganw/Desktop/Parallax/matched hires/forest_frame_$(alpha + frame - 1).jpg", newLabIm')
+        save("forest_$(alpha + frame - 1).jpg", newLabIm')
     end
 end
