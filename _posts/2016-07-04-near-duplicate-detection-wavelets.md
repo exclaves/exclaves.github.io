@@ -1,5 +1,5 @@
 ---
-title: Detecting nearly duplicate images using a wavelet transform
+title: Detecting nearly duplicate images using wavelet transforms
 ---
 
 *n.b. This is a very early draft of this post, expect typos, grammatical errors, factual inaccuracies, etc.*
@@ -34,7 +34,7 @@ The histogram of the image after a wavelet decomposition is very different -- th
 
 ![Wavelet histogram]({{site.baseurl}}/images/2016-07-04/wavelet_histogram.png)
 
-This means that many values can be truncated to 0, allowing a wavelet transform to preserve details much better than by simply downsampling the image, as the comparison below shows. The left-hand column shows a simple downscaling/pixellation, and the right-hand column shows an image formed from a inverting a sparse-ified wavelet decomposition. Click on the image for a full resolution comparison. Note how the inverted wavelet transform image has preserved detail in regions where there are fine and dramatic brightness variations.
+This means that many values can be truncated to 0, allowing wavelet transforms to preserve details much better than by simply downsampling the image, as the comparison below shows. The left-hand column shows a simple downscaling/pixellation, and the right-hand column shows an image formed from a inverting a sparse-ified wavelet decomposition. Click on the image for a full resolution comparison. Note how the inverted wavelet transform image has preserved detail in regions where there are fine and dramatic brightness variations.
 
 [![A comparison between wavelet compression and downsampling, with roughly the same number of bytes.]({{site.baseurl}}/images/2016-07-04/wavelet_sparsity_comparison.png)]({{site.baseurl}}/images/2016-07-04/wavelet_sparsity_comparison.png)
 
