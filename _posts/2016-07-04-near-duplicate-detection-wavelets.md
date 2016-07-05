@@ -12,7 +12,7 @@ Note, critically, that these duplicate images are not *exactly* the same -- ther
 
 ## The naive approach: direct comparison
 
-A naive approach for comparing near duplicate images might be to look at the pixel values directly. For example, we could calculate the Euclidean distance between two images. (```sqrt(sum((A-B)^2))```, where A and B are image vectors.) However, this does not work very well.
+A naive approach for comparing near duplicate images might be to look at the pixel values directly. For example, we could calculate the Euclidean distance between two images. (```sqrt(sum((A-B)^2)```), where A and B are image vectors.) However, this does not work very well.
 
 A small variation in exposure produces an offset with every pixel value, which can make very similar images seem very far from each other. A small change in perspective or a small rotation can likewise produce a very large Euclidean distance.
 
@@ -21,6 +21,8 @@ Finally, noise is a significant issue -- even if the image was taken using a tri
 ### Histogram comparison
 
 There are various references in literature to finding near duplicate images through the comparison of image histograms, however, I did not have success with this method.
+
+***Todo:** explain?*
 
 ## Wavelet transform
 
