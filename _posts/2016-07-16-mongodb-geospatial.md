@@ -3,6 +3,7 @@ title: Selected useful Mongodb queries
 ---
 
 Group by date:
+
 ```
 db.getCollection('images').aggregate(
     [
