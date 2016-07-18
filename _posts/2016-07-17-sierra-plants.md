@@ -2,52 +2,52 @@
 title: A few wildflowers from the Desolation Wilderness
 ---
 
-![Castilleja applegatei]({{site.baseurl}}/DSCF5450.jpg)
+![Castilleja applegatei]({{site.baseurl}}/images/2016-07-17/DSCF5450.jpg)
 
 Wavy-leaved paintbrush (*Castilleja applegatei*.)
 
-![Streptanthus tortuosus]({{site.baseurl}}/DSCF5483.jpg)
+![Streptanthus tortuosus]({{site.baseurl}}/images/2016-07-17/DSCF5483.jpg)
 
 Mountain jewelflower, or shield plant (*Streptanthus tortuosus*.)
 
-![Lupinus polyphyllus var. burkei]({{site.baseurl}}/DSCF5486.jpg)
+![Lupinus polyphyllus var. burkei]({{site.baseurl}}/images/2016-07-17/DSCF5486.jpg)
 
 Many-leaved lupine (*Lupinus polyphyllus* var. *burkei*.)
 
-![Populus tremuloides]({{site.baseurl}}/DSCF5493.jpg)
+![Populus tremuloides]({{site.baseurl}}/images/2016-07-17/DSCF5493.jpg)
 
 I found trembling aspen (*Populus tremuloides*) frequently in the damp riparian zones of the south western side of the Crystal Range.
 
-![Lilium parvum]({{site.baseurl}}/DSCF5499.jpg)
+![Lilium parvum]({{site.baseurl}}/images/2016-07-17/DSCF5499.jpg)
 
 Sierra tiger lily (*Lilium parvum*.)
 
-![Forest understory]({{site.baseurl}}/DSCF5501.jpg)
+![Forest understory]({{site.baseurl}}/images/2016-07-17/DSCF5501.jpg)
 
 Lupine, tiger-lillies, and bracken fill the forest understory.
 
-![Abies magnifica]({{site.baseurl}}/DSCF5504.jpg)
+![Abies magnifica]({{site.baseurl}}/images/2016-07-17/DSCF5504.jpg)
 
-![Abies magnifica]({{site.baseurl}}/DSCF5675.jpg)
+![Abies magnifica]({{site.baseurl}}/images/2016-07-17/DSCF5675.jpg)
 
 Red fir, or silvertip (*Abies magnifica*.)
 
-![Calochortus leichtlinii]({{site.baseurl}}/DSCF5520.jpg)
+![Calochortus leichtlinii]({{site.baseurl}}/images/2016-07-17/DSCF5520.jpg)
 
 Leichtlin's mariposa lily (*Calochortus leichtlinii*.)
 
-![Sedum obtusatum]({{site.baseurl}}/DSCF5541.jpg)
+![Sedum obtusatum]({{site.baseurl}}/images/2016-07-17/DSCF5541.jpg)
 
 Sierra stonecrop (*Sedum obtusatum*.)
 
-![Phyllodoce breweri]({{site.baseurl}}/DSCF5548.jpg)
+![Phyllodoce breweri]({{site.baseurl}}/images/2016-07-17/DSCF5548.jpg)
 
 Mountain heather (*Phyllodoce breweri]*.) Not the freshest looking flower, but these smelled great!)
 
-![Delphinium gracilentum]({{site.baseurl}}/DSCF5687.jpg)
+![Delphinium gracilentum]({{site.baseurl}}/images/2016-07-17/DSCF5687.jpg)
 
 Slender larkspur (*Delphinium gracilentum*.)
 
-![Lake Schmidell]({{site.baseurl}}/DSCF5791.jpg)
+![Lake Schmidell]({{site.baseurl}}/images/2016-07-17/DSCF5791.jpg)
 
 Near my campsite at Lake Schmidell.
