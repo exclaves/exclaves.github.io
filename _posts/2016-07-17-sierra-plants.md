@@ -8,7 +8,9 @@ Wavy-leaved paintbrush (*Castilleja applegatei*.)
 
 ![Streptanthus tortuosus]({{site.baseurl}}/images/2016-07-17/DSCF5483.jpg)
 
-Mountain jewelflower, or shield plant (*Streptanthus tortuosus*.)
+![Streptanthus tortuosus at high elevation]({{site.baseurl}}/images/2016-07-17/DSCF5858.jpg)
+
+Mountain jewelflower, or shield plant (*Streptanthus tortuosus*.) The second image shows the plant growing at a significantly higher elevation (~9000ft vs ~7000ft.) The darker color is perhaps due to increased UV/solar exposure?
 
 ![Lupinus polyphyllus var. burkei]({{site.baseurl}}/images/2016-07-17/DSCF5486.jpg)
 
