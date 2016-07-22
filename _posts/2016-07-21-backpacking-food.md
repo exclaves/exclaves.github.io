@@ -6,7 +6,7 @@ This seems like an incredible quantity of food. Is this really what two people e
 
 ## Dinner
 
-![Dinner photo]({{site.baseurl}}/2016-07-21/dinner.JPG)
+![Dinner photo]({{site.baseurl}}/images/2016-07-21/dinner.JPG)
 
 Clockwise from top left
 
@@ -56,7 +56,7 @@ Basically, just dehydrated chili. Substituted tofu for ground beef, not sure if 
 
 ## Snacks / lunch
 
-![Lunch photo]({{site.baseurl}}/2016-07-21/lunch.JPG)
+![Lunch photo]({{site.baseurl}}/images/2016-07-21/lunch.JPG)
 
 * Costco nut clusters
 * Costco pork jerky
@@ -81,7 +81,7 @@ Basically, just dehydrated chili. Substituted tofu for ground beef, not sure if 
 
 ## Breakfast
 
-![Breakfast photo]({{site.baseurl}}/2016-07-21/breakfast.JPG)
+![Breakfast photo]({{site.baseurl}}/images/2016-07-21/breakfast.JPG)
 
 Left to right
 
