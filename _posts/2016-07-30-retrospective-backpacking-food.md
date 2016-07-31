@@ -1,5 +1,5 @@
 ---
-title: Hindsight: packing for a six day backpacking trip
+title: Hindsight -- packing for a six day backpacking trip
 ---
 
 This seems like an incredible quantity of food. Is this really what two people eat? I guess on a normal day I don't exert as much physical effort as our calorie plan is anticipating.
