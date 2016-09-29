@@ -1,6 +1,6 @@
 ---
 title: Feasibility of a low-cost gas camera
-----
+---
 
 *This is [cross-posted](https://publiclab.org/notes/loganw/09-29-2016/new-possibilities-for-a-low-cost-gas-camera) as a research note on the [Public Lab](https://publiclab.org).*
 
