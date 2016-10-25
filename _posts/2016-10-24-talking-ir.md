@@ -26,9 +26,12 @@ this is a problem with repeated starts
 
 write (looks good):
 ￼
+!({{site.baseurl}}/images/2016-10-24/1.png)
 
 read (looks bad):
 ￼
+!({{site.baseurl}}/images/2016-10-24/2.png)
+
 
 Note the stop condition (P) in the middle. (http://www.esacademy.com/en/library/technical-articles-and-documents/miscellaneous/i2c-bus/i2c-bus-events/start-and-stop-conditions.html) this fucks it all up!
 
@@ -42,6 +45,7 @@ options i2c-bcm2708 combined=1
 
 result:
 
+!({{site.baseurl}}/images/2016-10-24/3.png)
 ￼
 
 Smbus limited to 32 bytes received data try code from :
