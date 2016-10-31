@@ -10,7 +10,8 @@ To do this, I wrote the following:
   var locationArea = bar.append("g")
       .attr("transform", function(d) { return "translate(200," + 24*(+d.length) + ")"; })
       .attr("class", function(d, i) { return "locations n_".concat(i) });
-
+```
+```
   var locationXAxes = locationArea
     .each(function (d, i) {
 
@@ -29,6 +30,7 @@ To do this, I wrote the following:
         .attr("transform", "translate(0, 60)")
         .call(axis);
     });
+
  ```
 
  For each set of data points, a new D3 scale is created, and a new axis is created from that scale. Then, the group created previously is selected and the axis is appended to that specific group.
