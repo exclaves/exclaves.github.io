@@ -85,7 +85,7 @@ If having conversations with people that you normally wouldn't is an idea that e
 > 
 > “In your neighborhood?”
 > 
-> “We live in Maryville, so, yeah…” - Unknown in Phoenix, Arizona
+> “We live in Maryvale, so, yeah…” - Unknown in Phoenix, Arizona
 
 > “I'm hopeful I can be a good father to my son. He’s in Washington state. I got left behind.” - Abraham in Phoenix, Arizona
 
