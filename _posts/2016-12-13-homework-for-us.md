@@ -47,7 +47,7 @@ I'm not completely sure what to do about these reasons -- both seem more like fe
 
 A second failure was that the project wasn't shared very much. A handful of shares on Facebook and Twitter, all within our existing social network. An issue that arose, though I don't think it impacted the amount of sharing significantly, was that our chosen hashtag, "#AmericaListens," turned out to have a conflict with another prolific poster, which intensified after launching our website.
 
-Perhaps the project could be framed in a different way that would better encourage sharing, but I'm not sure what it might be. Do you have ideas? [Let me know.](mailto:logan.williams@alum.mit.edu).
+Perhaps the project could be framed in a different way that would better encourage sharing, but I'm not sure what it might be. Do you have ideas? [Let me know.](mailto:logan.williams@alum.mit.edu)
 
 This said, many people did visit the website.
 
