@@ -4,7 +4,8 @@ title: Serving a little service with node
 
 I needed to have an easy way of communicating with the Stanford language parser. I had difficulty using the `stanford-simple-nlp` node package in Meteor directly, and got frustrated with debugging it, so I created another local HTTP server with Node that serves a single endpoint for parsing sentences. And it works!
 
-```var http = require('http');
+```
+var http = require('http');
 var StanfordSimpleNLP = require('stanford-simple-nlp');
 var httpdispatcher = require('httpdispatcher');
 
@@ -51,4 +52,5 @@ var server = http.createServer(handleRequest);
 
 server.listen(PORT, function(){
     console.log("Server listening on: http://localhost:%s", PORT);
-});```
+});
+```
