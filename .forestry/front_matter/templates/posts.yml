@@ -1,0 +1,51 @@
+---
+pages:
+- _posts/recurse-center-weeks-1-3.md
+- _posts/2017-05-23-the-unreasonable-accuracy-of-orienteering-maps.md
+- _posts/2016-12-20-serving-a-node.md
+- _posts/2016-12-17-noaa-frisco-bay-tides.md
+- _posts/2016-12-16-modeling-part-openscad.md
+- _posts/2016-12-13-homework-for-us.md
+- _posts/2016-12-13-calibrating-heimann.md
+- _posts/2016-10-31-rendering-multiple-axes-in-d3.md
+- _posts/2016-10-26-talkin-ir.md
+- _posts/2016-10-24-ir-notes.md
+- _posts/2016-09-29-low-cost-gas-camera.md
+- _posts/2016-09-28-debate-regendering.md
+- _posts/2016-07-30-retrospective-backpacking-food.md
+- _posts/2016-07-21-backpacking-food.md
+- _posts/2016-07-20-facebook-scraper.md
+- _posts/2016-07-19-custom-map-projection.md
+- _posts/2016-07-17-sierra-plants.md
+- _posts/2016-07-16-mongodb-geospatial.md
+- _posts/2016-07-15-phase-based-interpolation.md
+- _posts/2016-07-04-near-duplicate-detection-wavelets.md
+- _posts/2016-07-03-foraging.md
+- _posts/2016-07-02-leafminers.md
+- _posts/2016-07-01-baja.md
+- _posts/2016-06-12-steering-pyramids.md
+- _posts/2016-06-09-slow-fade.md
+- _posts/2016-05-24-more-meteor.md
+- _posts/2016-05-23-simplehttpserver.md
+- _posts/2016-05-20-sexy-maps.md
+- _posts/2016-05-19-remember-cat.md
+- _posts/2016-05-18-greening-the-dead.md
+- _posts/2016-05-17-redwoods.md
+- _posts/2016-05-16-loquat-bag.md
+hide_body: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: post
