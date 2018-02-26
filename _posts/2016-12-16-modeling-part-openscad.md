@@ -50,4 +50,4 @@ sensor_filter_bracket(module_height = 6.15,
                                             filter_width = 5);
 ```
 
-![Camera filter bracket])({{site.baseurl}}/images/2016-12-16/part.png)
+![Camera filter bracket]({{site.baseurl}}/images/2016-12-16/part.png)
