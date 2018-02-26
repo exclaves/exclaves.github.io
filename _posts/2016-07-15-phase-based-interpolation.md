@@ -1,5 +1,5 @@
 ---
-title: Phased-based frame interpolation, a Julia implementation
+title: Phase-based frame interpolation, a Julia implementation
 ---
 
 In this post, I'll show how we can use Julia and my multi-scale image decomposition library, [Pyramids.jl](https://github.com/loganwilliams/Pyramids.jl), to implement [*Phase-Based Frame Interpolation for Video*](https://www.disneyresearch.com/publication/phasebased/), an algorithm from CVPR 2015. This assumes some familiarity with [complex steerable pyramids](http://www.cns.nyu.edu/~eero/STEERPYR/).
