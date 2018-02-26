@@ -3,14 +3,14 @@
 # # # # # # # #
 
 # Basic
-name:               "something new every day"
-description:        "a low budget blog"
+name:               "tracks and traces"
+description:        "a no-filter blog for everything in progress"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 url:                "//exclav.es/"
 author:             "loganw"
 twitter:
-  username:         "cochlearholiday"
+  username:         "obtusatum"
 #facebook:
 #  app_id:           1234
 #    publisher:      1234
@@ -25,7 +25,7 @@ markdown:           kramdown
 
 # Navigation
 nav:
-  - name:           "Other Ideas"
+  - name:           "← back to portfolio"
     href:           "//subject.space/"
 
 # Sass
