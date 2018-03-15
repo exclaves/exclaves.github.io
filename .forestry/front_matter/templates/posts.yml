@@ -1,11 +1,20 @@
 ---
 pages:
+- _posts/recurse-center-workshops.md
+- _posts/2016-07-15-phase-based-interpolation.md
+- _posts/2016-12-16-modeling-part-openscad.md
+- _posts/2016-12-17-noaa-frisco-bay-tides.md
+- _posts/2015-05-05-tsne-100-photos.md
+- _posts/2017-08-08-24-hours-of-muni.md
+- _posts/2017-06-01-garden-year-two.md
+- _posts/2016-07-20-distorting-a-journey-onto-a-time-axis.md
+- _posts/2015-07-01-descending-the-nn-bandwagon.md
+- _posts/2015-05-20-stupid-hackathon.md
+- _posts/2014-10-29-poems-from-spam.md
 - _posts/2018-02-05-recurse-center-week-4.md
 - _posts/2017-05-23-the-unreasonable-accuracy-of-orienteering-maps.md
 - _posts/2018-01-29-recurse-center-weeks-1-3.md
 - _posts/2016-12-20-serving-a-node.md
-- _posts/2016-12-17-noaa-frisco-bay-tides.md
-- _posts/2016-12-16-modeling-part-openscad.md
 - _posts/2016-12-13-homework-for-us.md
 - _posts/2016-12-13-calibrating-heimann.md
 - _posts/2016-10-31-rendering-multiple-axes-in-d3.md
@@ -19,7 +28,6 @@ pages:
 - _posts/2016-07-19-custom-map-projection.md
 - _posts/2016-07-17-sierra-plants.md
 - _posts/2016-07-16-mongodb-geospatial.md
-- _posts/2016-07-15-phase-based-interpolation.md
 - _posts/2016-07-04-near-duplicate-detection-wavelets.md
 - _posts/2016-07-03-foraging.md
 - _posts/2016-07-02-leafminers.md
