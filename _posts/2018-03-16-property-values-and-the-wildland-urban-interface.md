@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Property values and the wildland urban interface
-date: 2018-03-15 00:00:00 +0000
+date: 2018-03-16 00:48:19 -0700
 ---
 Most consequences of climate change will be felt most severely by the least wealthy and most vulnerable populations in the world. However, this may not be true of every effect of climate change.
 
