@@ -45,4 +45,6 @@ In the Los Angeles area, we see what I would expect. The hills surrounding the c
 
 This pattern does not hold true everywhere in California. Many rural and suburban areas, for example, on the eastern outskirts of Sacramento, are both low-wealth and at risk. But it tracks for hillsides surrounding Los Angeles and the Bay Area.
 
-Wildfires are a climate change risk that disproportionately impacts the wealthiest. Maybe that's why they have dominated the media attention?
+None of this is intended to discount the tragedy of wildfires for communities, families, and individuals. They are a devastating natural disaster that has impacts on all slices of society. And, like all disasters, the people most economically vulnerable before the disaster have the hardest time recovering.
+
+Still, on average, wildfires disproportionately impact the property of the wealthiest. Maybe that's why they have had such extensive media coverage in comparison to other consequences of climate change?
