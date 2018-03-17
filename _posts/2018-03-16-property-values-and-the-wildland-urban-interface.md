@@ -23,9 +23,7 @@ I can also plot all three variables, income, property values, and embodied real 
 
 This is kind of ugly and definitely difficult to interpret.
 
-![](/uploads/2018/03/16/key.png)
-
-The Bay Area shows distinct regions: high income urban cores and low income inner ring suburbs both share low real estate wealth, while low income rural exurbs benefit from very high property values and rates of home ownership.
+![](/uploads/2018/03/17/key.png)The Bay Area shows distinct regions: high income urban cores and low income inner ring suburbs both share low real estate wealth, while low income rural exurbs benefit from very high property values and rates of home ownership.
 
 ![](/uploads/2018/03/16/sfbay.png)
 
