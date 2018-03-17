@@ -7,7 +7,7 @@ Besides the [interactive art jam and Tidal Cycles live coding workshops](http://
 
 On Wednesday, I launched [Conceptquest](https://subject.space/projects-static/conceptquest/), an interactive hypertext adventure game based on navigating Conceptnet, a dataset of real world relations between concepts that I've been fascinated by since I learned about it 18 months ago. Conceptquest is itself an evolution of a [Twitter poetry bot](https://twitter.com/ConceptNetPoet) that I also created at RC a few weeks back. Conceptquest is built in [React](github.com/loganwilliams/conceptquest).
 
-![Conceptquest](http://subject.space/projects/conceptquest/card_large.jpg)
+![](/uploads/2018/03/17/card_large.jpg)
 
 I also put a [pre-release version of a map of the realtime train positions on the NYC Subway](http://fog.today/nyc) online. This is the first [Golang backend](github.com/loganwilliams/where-are-the-trains) I've written, and while it's simple, I've learned a lot. The front end is built with React and Mapbox. This is also the first Dockerized application I've built, but it certainly won't be the last — deployment on Digital Ocean was a breeze. I've been hearing good things about [dokku](https://github.com/dokku/dokku), and I might try that with my next project.
 
@@ -33,7 +33,7 @@ I've been reading _7 Languages in 7 Weeks_, and am spending the weekend on Prolo
 
 I applied to be a Toolmaker-in-Residence at [Signal Culture](http://signalculture.org/), and was accepted! So I'll be there in April, continuing to work on tools for generating [Isometric Spacelapses](http://subject.space/projects/isometric-spacelapse/).
 
-![](https://subject.space/projects/isometric-spacelapse/background.jpg)
+![Screenshot of isometric spacelapse](/uploads/2018/03/17/background.jpg)
 
 I wrote a talk proposal for !!Con, because it seemed like fun. I don't expect it to get selected, but it was my first time thinking about what I might talk about in a conference environment, and was a fun design exercise. If my bluff is called on this, however, things could get interesting.
 
