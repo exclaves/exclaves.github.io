@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recurse Center - Workshops! (Week 10!?)
+title: Recurse Center - workshops! (Week 10!?)
 date: 2018-03-15 00:20:24 -0700
 ---
 I co-hosted two workshops at RC recently, one on Monday, and one on Tuesday. Both went pretty well!
