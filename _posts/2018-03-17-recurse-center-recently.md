@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Recurse Center - Recently
+title: Recurse Center - recently (Weeks 5-10)
 date: 2018-03-17 00:00:00 +0000
 ---
 Besides the [interactive art jam and Tidal Cycles live coding workshops](http://exclav.es/2018/03/15/recurse-center-workshops/), I've been up to a lot at Recurse Center recently.
