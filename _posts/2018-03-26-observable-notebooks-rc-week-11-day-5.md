@@ -12,6 +12,7 @@ Some work needs to be done:
 * Better UI for selecting variables
 * Title and legend on the map
 * Multivariate comparisons
+* Check box for normalizing by population
 
 But we got it working! Two major revelations about Observable Notebooks:
 
