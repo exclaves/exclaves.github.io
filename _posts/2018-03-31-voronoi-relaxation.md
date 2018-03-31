@@ -7,7 +7,7 @@ I saw an interesting visualization on [Jason Davie's website](https://www.jasond
 
 <script src="https://www.jasondavies.com/d3.min.js"></script>
 
-<div id="chart"><canvas width="1920" height="960" style="width: 960px; height: 480px;"></canvas></div>
+<div id="chart"></div>
 
 <script>
 var ratio = window.devicePixelRatio || 1,
