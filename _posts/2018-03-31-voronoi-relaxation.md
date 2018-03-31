@@ -3,7 +3,7 @@ layout: post
 title: Lloyd's relaxation with color coded cells
 date: 2018-03-31 00:00:00 +0000
 ---
-I saw an interesting visualization on [Jason Davie's website](https://www.jasondavies.com/lloyd/) last night of Lloyd's relaxation algorithm.
+I saw an interesting visualization on [Jason Davie's website](https://www.jasondavies.com/lloyd/) last night of Lloyd's relaxation algorithm. I thought it was fun to watch the cells slowly change number of sides and irregularity, so I extended his visualization to color cells differently depending on their irregularity.
 
 <script src="https://www.jasondavies.com/d3.min.js""></script>
 
