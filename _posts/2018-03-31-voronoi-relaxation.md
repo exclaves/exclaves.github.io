@@ -11,13 +11,13 @@ I saw an interesting visualization on [Jason Davie's website](https://www.jasond
 
 <script>
 var ratio = window.devicePixelRatio || 1,
-width = 960 \* ratio,
-height = 480 \* ratio,
+width = 960 * ratio,
+height = 480 * ratio,
 n = 1000,
 vertices;
 
 var voronoi = d3.geom.voronoi()
-.clipExtent(\[\[0, 0\], \[width, height\]\]);
+.clipExtent([[0, 0], [width, height]]);
 
 var canvas = d3.select("#chart").append("canvas")
 .attr("width", width)
@@ -26,12 +26,12 @@ var canvas = d3.select("#chart").append("canvas")
 .style("height", height / ratio + "px")
 .on("click", function() {
 var mouse = d3.mouse(this);
-reset(mouse\[0\] \* ratio, mouse\[1\] \* ratio);
+reset(mouse[0] * ratio, mouse[1] * ratio);
 });
 
 var context = canvas.node().getContext("2d");
 context.fillStyle = "#00f";
-context.lineWidth = .5 \* ratio;
+context.lineWidth = .5 * ratio;
 context.strokeStyle = "#000";
 
 var iterations,
@@ -53,12 +53,12 @@ return Math.sqrt(totalDeviation/data.length);
 }
 
 function get_color(irregularity, size, sides) {
-var max_irregularity = 20 / (Math.pow(width \* height / n, 0.25) \* 4);
+var max_irregularity = 20 / (Math.pow(width * height / n, 0.25) * 4);
 irregularity /= max_irregularity;
-var hue = irregularity \* 360;
+var hue = irregularity * 360;
 hue += Date.now()/100;
 
-var max_size = Math.sqrt(width \* height / n) \* 4;
+var max_size = Math.sqrt(width * height / n) * 4;
 size /= max_size;
 
 if (sides == 4) {
@@ -67,7 +67,7 @@ hue -= 180;
 hue -= 90;
 }
 
-return d3.hcl(hue % 360, size\*80, 80 - size \* 60 - (irregularity  \* 80));
+return d3.hcl(hue % 360, size*80, 80 - size * 60 - (irregularity  * 80));
 }
 
 function redraw() {
@@ -77,7 +77,7 @@ dy = 0,
 edges = {};
 
 for (var i = 0, n = cells.length; i < n; ++i) {
-var cell = cells\[i\];
+var cell = cells[i];
 if (cell == null) continue;
 
     var area = d3.geom.polygon(cell).area(),
@@ -112,12 +112,12 @@ if (cell == null) continue;
 
 d3.select("#iterations").text(format(++iterations));
 
-if (dx \* dx + dy \* dy < 1e-6) return true;
+if (dx * dx + dy * dy < 1e-6) return true;
 }
 
 function reset(x, y) {
 vertices = d3.range(n).map(function(d) {
-return \[x + Math.random() - .5, y + Math.random() - .5\];
+return [x + Math.random() - .5, y + Math.random() - .5];
 });
 iterations = 0;
 }
