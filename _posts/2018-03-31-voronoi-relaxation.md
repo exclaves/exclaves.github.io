@@ -3,7 +3,7 @@ layout: post
 title: Voronoi relaxation
 date: 2018-03-31 00:00:00 +0000
 ---
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
 
 <div id="chart"><canvas width="1920" height="960" style="width: 960px; height: 480px;"></canvas></div>
 
@@ -121,4 +121,3 @@ function reset(x, y) {
   iterations = 0;
 }
 </script>
-
