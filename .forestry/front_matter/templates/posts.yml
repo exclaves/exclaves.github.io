@@ -1,9 +1,10 @@
 ---
 pages:
+- _posts/signal-culture-realtime-tools-for-3d-video-slicing.md
 - _posts/2018-04-06-adjustable-fov-webmaps.md
+- _posts/2018-03-26-observable-notebooks-rc-week-11-day-5.md
 - _posts/2018-04-05-message-history-visualization.md
 - _posts/2018-03-31-voronoi-relaxation.md
-- _posts/2018-03-26-observable-notebooks-rc-week-11-day-5.md
 - _posts/2018-03-19-recurse-week-11-monday.md
 - _posts/2018-03-17-recurse-center-recently.md
 - _posts/2018-03-16-property-values-and-the-wildland-urban-interface.md
@@ -49,6 +50,7 @@ pages:
 - _posts/2016-05-17-redwoods.md
 - _posts/2016-05-16-loquat-bag.md
 hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
