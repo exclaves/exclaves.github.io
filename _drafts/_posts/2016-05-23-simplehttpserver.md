@@ -1,5 +1,6 @@
 ---
 title: SimpleHTTPServer and you
+date: 2016-05-23 00:00:00 +0000
 ---
 
 Apparently, the problem I was trying to solve last Thursday, loading local resources while serving a site from localhost, is pretty common. [Rachel](http://rfol.io/) clued me into Python's SimpleHTTPServer, which, basically, does what it says on the tin.

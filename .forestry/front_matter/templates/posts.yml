@@ -1,5 +1,6 @@
 ---
 pages:
+- _posts/2016-05-23-simplehttpserver.md
 - _posts/2018-04-17-signal-culture-realtime-tools-for-3d-video-slicing.md
 - _posts/2018-04-06-adjustable-fov-webmaps.md
 - _posts/2018-03-26-observable-notebooks-rc-week-11-day-5.md
@@ -43,7 +44,6 @@ pages:
 - _posts/2016-06-12-steering-pyramids.md
 - _posts/2016-06-09-slow-fade.md
 - _posts/2016-05-24-more-meteor.md
-- _posts/2016-05-23-simplehttpserver.md
 - _posts/2016-05-20-sexy-maps.md
 - _posts/2016-05-19-remember-cat.md
 - _posts/2016-05-18-greening-the-dead.md
