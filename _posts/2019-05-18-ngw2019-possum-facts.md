@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: 'NGW 2019: a possum-based CTF puzzle'
