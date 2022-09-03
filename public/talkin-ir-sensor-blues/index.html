@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Talkin&#39; IR sensor blues</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Talkin&#39; IR sensor blues</h1>
+        <div>
+                <time>October 26, 2016</time>
+            </div>
+    </header><p>I received the sensor that I purchased from <a href="http://www.heimannsensor.com/">Heimann Sensor</a> a couple weeks ago, and today was able to succesfully read an image off of it. The sensor communicates over I2C, which I have used before, but have never had to dive extremely deeply into. However, in debugging the communication with this sensor, I had to dive quite deeply into the <a href="http://www.ti.com/lit/an/slva704/slva704.pdf">specific timing</a> of the I2C specification.</p>
+<p>With the device connected to a Raspberry Pi, and with the Pi <a href="https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c">configured correctly</a> for I2C, I was able to see the devices connected with the <code>i2cdetect</code> command.</p>
+<pre tabindex="0"><code>pi@raspberrypi:~ $ i2cdetect -y 1
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- 1a -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: 50 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+70: -- -- -- -- -- -- -- --       
+</code></pre><p>This is weird, as this does not correspond to the expected addresses listed in the datasheet! (0x34 for the sensor itself, and 0xA0 for the EEPROM.) 0xA0 is actually an 8 bit number, and 0x50 corresponds to this address with the last bit (a 0 for read) left off, so this makes some sense. However, 0x1A seems to be wrong &ndash; a mispring in the datasheet.</p>
+<p>The quickest way to start working with the Raspberry Pi&rsquo;s I2C bus is with a <a href="http://www.raspberry-projects.com/pi/programming-in-python/i2c-programming-in-python/using-the-i2c-interface-2">Python library that uses the smbus interface</a>. However, with this, I received an IOError whenever attempting to read a register from the device. To dive in further, I looked at what the devices were communicating with each other through a <a href="http://www.dreamsourcelab.com/">logic analyzer</a>.</p>
+<p>Writing a value to a register seems to work correctly:</p>
+<p><img src="/images/2016-10-24/1.png" alt="A good write"></p>
+<p>However, reading a value does not:
+￼
+<img src="/images/2016-10-24/2.png" alt="A bad read"></p>
+<p>Note the <a href="http://www.esacademy.com/en/library/technical-articles-and-documents/miscellaneous/i2c-bus/i2c-bus-events/start-and-stop-conditions.html">stop condition (P)</a> in the middle. This confuses the device, which expects a &ldquo;repeated start&rdquo; rather than a complete write immediately followed by a complete read.</p>
+<h3 id="enabling-repeated-starts">Enabling repeated starts</h3>
+<p>Researching this online revealed that the I2C driver has a combined write/read mode that can be enabled by editing the file /etc/modprobe.d/i2c.conf to include the following line:</p>
+<pre tabindex="0"><code>options i2c-bcm2708 combined=1
+</code></pre><p>This forces the I2C kernel driver to be loaded with combined mode enabled, and results in the following:</p>
+<p><img src="/images/2016-10-24/3.png" alt="A good read"></p>
+<h3 id="reading">Reading</h3>
+<p>To read data off of the sensor, one must read 258 bytes with a particular command. However, the SMBus is limited to 32 bytes. That said, the 32 bytes I did manage to receive look reasonable.</p>
+<pre tabindex="0"><code>a = [126, 167, 131, 110, 129, 159, 130, 92, 131, 143, 131, 26, 130, 80, 131, 85, 130, 87, 128, 174, 130, 9, 130, 149, 131, 7, 130, 210, 131, 5, 130, 202]
+</code></pre><p>To solve this I needed to interface with the I2C bus directly, rather than through <code>smbus</code>.</p>
+<p>I ended up using the Python library <a href="https://python-periphery.readthedocs.io/en/latest/">python-periphery</a> to accomplish this, and it worked very well. The test script before sets up the device, following a prescribed set of configuration options published in the datasheet, before reading the data from the sensor in a set of four blocks and saving it using pickle.</p>
+<p>{% gist 9ec1a7f977695e35196ac4169b85e492 %}</p>
+<h3 id="results">Results</h3>
+<p>When I looked at one of the captured images, I saw this:</p>
+<p><img src="/images/2016-10-26/noisy.png" alt="Noise!"></p>
+<p>This doesn&rsquo;t look good. Exposing the sensor again, this time holding my hand in front of it, and subtracting that image from the first one results in the following:</p>
+<p><img src="/images/2016-10-26/hand.png" alt="A hand!"></p>
+<p>This shows the issue &ndash; each pixel (or each analog-to-digital converter, given the repeating structure corresponding to each &ldquo;block&rdquo; of the sensor) has its own offset, and its on responsivity to incoming light. Without calibrating this, this constant &ldquo;noise&rdquo; overpowers the signal from changing IR/temperature conditions. By subtracting two frames in quick succession, this common noise signal is removed, and we can see the actual signal, the hand, directly.</p>
+<p>However, it is still quite noisy, as this process of frame subtraction increases random noise (because now we have contributions from two frames) and doesn&rsquo;t correct for pixel dependent sensitivity.</p>
+<p>Improving this noisiness and allowing single frame exposures will require either calibrating this sensor myself, or purchasing a new sensor from Heimann that has been calibrated at the factory.</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

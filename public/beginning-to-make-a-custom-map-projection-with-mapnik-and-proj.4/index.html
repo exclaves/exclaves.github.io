@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Beginning to make a custom map projection with mapnik and proj.4</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Beginning to make a custom map projection with mapnik and proj.4</h1>
+        <div>
+                <time>July 19, 2016</time>
+            </div>
+    </header><h2 id="installing-mapnik-and-linking-to-a-custom-self-compiled-proj4-library">Installing mapnik and linking to a custom, self-compiled proj.4 library</h2>
+<p>I manually compiled proj.4 from downloaded source code.</p>
+<p>I edited the Homebrew formula for mapnik2 (couldn&rsquo;t get it to work with mapnik 3) so that it would link the version of proj.4 I just compiled by setting the location of these libraries to where proj.4 <code>make install</code> puts them and not where Homebrew expects them:</p>
+<p>{% highlight bash %}
+&ldquo;PROJ_INCLUDES=/usr/local/proj/include&rdquo;,
+&ldquo;PROJ_LIBS=/usr/local/proj/lib&rdquo;,
+{% endhighlight %}</p>
+<p>Then I compiled and installed mapnik, using the cairo option because that seems to be the only way to get Homebrew to compile it/relink the proj.4 plibraries. Since the python driver for mapnik was always looking for the libraries in the same location, this will just work &ndash; but I need to force Python to reload them, which seems to require restarting the Python kernel.</p>
+<p>Finally, if you try to load OSM data with this custom-built mapnik, you&rsquo;ll get an error like the following:</p>
+<p>{% highlight bash %}
+RuntimeError: Could not create datasource for type: &lsquo;osm&rsquo;  encountered during parsing of layer &lsquo;building&rsquo; in Layer at line 40 of &lsquo;mapnik_style.xml&rsquo;
+{% endhighlight %}</p>
+<p>This can be fixed by adding <code>&quot;INPUT_PLUGINS=osm&quot;</code> to the list of arguments used by <code>scons</code>.</p>
+<h3 id="the-final-mapnik2rb-formula">The final mapnik2.rb formula</h3>
+<p>{% highlight ruby %}
+class Mapnik2 &lt; Formula
+desc &ldquo;Toolkit for developing mapping applications&rdquo;
+homepage &ldquo;<a href="http://www.mapnik.org/%22">http://www.mapnik.org/&quot;</a>
+url &ldquo;<a href="https://s3.amazonaws.com/mapnik/dist/v2.2.0/mapnik-v2.2.0.tar.bz2%22">https://s3.amazonaws.com/mapnik/dist/v2.2.0/mapnik-v2.2.0.tar.bz2&quot;</a>
+sha256 &ldquo;9b30de4e58adc6d5aa8478779d0a47fdabe6bf8b166b67a383b35f5aa5d6c1b0&rdquo;
+revision 2</p>
+<p>bottle do
+sha256 &ldquo;b555f843463c44234c82571c15cd9cc8345a8c30cea415cccbaccfd273beae55&rdquo; =&gt; :el_capitan
+sha256 &ldquo;0b98b9139c184c9d58cab3fd510df54a17ca722e15897ba20dabecd13a3c641a&rdquo; =&gt; :yosemite
+sha256 &ldquo;841a6ad2f0458ce1e0829e729a59ddb34689072692eb2704dc983eaad93fc16a&rdquo; =&gt; :mavericks
+end</p>
+<h1 id="compile-error-in-bindingspythonmapnik_text_placementcpp">compile error in bindings/python/mapnik_text_placement.cpp</h1>
+<h1 id="httpsgithubcommapnikmapnikissues1973"><a href="https://github.com/mapnik/mapnik/issues/1973">https://github.com/mapnik/mapnik/issues/1973</a></h1>
+<p>patch :DATA</p>
+<h1 id="boost-156-compatibility">boost 1.56 compatibility</h1>
+<h1 id="concatenated-from-httpsgithubcommapnikmapnikissues2428">concatenated from <a href="https://github.com/mapnik/mapnik/issues/2428">https://github.com/mapnik/mapnik/issues/2428</a></h1>
+<p>patch do
+url &ldquo;<a href="https://gist.githubusercontent.com/tdsmith/22aeb0bfb9691de91463/raw/3064c193466a041d82e011dc5601312ccadc9e15/mapnik-boost-megadiff.diff%22">https://gist.githubusercontent.com/tdsmith/22aeb0bfb9691de91463/raw/3064c193466a041d82e011dc5601312ccadc9e15/mapnik-boost-megadiff.diff&quot;</a>
+sha256 &ldquo;40e83052ae892aa0b134c09d8610ebd891619895bb5f3e5d937d0c48ed42d1a6&rdquo;
+end</p>
+<p>depends_on &ldquo;pkg-config&rdquo; =&gt; :build
+depends_on &ldquo;freetype&rdquo;
+depends_on &ldquo;libpng&rdquo;
+depends_on &ldquo;libtiff&rdquo;
+depends_on &ldquo;icu4c&rdquo;
+depends_on &ldquo;jpeg&rdquo;
+depends_on &ldquo;boost159&rdquo;
+depends_on &ldquo;boost-python159&rdquo;
+depends_on &ldquo;gdal&rdquo; =&gt; :optional
+depends_on &ldquo;postgresql&rdquo; =&gt; :optional
+depends_on &ldquo;cairo&rdquo; =&gt; :optional
+depends_on &ldquo;py2cairo&rdquo; if build.with? &ldquo;cairo&rdquo;</p>
+<p>conflicts_with &ldquo;mapnik&rdquo;, :because =&gt; &ldquo;Differing versions of the same formula&rdquo;</p>
+<p>def install
+icu = Formula[&ldquo;icu4c&rdquo;].opt_prefix
+boost = Formula[&ldquo;boost159&rdquo;].opt_prefix
+proj = Formula[&ldquo;proj&rdquo;].opt_prefix
+jpeg = Formula[&ldquo;jpeg&rdquo;].opt_prefix
+libpng = Formula[&ldquo;libpng&rdquo;].opt_prefix
+libtiff = Formula[&ldquo;libtiff&rdquo;].opt_prefix
+freetype = Formula[&ldquo;freetype&rdquo;].opt_prefix</p>
+<pre><code># mapnik compiles can take ~1.5 GB per job for some .cpp files
+# so lets be cautious by limiting to CPUS/2
+jobs = ENV.make_jobs.to_i
+jobs /= 2 if jobs &gt; 2
+
+args = [&quot;CC=\&quot;#{ENV.cc}\&quot;&quot;,
+        &quot;CXX=\&quot;#{ENV.cxx}\&quot;&quot;,
+        &quot;JOBS=#{jobs}&quot;,
+        &quot;PREFIX=#{prefix}&quot;,
+        &quot;ICU_INCLUDES=#{icu}/include&quot;,
+        &quot;ICU_LIBS=#{icu}/lib&quot;,
+        &quot;PYTHON_PREFIX=#{prefix}&quot;, # Install to Homebrew's site-packages
+        &quot;JPEG_INCLUDES=#{jpeg}/include&quot;,
+        &quot;JPEG_LIBS=#{jpeg}/lib&quot;,
+        &quot;PNG_INCLUDES=#{libpng}/include&quot;,
+        &quot;PNG_LIBS=#{libpng}/lib&quot;,
+        &quot;TIFF_INCLUDES=#{libtiff}/include&quot;,
+        &quot;TIFF_LIBS=#{libtiff}/lib&quot;,
+        &quot;BOOST_INCLUDES=#{boost}/include&quot;,
+        &quot;BOOST_LIBS=#{boost}/lib&quot;,
+        &quot;PROJ_INCLUDES=/usr/local/proj/include&quot;,
+        &quot;PROJ_LIBS=/usr/local/proj/lib&quot;,
+        &quot;FREETYPE_CONFIG=#{freetype}/bin/freetype-config&quot;,
+        &quot;INPUT_PLUGINS=osm&quot;
+       ]
+
+if build.with? &quot;cairo&quot;
+  args &lt;&lt; &quot;CAIRO=True&quot; # cairo paths will come from pkg-config
+else
+  args &lt;&lt; &quot;CAIRO=False&quot;
+end
+args &lt;&lt; &quot;GDAL_CONFIG=#{Formula[&quot;gdal&quot;].opt_bin}/gdal-config&quot; if build.with? &quot;gdal&quot;
+args &lt;&lt; &quot;PG_CONFIG=#{Formula[&quot;postgresql&quot;].opt_bin}/pg_config&quot; if build.with? &quot;postgresql&quot;
+
+# system &quot;python&quot;, &quot;scons/scons.py&quot;, &quot;INPUT_PLUGINS=all&quot;
+system &quot;python&quot;, &quot;scons/scons.py&quot;, &quot;configure&quot;, *args
+system &quot;python&quot;, &quot;scons/scons.py&quot;, &quot;install&quot;
+</code></pre>
+<p>end</p>
+<p>test do
+system bin/&ldquo;mapnik-config&rdquo;, &ldquo;-v&rdquo;
+end
+end</p>
+<p><strong>END</strong>
+diff &ndash;git a/bindings/python/mapnik_text_placement.cpp b/bindings/python/mapnik_text_placement.cpp
+index 0520132..4897c28 100644
+&mdash; a/bindings/python/mapnik_text_placement.cpp
++++ b/bindings/python/mapnik_text_placement.cpp
+@@ -194,7 +194,11 @@ struct ListNodeWrap: formatting::list_node, wrapper<a href="formatting::list_node">formatting::list_node</a>
+ListNodeWrap(object l) : formatting::list_node(), wrapper<a href="formatting::list_node">formatting::list_node</a>()
+{
+stl_input_iterator<a href="formatting::node_ptr">formatting::node_ptr</a> begin(l), end;</p>
+<ul>
+<li>
+<pre><code>   children_.insert(children_.end(), begin, end);
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<pre><code>   while (begin != end)
+</code></pre>
+</li>
+<li>
+<pre><code>   {
+</code></pre>
+</li>
+<li>
+<pre><code>       children_.push_back(*begin);
+</code></pre>
+</li>
+<li>
+<pre><code>       ++begin;
+</code></pre>
+</li>
+<li>
+<pre><code>   }
+</code></pre>
+<p>}</p>
+<p>/* TODO: Add constructor taking variable number of arguments.
+{% endhighlight %}</p>
+</li>
+</ul>
+<h2 id="writing-a-custom-map-projection">Writing a custom map projection</h2>
+<p>Proj.4 has many source files, prefixed with PJ_ that are used to convert coordinates from spherical or ellipsoidal points into rectangular ones. As an example, below is the source code to the Mercator implementation, PJ_merc.c:</p>
+<p>{% highlight c %}
+#define PJ_LIB__
+#include	&lt;projects.h&gt;
+PROJ_HEAD(merc, &ldquo;Mercator&rdquo;) &ldquo;\n\tCyl, Sph&amp;Ell\n\tlat_ts=&rdquo;;
+#define EPS10 1.e-10
+FORWARD(e_forward); /* ellipsoid <em>/
+if (fabs(fabs(lp.phi) - HALFPI) &lt;= EPS10) F_ERROR;
+xy.x = P-&gt;k0 * lp.lam;
+xy.y = - P-&gt;k0 * log(pj_tsfn(lp.phi, sin(lp.phi), P-&gt;e));
+return (xy);
+}
+FORWARD(s_forward); /</em> spheroid <em>/
+if (fabs(fabs(lp.phi) - HALFPI) &lt;= EPS10) F_ERROR;
+xy.x = P-&gt;k0 * lp.lam;
+xy.y = P-&gt;k0 * log(tan(FORTPI + .5 * lp.phi));
+return (xy);
+}
+INVERSE(e_inverse); /</em> ellipsoid <em>/
+if ((lp.phi = pj_phi2(P-&gt;ctx, exp(- xy.y / P-&gt;k0), P-&gt;e)) == HUGE_VAL) I_ERROR;
+lp.lam = xy.x / P-&gt;k0;
+return (lp);
+}
+INVERSE(s_inverse); /</em> spheroid */
+lp.phi = HALFPI - 2. * atan(exp(-xy.y / P-&gt;k0));
+lp.lam = xy.x / P-&gt;k0;
+return (lp);
+}
+FREEUP; if (P) pj_dalloc(P); }
+ENTRY0(merc)
+double phits=0.0;
+int is_phits;</p>
+<pre><code>if( (is_phits = pj_param(P-&gt;ctx, P-&gt;params, &quot;tlat_ts&quot;).i) ) {
+	phits = fabs(pj_param(P-&gt;ctx, P-&gt;params, &quot;rlat_ts&quot;).f);
+	if (phits &gt;= HALFPI) E_ERROR(-24);
+}
+if (P-&gt;es) { /* ellipsoid */
+	if (is_phits)
+		P-&gt;k0 = pj_msfn(sin(phits), cos(phits), P-&gt;es);
+	P-&gt;inv = e_inverse;
+	P-&gt;fwd = e_forward;
+} else { /* sphere */
+	if (is_phits)
+		P-&gt;k0 = cos(phits);
+	P-&gt;inv = s_inverse;
+	P-&gt;fwd = s_forward;
+}
+</code></pre>
+<p>ENDENTRY(P)
+{% endhighlight %}</p>
+<p>Note the use of function definition compiler macros. Also note that the coordinates returned (<code>(xy)</code>) are somewhat arbitrary &ndash; they seem to vary dramatically from projection to projection.</p>
+<p>Let&rsquo;s try dividing the output x coordinate by two. One condition that proj.4/mapnik does enforce is a 1:1 aspect ratio between x and y, so this should compress the output image. Note that we had to multiply it by two in the inverse functions as well.</p>
+<p>{% highlight c %}
+#define PJ_LIB__
+#include	&lt;projects.h&gt;
+PROJ_HEAD(merc, &ldquo;Mercator&rdquo;) &ldquo;\n\tCyl, Sph&amp;Ell\n\tlat_ts=&rdquo;;
+#define EPS10 1.e-10
+FORWARD(e_forward); /* ellipsoid <em>/
+if (fabs(fabs(lp.phi) - HALFPI) &lt;= EPS10) F_ERROR;
+xy.x = P-&gt;k0 * lp.lam / 2;
+xy.y = - P-&gt;k0 * log(pj_tsfn(lp.phi, sin(lp.phi), P-&gt;e));
+return (xy);
+}
+FORWARD(s_forward); /</em> spheroid <em>/
+if (fabs(fabs(lp.phi) - HALFPI) &lt;= EPS10) F_ERROR;
+xy.x = P-&gt;k0 * lp.lam / 2;
+xy.y = P-&gt;k0 * log(tan(FORTPI + .5 * lp.phi));
+return (xy);
+}
+INVERSE(e_inverse); /</em> ellipsoid <em>/
+if ((lp.phi = pj_phi2(P-&gt;ctx, exp(- xy.y / P-&gt;k0), P-&gt;e)) == HUGE_VAL) I_ERROR;
+lp.lam = 2 * xy.x / P-&gt;k0;
+return (lp);
+}
+INVERSE(s_inverse); /</em> spheroid */
+lp.phi = HALFPI - 2. * atan(exp(-xy.y / P-&gt;k0));
+lp.lam = 2 * xy.x / P-&gt;k0;
+return (lp);
+}
+FREEUP; if (P) pj_dalloc(P); }
+ENTRY0(merc)
+double phits=0.0;
+int is_phits;</p>
+<pre><code>if( (is_phits = pj_param(P-&gt;ctx, P-&gt;params, &quot;tlat_ts&quot;).i) ) {
+	phits = fabs(pj_param(P-&gt;ctx, P-&gt;params, &quot;rlat_ts&quot;).f);
+	if (phits &gt;= HALFPI) E_ERROR(-24);
+}
+if (P-&gt;es) { /* ellipsoid */
+	if (is_phits)
+		P-&gt;k0 = pj_msfn(sin(phits), cos(phits), P-&gt;es);
+	P-&gt;inv = e_inverse;
+	P-&gt;fwd = e_forward;
+} else { /* sphere */
+	if (is_phits)
+		P-&gt;k0 = cos(phits);
+	P-&gt;inv = s_inverse;
+	P-&gt;fwd = s_forward;
+}
+</code></pre>
+<p>ENDENTRY(P)
+{% endhighlight %}</p>
+<h2 id="compiling">Compiling</h2>
+<p>First, in the proj.4 directory, run</p>
+<p>{% highlight bash %}
+make
+make install
+{% endhighlight %}</p>
+<p>Then rebuild mapnik to relink the proj.4 (maybe there&rsquo;s a better way of doing this?):</p>
+<p>{% highlight bash %}
+brew uninstall homebrew/versions/mapnik2
+brew install homebrew/versions/mapnik2 &ndash;with-cairo
+{% endhighlight %}</p>
+<h2 id="using-the-new-map-projection">Using the new map projection</h2>
+<p>In your mapnik XML stylesheet, set the projection like so (this corresponds to web mercator):</p>
+<p>{% highlight xml %}
+<Map background-color="#f2efe9" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs">
+{% endhighlight %}</p>
+<p>With the original PJ_merc.c:</p>
+<p><img src="/images/2016-07-19/normal.png" alt="Normal aspect ratio map"></p>
+<p>With the modified/stretched PJ_merc.c:</p>
+<p><img src="/images/2016-07-19/stretched.png" alt="Stretched aspect ratio map"></p>
+<p>Obviously this is only the tip of the iceberg for defining a map projection &ndash; you just need a set of functions for performing the forward and inverse projection, and you&rsquo;re ready to start rendering real maps with real data. You can even render tiled maps for use with maps browser such as <a href="http://leafletjs.com/">Leaflet</a>.</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

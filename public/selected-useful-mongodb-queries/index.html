@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Selected useful Mongodb queries</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Selected useful Mongodb queries</h1>
+        <div>
+                <time>July 16, 2016</time>
+            </div>
+    </header><p>Group by date:</p>
+<pre tabindex="0"><code>db.getCollection(&#39;images&#39;).aggregate(
+    [
+        {
+            $group: { 
+                _id : { month: { $month: &#34;$datetime.utc_timestamp&#34; }, day: { $dayOfMonth: &#34;$datetime.utc_timestamp&#34; }, year: { $year: &#34;$datetime.utc_timestamp&#34; } },
+                count: { $sum: 1 },
+                latitude: { $avg: &#34;$latitude&#34;},
+                longitude: { $avg: &#34;$longitude&#34;},
+            }
+        }
+    ]
+)
+</code></pre><p>Creating a 2-D geospatial index on an Earth-spheroid.</p>
+<pre tabindex="0"><code>db.images.createIndex({&#34;location&#34;: &#34;2dsphere&#34;})
+</code></pre><p>Finding documents near a point:</p>
+<pre tabindex="0"><code>db.images.find({
+    &#34;location&#34;: {
+        $near: {
+            $geometry: {
+                type: &#34;Point&#34;,
+                coordinates: [-122.1624, 37.201836]
+            },
+            $maxDistance: 100
+        }
+    }
+})
+</code></pre><p>Aggregating documents near a point with the computed distance:</p>
+<pre tabindex="0"><code>db.images.aggregate([
+   {
+     $geoNear: {
+        near: { type: &#34;Point&#34;, coordinates:  [-122.1624, 37.201836] },
+        distanceField: &#34;distance&#34;,
+        maxDistance: 2000,
+        includeLocs: &#34;location&#34;,
+        num: 5,
+        spherical: true
+     }
+   }
+])
+</code></pre><p>The five images closest to a given point (within 200km) that were taken on distinct days.</p>
+<pre tabindex="0"><code>db.images.aggregate([
+   {
+     $geoNear: {
+        near: { type: &#34;Point&#34;, coordinates:  [-122.1624, 37.201836] },
+        distanceField: &#34;distance&#34;,
+        maxDistance: 200000,
+        includeLocs: &#34;location&#34;,
+        spherical: true
+     }
+   },
+   {
+       $group: { 
+            _id : { month: { $month: &#34;$datetime.utc_timestamp&#34; }, day: { $dayOfMonth: &#34;$datetime.utc_timestamp&#34; }, year: { $year: &#34;$datetime.utc_timestamp&#34; } },
+            distance: {$min: &#34;$distance&#34;},
+            image: {$first: &#34;$$CURRENT&#34;}
+        }
+   },
+   {
+       $sort: {&#34;distance&#34;: 1}
+   },
+   {
+       $limit: 5
+   }
+])
+</code></pre><p>Find the images that look most similar to a given image fingerprint:</p>
+<pre tabindex="0"><code>db.images.mapReduce(
+    function() {
+        var fingerprint_difference = 0;
+        var comparison_fingerprint = [0.468555122613907,
+            -0.353169769048691,
+            0.14241087436676,
+            -0.0821656882762909,
+            -0.0524195097386837,
+            -0.00935091450810432,
+            0.184520080685616,
+            0.164618194103241,
+            -0.0220650248229504,
+            0.0105008510872722,
+            -0.423288017511368,
+            0.207316115498543,
+            0.0272494424134493,
+            0.0,
+            -0.157153755426407,
+            0.149594604969025,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0281856469810009,
+            -0.0578242465853691,
+            0.0,
+            0.0,
+            0.0,
+            -0.106666743755341,
+            -0.285874038934708,
+            0.0,
+            0.00936079490929842,
+            0.229413896799088,
+            0.0659909546375275,
+            0.0145512670278549,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0268315020948648,
+            -0.0364695005118847,
+            0.0,
+            0.0,
+            0.030316386371851,
+            -0.26200807094574,
+            0.103866763412952,
+            0.03290805965662,
+            0.0,
+            -0.0890728309750557,
+            0.0108723239973187,
+            0.0231005717068911,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -0.0207184460014105,
+            0.0387163199484348,
+            0.0,
+            0.0,
+            0.0147460391744971,
+            0.191929057240486,
+            -0.0658795014023781,
+            -0.0100948391482234,
+            0.0,
+            -0.0628153160214424,
+            0.0,
+            0.0132519574835896
+        ];
+        
+        for (var i = 0; i &lt; this.syntactic_fingerprint.length; i++) {
+            fingerprint_difference += Math.pow(this.syntactic_fingerprint[i] - comparison_fingerprint[i],2);
+        }
+        
+        if (!(isNaN(fingerprint_difference))) {
+            emit(this._id, Math.sqrt(fingerprint_difference)); 
+        }
+    },
+    function(key, values) {
+        return values;    
+    },
+    {
+        query: {},
+        out: &#39;image_similarity&#39;
+    }
+);
+    
+db.image_similarity.find({}).sort({&#39;value&#39;: 1}).skip(1).limit(5);
+</code></pre></article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

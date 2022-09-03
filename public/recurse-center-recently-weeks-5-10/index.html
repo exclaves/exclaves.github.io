@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your site description">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Recurse Center - recently (Weeks 5-10)</title>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="/" title="posts">posts</a>
+            </li><li>
+                <a href="/about/" title="about">about</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Recurse Center - recently (Weeks 5-10)</h1>
+        <div>
+                <time>March 17, 2018</time>
+            </div>
+    </header><p>Besides the <a href="http://exclav.es/2018/03/15/recurse-center-workshops/">interactive art jam and Tidal Cycles live coding workshops</a>, I&rsquo;ve been up to a lot at Recurse Center recently.</p>
+<p>On Wednesday, I launched <a href="https://subject.space/projects-static/conceptquest/">Conceptquest</a>, an interactive hypertext adventure game based on navigating Conceptnet, a dataset of real world relations between concepts that I&rsquo;ve been fascinated by since I learned about it 18 months ago. Conceptquest is itself an evolution of a <a href="https://twitter.com/ConceptNetPoet">Twitter poetry bot</a> that I also created at RC a few weeks back. Conceptquest is built in <a href="github.com/loganwilliams/conceptquest">React</a>.</p>
+<p><img src="/uploads/2018/03/17/card_large.jpg" alt=""></p>
+<p>I also put a <a href="http://fog.today/nyc">pre-release version of a map of the realtime train positions on the NYC Subway</a> online. This is the first <a href="github.com/loganwilliams/where-are-the-trains">Golang backend</a> I&rsquo;ve written, and while it&rsquo;s simple, I&rsquo;ve learned a lot. The front end is built with React and Mapbox. This is also the first Dockerized application I&rsquo;ve built, but it certainly won&rsquo;t be the last — deployment on Digital Ocean was a breeze. I&rsquo;ve been hearing good things about <a href="https://github.com/dokku/dokku">dokku</a>, and I might try that with my next project.</p>
+<p><img src="/uploads/2018/03/17/screenshot.png" alt=""></p>
+<p>I&rsquo;m reading <a href="https://bigmachine.io/products/a-curious-moon">A Curious Moon</a> and learning a lot about Postgres and relational databases. This is helpful, as the next version of the realtime NYC Subway map is storing historic data in a Postgres database, so that I will be able to show historical and current statistics on subway train status.</p>
+<p>Speaking of reading, I&rsquo;ve been reading three important non-technical books as well. Rebecca Solnit&rsquo;s <em>Men Explain Things to Me</em> is one I&rsquo;ve meant to read for a while —  because it is an important work in the current moment, because I love Rebecca Solnit&rsquo;s writing, and because I know I have been guilty of explaining things to people that know the thing better than I do. The stand out essay in this collection was <em>Woolf&rsquo;s Darkness</em>, an unexpected celebration of the unknowable future and our unknowable, diverse, shapeshifting identities. (Had I not already been familiar with the titular essay, I likely would have found it to the stand out!) Of course, all of this is intertwined and contextualized through discussion of the way patriarchal societies have limited the freedom that women have to express and find joy in this unknowability.</p>
+<p>The second book is <em>The Color of Law</em>. I have never read a book with an introduction as important, clear, and powerful as this book. I normally hate book introductions, but my jaw dropped reading this. Read this book.</p>
+<p>The final (semi-technical) one is <em>The Real World of Technology</em>. Also read (or <a href="http://www.cbc.ca/radio/ideas/the-1989-cbc-massey-lectures-the-real-world-of-technology-1.2946845">listen</a>) to this. It&rsquo;s worthy of its own blog post that I&rsquo;ll maybe someday write.</p>
+<p>I built a new version of <a href="http://subject.space/">my portfolio website</a>, using Hugo instead of some custom Python scripts like I was using before. I&rsquo;m pretty happy with the Times New Roman 12pt aesthetic, but still trying to figure out if there&rsquo;s a way to better integrate my blog into it. At the same time, I don&rsquo;t want to sacrifice the freedom that I feel here to post and talk about half-baked projects and ideas.</p>
+<p><img src="/uploads/2018/03/17/Screen%20Shot%202018-03-17%20at%205.40.25%20PM.png" alt=""></p>
+<p>I discovered a bunch of small, unexpectedly named parks around NYC, and this inspired me to train a recurrent neural network on park names. People had fun guessing which parks were real and which were generated, so I <a href="https://subject.space/projects-static/parks-game/">made a game out of it</a>. This was a 24 hour project that I had a lot of fun building, though the code quality isn&rsquo;t the greatest. I gave a presentation on it, and want to upload these presentation slides and a side by side transcript to document them online too.</p>
+<p><img src="/uploads/2018/03/17/Screen%20Shot%202018-03-17%20at%205.47.34%20PM.png" alt=""></p>
+<p>I&rsquo;ve been reading <em>7 Languages in 7 Weeks</em>, and am spending the weekend on Prolog. It&rsquo;s been a great set of exercises for broadening my programming language familiarity. (Did you know Ruby as a True class and a False class, but no Boolean class?)</p>
+<p>I applied to be a Toolmaker-in-Residence at <a href="http://signalculture.org/">Signal Culture</a>, and was accepted! So I&rsquo;ll be there in April, continuing to work on tools for generating <a href="http://subject.space/projects/isometric-spacelapse/">Isometric Spacelapses</a>.</p>
+<p><img src="/uploads/2018/03/17/background.jpg" alt="Screenshot of isometric spacelapse"></p>
+<p>I wrote a talk proposal for !!Con, because it seemed like fun. I don&rsquo;t expect it to get selected, but it was my first time thinking about what I might talk about in a conference environment, and was a fun design exercise. If my bluff is called on this, however, things could get interesting.</p>
+<p><img src="/uploads/2018/01/29/perspectiveless.png" alt=""></p>
+<p>Speaking of fun design exercises, I participated in a hackathon on the topic of the L train mitigation last weekend. Our team was composed of a couple people with experience in marketing, and a couple open data and visualization enthusiasts. The hackathon itself was a bit confusing, as the transit and transportation parts of mitigating the shutdown seem pretty solidly figured out. But our team found a kind of clever way to re-interpret the shutdown as an opportunity for local economic development. Our unlikely idea won third place!</p>
+<p><img src="/uploads/2018/03/17/Screen%20Shot%202018-03-10%20at%208.05.20%20PM.png" alt=""></p>
+<p>I also met some people from the DOT there that I was able to connect with someone working on computer vision analysis of DOT traffic cameras.</p>
+<p>Alison, Leanne, Will and I applied to the Knight Foundation&rsquo;s Arts Prototyping Grant. I&rsquo;m also not really expecting to win this, but I think we came up with some interesting platform proposals for improving arts awareness and new gallery/payment paradigms for <em>in situ</em> net artists.</p>
+<p>I <a href="https://github.com/loganwilliams/mapbox-gl-js">forked Mapbox GL</a> to add real support for some of the FOV experimentation that I was doing. This still needs work into to avoid camera configurations that crash/severely slow the renderer.</p>
+<p>I fixed <a href="https://github.com/loganwilliams/Pyramids.jl">Pyramids.jl</a> to work with Julia 0.6. This was long overdue, for the three people that use(s/d) this library, I apologize!</p>
+<p>I finally wrote up some of the <a href="http://exclav.es/2018/03/16/property-values-and-the-wildland-urban-interface/">geographic exploration of property values, wealth, and wildfires in Southern California</a> that I was working on in December.</p>
+<p><img src="/uploads/2018/03/15/wui_la.png" alt=""></p>
+<p>I&rsquo;ve started working on figuring out jobs and such, and getting excited about what&rsquo;s coming up next. But this means that I might have to set down some of these projects in an unfinished state. At least loose ends make it easy to grab onto something when I come back!</p>
+<p>I&rsquo;m probably forgetting something I worked on over the past six weeks. It&rsquo;s been busy.</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>
