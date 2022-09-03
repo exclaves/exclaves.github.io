@@ -1,5 +1,6 @@
 ---
 title: More meteor
+date: 2016-05-24
 ---
 
 I expanded my Photo display React component to display groups of photos, and provide a user interface for expanding and contracting them.

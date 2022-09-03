@@ -1,5 +1,6 @@
 ---
 title: Remember the cat?
+date: 2016-05-19
 ---
 
 I woke up this morning to find that the freshly planted patch in the back of 1611's back yard had been completely dug up, and around the edges, suspiciously sized footprints.

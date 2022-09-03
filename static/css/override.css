@@ -193,3 +193,8 @@ details {
   .inaturalist img {
     transform: none !important;
   }
+
+  nav {
+    display: block !important;
+    margin-left: -1em;
+  }

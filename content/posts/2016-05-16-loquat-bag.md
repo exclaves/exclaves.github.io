@@ -1,5 +1,6 @@
 ---
 title: Loquat jam and a bag garden
+date: 2016-05-16
 ---
 
 What is a loquat? I wondered the same question

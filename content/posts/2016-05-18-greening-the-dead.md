@@ -1,5 +1,6 @@
 ---
 title: Greening the great dead patch
+date: 2016-05-18
 ---
 
 ![Tilling the soil](/images/IMG_4663.JPG)
