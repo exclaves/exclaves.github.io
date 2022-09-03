@@ -1,0 +1,44 @@
+{{ $id := index (last 1 (split (.Get 0) "/" )) 0 }}
+{{ $day := .Get 0 }}
+{{ $month := .Get 1 }}
+{{ $year := .Get 2 }}
+{{ $url := printf "https://api.inaturalist.org/v1/observations?user_login=loganw&day=%d&month=%d&year=%d&per_page=200&order=asc&order_by=observed_on" $day $month $year }}
+{{ $data := getJSON $url }}
+
+<div class="inatgroup">
+{{ range $index, $result := $data.results }}
+    {{ $taxon := $result.taxon }}
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            {{ $taxon.preferred_common_name }} <span>({{ $taxon.name }})</span>
+            </div>
+            <div class="right">
+                {{ if (eq $result.quality_grade "research") }}
+                    ✅
+                {{ end }}
+            </div>
+        </div>
+
+        <a href="{{ replace (index $result.observation_photos 0).photo.url "square" "original" }}">
+            <img src="{{ replace (index $result.observation_photos 0).photo.url "square" "medium" }}" />
+        </a>
+
+        <a href="{{ $result.uri }}">
+            <div class="details">
+                <div class="left">
+                    <div class="date">{{ $result.observed_on_string }}</div>
+                    <div class="location">
+                        {{ $result.place_guess }}</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">{{ $taxon.iconic_taxon_name }}</div>
+                    <div class="ids">{{ $result.identifications_count }} IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+{{ end }}
+</div>

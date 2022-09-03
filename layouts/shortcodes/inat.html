@@ -1,0 +1,38 @@
+{{ $id := index (last 1 (split (.Get 0) "/" )) 0 }}
+{{ $url := printf "https://api.inaturalist.org/v1/observations/%s" $id }}
+{{ $data := getJSON $url }}
+{{ $result := index $data.results 0}}
+{{ $taxon := $result.taxon }}
+
+<div class="inaturalist">
+    <div class="title">
+        <div class="left">
+            {{ $taxon.preferred_common_name }} <span>({{ $taxon.name }})</span>
+            </div>
+            <div class="right">
+                {{ if (eq $result.quality_grade "research") }}
+                    ✅
+                {{ end }}
+            </div>
+    </div>
+
+    <a href="{{ replace (index $result.observation_photos 0).photo.url "square" "original" }}">
+        <img src="{{ replace (index $result.observation_photos 0).photo.url "square" "large" }}" />
+    </a>
+
+    <a href="{{ $result.uri }}">
+        <div class="details">
+            <div class="left">
+                <div class="date">{{ $result.observed_on_string }}</div>
+                <div class="location">
+                    {{ $result.place_guess }}</span>
+                </div>
+            </div>
+            <div class="right">
+                <div class="iconic">{{ $taxon.iconic_taxon_name }}</div>
+                <div class="ids">{{ $result.identifications_count }} IDs</div>
+            </div>
+        </div>
+    </a>
+
+</div>
