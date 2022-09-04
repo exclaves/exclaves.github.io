@@ -3,7 +3,7 @@ title: Distorting a journey onto a time axis
 date: 2016-07-20
 ---
 
-Yesterday, I talked about how to [build a custom map project in proj.4 and mapnik]({{ site.baseurl }}{% post_url 2016-07-19-custom-map-projection %}). I started this project, because I wanted to "unfold" a geographic journey, so that one axis was temporal, and the other was spatial.
+Yesterday, I talked about how to [build a custom map project in proj.4 and mapnik](/2016/07/19/beginning-to-make-a-custom-map-projection-with-mapnik-and-proj.4/). I started this project, because I wanted to "unfold" a geographic journey, so that one axis was temporal, and the other was spatial.
 
 Before I started messing around with Proj.4, I created a quick demo of this by stretching a raster map image. However, this had legibility issues as it stretched the text, roadway widths, etc.
 

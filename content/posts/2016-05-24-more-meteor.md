@@ -13,7 +13,7 @@ I also added a date widget, and got pagination, subscriptions, and routing figur
 
 Seriously, it was super easy. I can probably handle parsing and changing the dates in a slightly more elegant way though.
 
-{% highlight javascript %}
+```
 FlowRouter.route('/timeline/:date', {
 	name: 'timeline',
 	subscriptions: function(params) {
@@ -28,7 +28,7 @@ FlowRouter.route('/timeline/:date', {
 		mount(App, {date: moment(params.date)})
 	}
 });
-{% endhighlight %}
+```
 
 ---
 

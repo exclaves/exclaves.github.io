@@ -26,11 +26,11 @@ In this way, the algorithm computes a consistent, unwrapped phase for each pixel
 
 Now, let's look at how to implement this algorithm in Julia. First, we will include the libraries we will need, define a new pyramid type that we will use to denote a pyramid containing image phase alone.
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b setup.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b setup.jl >}}
 
 Next, we must load the images that we will be interpolating between ("frame_0.jpg" and "frame_1.jpg"), extract just the luminance component by converting the image to [Lab color space](https://en.wikipedia.org/wiki/Lab_color_space) and generate a complex steerable pyramid using the ```ImagePyramid``` constructor. Note that unlike traditional complex steerable pyramids, we are using a scale factor > 0.5, which results in a significantly over complete basis. This has been shown to produce significantly higher quality results for this and similar algorithms.
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b loading.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b loading.jl >}}
 
 This accomplishes the step I have labeled "A" in the algorithm overview above.
 
@@ -38,7 +38,7 @@ This accomplishes the step I have labeled "A" in the algorithm overview above.
 
 The next significant step, labeled "B" simply requires computing the difference in phase between each pixel of two pyramids. This looks like the following:
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b phase_difference.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b phase_difference.jl >}}
 
 This simply iterates through each level of the two input pyramids, and create a third pyramid (of type ```PhasePyramid```) which stores the difference in phase.
 
@@ -46,7 +46,7 @@ This simply iterates through each level of the two input pyramids, and create a 
 
 The next step is labeled "C," and is the most significant part of the algorithm. Here, we will use phase information from larger spatial scales of the image in order to resolve phase ambiguities at higher levels. Let's take a look.
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b shift_correction.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b shift_correction.jl >}}
 
 Notice that the phase of each level is scaled by the pyramid scale factor, as well as interpolated to match the number of pixels. Also note that anything that hints at ambiguity or inaccuracy (phase shifts too large or phase shifts that don't match larger spatial scales) results in falling back on the phase shift of the larger spatial scale.
 
@@ -54,19 +54,19 @@ Notice that the phase of each level is scaled by the pyramid scale factor, as we
 
 The last significant step in the algorithm, "D," requires adjusting the corrected phase to ensure consistency with the original calculated phase delta. Analogous to how we unwrapped the phase in ```shift_correction```, we will add or subtract factors of 2π in order to produce a phase shift consistent with the original value but as close as possible to the corrected one.
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b adjust_phase.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b adjust_phase.jl >}}
 
 ### Interpolating and blending pyramids
 
 With the new, unwrapped phase difference computed, we are now able to compute the interpolated complex steerable pyramid. The pyramid amplitudes are interpolated linearly between the two pyramids, and the phase is of course the original phase + alpha * the unwrapped phase difference. To avoid ghosting, a single high frequency phase residual is used only.
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b blend_and_interpolate.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b blend_and_interpolate.jl >}}
 
 ### Rendering output
 
 Finally, we produce our output image. Notice that only the luminance channel uses the phase based interpolation method -- simpler, significantly faster linear interpolation suffices for the chrominance channels, as our visual system is far less sensitive to issues like ghosting and sharpness loss in these channels.
 
-{% gist 14027cab9c57ef5286f7eda3794d1f8b generate_output.jl %}
+{{< gist loganwilliams 14027cab9c57ef5286f7eda3794d1f8b generate_output.jl >}}
 
 ## Results
 

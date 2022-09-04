@@ -9,25 +9,25 @@ I manually compiled proj.4 from downloaded source code.
 
 I edited the Homebrew formula for mapnik2 (couldn't get it to work with mapnik 3) so that it would link the version of proj.4 I just compiled by setting the location of these libraries to where proj.4 ```make install``` puts them and not where Homebrew expects them:
 
-{% highlight bash %}
+```
 "PROJ_INCLUDES=/usr/local/proj/include",
 "PROJ_LIBS=/usr/local/proj/lib",
-{% endhighlight %}
+```
 
 Then I compiled and installed mapnik, using the cairo option because that seems to be the only way to get Homebrew to compile it/relink the proj.4 plibraries. Since the python driver for mapnik was always looking for the libraries in the same location, this will just work -- but I need to force Python to reload them, which seems to require restarting the Python kernel. 
 
 Finally, if you try to load OSM data with this custom-built mapnik, you'll get an error like the following:
 
 
-{% highlight bash %}
+```
 RuntimeError: Could not create datasource for type: 'osm'  encountered during parsing of layer 'building' in Layer at line 40 of 'mapnik_style.xml'
-{% endhighlight %}
+```
 
 This can be fixed by adding ```"INPUT_PLUGINS=osm"``` to the list of arguments used by ```scons```.
 
 ### The final mapnik2.rb formula
 
-{% highlight ruby %}
+```
 class Mapnik2 < Formula
   desc "Toolkit for developing mapping applications"
   homepage "http://www.mapnik.org/"
@@ -138,13 +138,13 @@ index 0520132..4897c28 100644
      }
 
      /* TODO: Add constructor taking variable number of arguments.
-{% endhighlight %}
+```
 
 ## Writing a custom map projection
 
 Proj.4 has many source files, prefixed with PJ_ that are used to convert coordinates from spherical or ellipsoidal points into rectangular ones. As an example, below is the source code to the Mercator implementation, PJ_merc.c:
 
-{% highlight c %}
+```
 #define PJ_LIB__
 #include	<projects.h>
 PROJ_HEAD(merc, "Mercator") "\n\tCyl, Sph&Ell\n\tlat_ts=";
@@ -192,13 +192,13 @@ ENTRY0(merc)
 		P->fwd = s_forward;
 	}
 ENDENTRY(P)
-{% endhighlight %}
+```
 
 Note the use of function definition compiler macros. Also note that the coordinates returned (`(xy)`) are somewhat arbitrary -- they seem to vary dramatically from projection to projection.
 
 Let's try dividing the output x coordinate by two. One condition that proj.4/mapnik does enforce is a 1:1 aspect ratio between x and y, so this should compress the output image. Note that we had to multiply it by two in the inverse functions as well.
 
-{% highlight c %}
+```
 #define PJ_LIB__
 #include	<projects.h>
 PROJ_HEAD(merc, "Mercator") "\n\tCyl, Sph&Ell\n\tlat_ts=";
@@ -246,31 +246,30 @@ ENTRY0(merc)
 		P->fwd = s_forward;
 	}
 ENDENTRY(P)
-{% endhighlight %}
+```
 
 ## Compiling
 
 First, in the proj.4 directory, run
 
-{% highlight bash %}
+```
 make
 make install
-{% endhighlight %}
-
+```
 Then rebuild mapnik to relink the proj.4 (maybe there's a better way of doing this?):
 
-{% highlight bash %}
+```
 brew uninstall homebrew/versions/mapnik2
 brew install homebrew/versions/mapnik2 --with-cairo
-{% endhighlight %}
+```
 
 ## Using the new map projection
 
 In your mapnik XML stylesheet, set the projection like so (this corresponds to web mercator):
 
-{% highlight xml %}
+```
 <Map background-color="#f2efe9" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs">
-{% endhighlight %}
+```
 
 With the original PJ_merc.c:
 

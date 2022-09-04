@@ -7,7 +7,7 @@ date: 2016-12-17
 
 Wrote a little Python (too) late lastnight to scrape and munge some tide station data from NOAA:
 
-{% gist bf97f5422ef758b7d941b562419c810b %}
+{{< gist loganwilliams bf97f5422ef758b7d941b562419c810b >}}
 
 The result:
 

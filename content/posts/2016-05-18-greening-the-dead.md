@@ -11,7 +11,7 @@ date: 2016-05-18
 
 > An early girl tomato starter, fresh in the ground.
 
-Today, I also discovered that the soil we used to start the [bag garden]({% post_url 2016-05-16-loquat-bag %}) was not the right type of soil for planting seeds, and that it needed to be mixed 50-50 with topsoil from a bag or from the ground. Perhaps the fact that the soil was called "amend" should have been a tip-off.
+Today, I also discovered that the soil we used to start the [bag garden](/2016/05/16/loquat-jam-and-a-bag-garden/) was not the right type of soil for planting seeds, and that it needed to be mixed 50-50 with topsoil from a bag or from the ground. Perhaps the fact that the soil was called "amend" should have been a tip-off.
 
 So, Alison and I replanted the bag garden this morning, which was slightly annoying, but will hopefully result in a better outcome.
 

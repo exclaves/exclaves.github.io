@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Alta Via Une
-date: 2022-08-31 00:00:00 +0000
+date: 2022-09-04 00:00:00 +0000
 ---
 
-159 species documented on iNaturalist, over 258 observations. You see a lot when you're in the mountains for 12 days. Especially when you walk slow. Or maybe the causation is the other way around. :)
+186 species documented on iNaturalist, over 317 observations. You see a lot when you're in the mountains for 12 days. Especially when you walk slow. Or maybe the causation is the other way around. :)
 
 Scroll through for vistas and highlights, or click "All organisms" to see all of my iNaturalist posts for that day.
 
