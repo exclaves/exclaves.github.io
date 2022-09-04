@@ -7,7 +7,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  description = "Your site description"
+  description = "in progress. blog of Logan Williams/subject.space."
   copyright = "Logan Williams"
   dark = "auto"
   highlight = true
