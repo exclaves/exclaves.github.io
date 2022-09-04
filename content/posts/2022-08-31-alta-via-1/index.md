@@ -12,7 +12,7 @@ Scroll through for vistas and highlights, or click "All observations" to see all
 
 #### Notes
 
-Lake Instagram. An introduction to gravel. Rock shelters in the rain. Thunderstorms and snail time. Ibex on the ridge. Wet lads, adrift in fog.
+Lake Instagram. An introduction to gravel. Rock shelters in the rain. Thunderstorms and snail time. Ibex on the ridge. Wet lads, adrift in fog. Transcontinental caterpillar livestream.
 
 #### Vistas
 
@@ -40,7 +40,7 @@ Lake Instagram. An introduction to gravel. Rock shelters in the rain. Thundersto
 
 #### Notes
 
-Sheep crossing. A hidden cave.
+Sheep crossing. A <s>hidden</s>very visible cave. Shelter in a thunderstorm as a drawing becomes worse and worse and worse and... better?
 
 #### Vistas
 
@@ -77,7 +77,7 @@ Sheep crossing. A hidden cave.
 
 #### Notes
 
-Intermediate gravel. Dippers: the smallest waterfowl. A visit to the Marmot Parliament. I hiked to the highest craft brewery in Europe and all I got was this New England IPA. Frogless in Fanes. Baby marmot sunset rainbow... too much.
+Intermediate gravel. Dippers: the smallest waterfowl. A visit to the Marmot Parliament. Fissures in the rocks and each one with a tiny perfect garden inside. "I hiked to the highest craft brewery in Europe and all I got was this New England IPA." Frogless in Fanes. Baby marmot sunset rainbow... too much.
 
 #### Vistas
 
@@ -148,8 +148,7 @@ Intermediate gravel. Dippers: the smallest waterfowl. A visit to the Marmot Parl
 
 #### Notes
 
-A nice pass. Fish that nibble your feet. Family picnic. So many people. Running out on dinner for a sunset. Dry eyes. Dry throat.
-
+Logan sees his dream horse. A nice pass. Fish that nibble your feet. Family picnic. So many people. We finally learn how to say "Chough." Running out on dinner for a sunset. Dry eyes. Dry throat.
 
 #### Vistas
 
@@ -159,7 +158,11 @@ A nice pass. Fish that nibble your feet. Family picnic. So many people. Running 
 {{< img "day-4/DSCF2554.jpg" >}}
 </div>
 
+<div class="multi" style="filter: brightness(120%); width: 80%; margin-left: 11%;">
 {{< img "day-4/DSCF2505.jpg" >}}
+</div>
+
+{{< img "day-4/IMG_0909.jpg" >}}
 
 <div class="multi">
 {{< img "day-4/DSCF2608.jpg" >}}
@@ -181,7 +184,11 @@ A nice pass. Fish that nibble your feet. Family picnic. So many people. Running 
 
 <div class="multi">
 {{< img "day-4/DSCF3019.jpg" >}}
+{{< img "day-4/IMG_0925.jpg" >}}
+{{< img "day-4/IMG_0930.jpg" >}}
+</div>
 
+<div class="multi">
 {{< img "day-4/DSCF2970.jpg" >}}
 {{< img "day-4/DSCF2987.jpg" >}}
 </div>
@@ -245,7 +252,7 @@ A nice pass. Fish that nibble your feet. Family picnic. So many people. Running 
 
 #### Notes
 
-The longest day planned. The trails full of school groups. Desperation. Outrunning the children. Mi scusi. Permeso. Finally, offtrail and into the paleolithic. A hutkeeper gathers dock leaves in the late afternoon sun. Shower and laundry.
+The longest day planned. The trails full of school groups. Desperation. Outrunning the children. Mi scusi. Permeso. Zooming in on plantains with the hand lens. Plantago — worth a second look! Finally, offtrail and into the paleolithic. A hutkeeper gathers dock leaves in the late afternoon sun. Shower and laundry.
 
 #### Vistas
 
@@ -338,7 +345,7 @@ Dinosaur footprints. Friends at the footprints! Cappucinos in the rain at the sk
 
 #### Notes
 
-Slowing and down and zooming in, but more. Also, more smoked ricotta. Alaska the cat. A great botanic garden. Crocs at sunset.
+Becoming the marmot ambassador. Slowing and down and zooming in, but more. Also, more smoked ricotta. Alaska the cat. A great botanic garden. Crocs at sunset.
 
 #### Vistas
 
@@ -386,7 +393,7 @@ Slowing and down and zooming in, but more. Also, more smoked ricotta. Alaska the
 
 #### Notes
 
-A wild goose chase, and eventually, a wild goose. And also, even more devil's claw. High stakes gaming.
+A wild goose chase, and eventually, a wild goose. And also, even more devil's claw. Advanced Italian, precocious child edition. Art restoration. High stakes gaming.
 
 #### Vistas
 
@@ -400,6 +407,7 @@ A wild goose chase, and eventually, a wild goose. And also, even more devil's cl
 {{< img "day-9/DSCF4665.jpg" >}}
 {{< img "day-9/DSCF4674.jpg" >}}
 </div>
+{{< img "day-9/IMG_1019.jpg" >}}
 <div class="multi">
 {{< img "day-9/DSCF4847.jpg" >}}
 {{< img "day-9/DSCF4939.jpg" >}}
@@ -430,7 +438,7 @@ A wild goose chase, and eventually, a wild goose. And also, even more devil's cl
 
 #### Notes
 
-Alison sees her dream horse. Cheese. A wild goose chase but no goose. Some stumbling. Hot dogs for dinner. The tables are cleaned with grappa here.
+Alison sees her dream horse, circa 1998. Cheese. A wild goose chase but no goose. Some stumbling. Hot dogs for dinner. The tables are cleaned with grappa here.
 
 #### Vistas
 <div class="multi">
@@ -472,7 +480,7 @@ Alison sees her dream horse. Cheese. A wild goose chase but no goose. Some stumb
 
 #### Notes
 
-One last shot at the wild goose. The departure of our friends. Coffee is nothing but trouble. Wales advice.
+One last shot at the wild goose. Coffee is nothing but trouble. The departure of our friends. No goose, but found a silent cuckoo. Horizontal grass and expert excursionists. A dinnertime introduction to Wales.
 
 #### Vistas
 
@@ -538,16 +546,24 @@ Swallows off-land. Off-soil. Off-shore but from a the edge of a mountain, into f
 {{< img "day-12/DSCF5943.jpg" >}}
 {{< img "day-12/DSCF5972.jpg" >}}
 </div>
+{{< img "day-12/IMG_1080.jpg" >}}
 {{< img "day-12/DSCF6028.jpg" >}}
 <div class="multi">
 {{< img "day-12/DSCF6019.jpg" >}}
 {{< img "day-12/DSCF6020.jpg" >}}
 </div>
+<div class="multi" style="width: 80%; margin-left: 11%;">
 {{< img "day-12/DSCF6217.jpg" >}}
+</div>
 <div class="multi">
 {{< img "day-12/DSCF6269.jpg" >}}
 {{< img "day-12/DSCF6283.jpg" >}}
 </div>>
+
+<div class="multi">
+{{< img "day-12/IMG_1088.jpg" >}}
+{{< img "day-12/IMG_1156.jpg" >}}
+</div>
 
 #### Observation highlights
 
