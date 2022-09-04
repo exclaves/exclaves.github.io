@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Alta Via Une
+title: Alta via n. 1
 date: 2022-09-04 00:00:00 +0000
 ---
 
 186 species documented on iNaturalist, over 317 observations. You see a lot when you're in the mountains for 12 days. Especially when you walk slow. Or maybe the causation is the other way around. :)
 
-Scroll through for vistas and highlights, or click "All organisms" to see all of my iNaturalist posts for that day.
+Scroll through for vistas and highlights, or click "All observations" to see all of my iNaturalist posts for that day.
 
 ## August 6th: Lago di Braies to Rifugio Biella
 
@@ -30,7 +30,7 @@ Lake Instagram. An introduction to gravel. Rock shelters in the rain. Thundersto
 {{< inat "https://www.inaturalist.org/observations/132057993" >}}
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 6 8 2022 >}}
 </div>
@@ -67,7 +67,7 @@ Sheep crossing. A hidden cave.
 {{< inat "https://www.inaturalist.org/observations/132110208" >}}
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 7 8 2022 >}}
 </div>
@@ -115,10 +115,10 @@ Intermediate gravel. Dippers: the smallest waterfowl. A visit to the Marmot Parl
 
 {{< img "day-3/DSCF2486.jpg" >}}
 
-#### Organisms of note
+#### observations of note
 
 <div class="multi">
-<video style="max-width:100%" controls>
+<video style="max-width:100%" controls preload="metadata">
 <source src="/videos/dipper.mp4" tyoe="video/mp4"/>
 </video>
 </div>
@@ -138,7 +138,7 @@ Intermediate gravel. Dippers: the smallest waterfowl. A visit to the Marmot Parl
 </div>
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 8 8 2022 >}}
 </div>
@@ -201,7 +201,7 @@ A nice pass. Fish that nibble your feet. Family picnic. So many people. Running 
 </div>
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 9 8 2022 >}}
 </div>
@@ -226,7 +226,7 @@ A nice pass. Fish that nibble your feet. Family picnic. So many people. Running 
 </div>
 
 
-#### Organisms of note
+#### observations of note
 
 {{< inat "https://www.inaturalist.org/observations/132057994" >}}
 <div class="multi">
@@ -235,7 +235,7 @@ A nice pass. Fish that nibble your feet. Family picnic. So many people. Running 
 </div>
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 10 8 2022 >}}
 </div>
@@ -280,7 +280,7 @@ The longest day planned. The trails full of school groups. Desperation. Outrunni
 {{< inat "https://www.inaturalist.org/observations/132327332" >}}
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 11 8 2022 >}}
 </div>
@@ -317,7 +317,7 @@ Dinosaur footprints. Friends at the footprints! Cappucinos in the rain at the sk
 #### Observation highlights
 
 <div class="multi">
-<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" controls>
+<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" preload="metadata" controls>
 <source src="/videos/salamander.mp4" tyoe="video/mp4"/>
 </video>
 </div>
@@ -328,7 +328,7 @@ Dinosaur footprints. Friends at the footprints! Cappucinos in the rain at the sk
 </div>
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 12 8 2022 >}}
 </div>
@@ -365,7 +365,7 @@ Slowing and down and zooming in, but more. Also, more smoked ricotta. Alaska the
 #### Observations of note
 
 <div class="multi">
-<video style="max-width:100%" controls>
+<video style="max-width:100%" preload="metadata" controls>
 <source src="/videos/marmots.mp4" tyoe="video/mp4"/>
 </video>
 </div>
@@ -376,7 +376,7 @@ Slowing and down and zooming in, but more. Also, more smoked ricotta. Alaska the
 </div>
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 13 8 2022 >}}
 </div>
@@ -408,7 +408,7 @@ A wild goose chase, and eventually, a wild goose. And also, even more devil's cl
 #### Observation highlights
 
 <div class="multi">
-<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" controls>
+<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" preload="metadata" controls>
 <source src="/videos/wallcreeper.mp4" tyoe="video/mp4"/>
 </video>
 </div>
@@ -420,7 +420,7 @@ A wild goose chase, and eventually, a wild goose. And also, even more devil's cl
 
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 14 8 2022 >}}
 </div>
@@ -462,7 +462,7 @@ Alison sees her dream horse. Cheese. A wild goose chase but no goose. Some stumb
 </div>
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 15 8 2022 >}}
 </div>
@@ -500,7 +500,7 @@ One last shot at the wild goose. The departure of our friends. Coffee is nothing
 #### Observations of note
 
 <div class="multi">
-<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" controls>
+<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" preload="metadata" controls>
 <source src="/videos/vole2.mp4" tyoe="video/mp4"/>
 </video>
 </div>
@@ -512,14 +512,14 @@ One last shot at the wild goose. The departure of our friends. Coffee is nothing
 </div>
 
 <div class="multi">
-<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" controls>
+<video style="max-width:100%; margin-top: 1em; margin-bottom: 0.5em;" preload="metadata" controls>
 <source src="/videos/marmot2.mp4" tyoe="video/mp4"/>
 </video>
 </div>
 
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 16 8 2022 >}}
 </div>
@@ -566,7 +566,7 @@ Swallows off-land. Off-soil. Off-shore but from a the edge of a mountain, into f
 
 
 <details>
-<summary>All organisms</summary>
+<summary>All observations</summary>
 <div class="content">
 {{< inatday 17 8 2022 >}}
 </div>
