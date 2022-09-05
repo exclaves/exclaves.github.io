@@ -588,5 +588,6 @@ Swallows off-land. Off-soil. Off-shore but from a the edge of a mountain, into f
 </div>
 </details>
 
+# Route map
 
-</div>
+{{< img "route-map.jpg" >}}

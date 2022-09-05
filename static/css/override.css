@@ -13,6 +13,7 @@
 img {
   border-radius: 1px
 }
+
 .inaturalist .details:hover {
     background-color: #eee;
     cursor: pointer;
