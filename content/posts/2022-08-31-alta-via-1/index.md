@@ -562,7 +562,7 @@ Swallows off-land. Off-soil. Off-shore but from a the edge of a mountain, into f
 <div class="multi">
 {{< img "day-12/DSCF6269.jpg" >}}
 {{< img "day-12/DSCF6283.jpg" >}}
-</div>>
+</div>
 
 <div class="multi">
 {{< img "day-12/IMG_1088.jpg" >}}
