@@ -216,6 +216,10 @@ Logan sees his dream horse. A nice pass. Fish that nibble your feet. Family picn
 
 ## August 10th: ...to Rifugio Averau
 
+#### Notes
+
+Screaming marmots and the ruins of World War 1 trenches. People disappear inside Tofana until goats distract.
+
 {{< img "day-5/DSCF3139.jpg" >}}
 {{< img "day-5/DSCF3181.jpg" >}}
 
@@ -591,3 +595,187 @@ Swallows off-land. Off-soil. Off-shore but from a the edge of a mountain, into f
 # Route map
 
 {{< img "route-map.jpg" >}}
+
+# The approximate location of every photograph I took
+
+A quick visualization of where photos were captured. Color indicates time of day.
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-tile@1"></script>
+<svg width="900" height="2400" viewBox="0 0 900 2400"></svg>
+<script>
+let width = 900;
+let height = 2400;
+
+d3.json("/av1-viz/nodes.json").then((nodes) => {
+    nodes.push({ x: 0, y: 0, origx: 0, origy: 0, type: "cursor" });
+    nodes = nodes.map((n) => ({ ...n, presetx: n.x, presety: n.y }));
+
+    let ex = {
+        type: "FeatureCollection",
+        features: [
+        {
+            type: "Feature",
+            properties: {},
+            geometry: {
+            type: "Point",
+            coordinates: [12.084274291992188, 46.68995749641134],
+            },
+        },
+        {
+            type: "Feature",
+            properties: {},
+            geometry: {
+            type: "Point",
+            coordinates: [12.1343994140625, 46.205497711275896],
+            },
+        },
+        {
+            type: "Feature",
+            properties: {},
+            geometry: {
+            type: "Point",
+            coordinates: [12.005996704101562, 46.53146906088904],
+            },
+        },
+        {
+            type: "Feature",
+            properties: {},
+            geometry: {
+            type: "Point",
+            coordinates: [12.08667755126953, 46.711854633749816],
+            },
+        },
+        ],
+    };
+
+    let projection = d3.geoMercator().fitSize([width, height], ex);
+
+    let tile = d3
+        .tile()
+        .size([width, height])
+        .scale(projection.scale() * 2 * Math.PI)
+        .translate(projection([0, 0]));
+
+    let url = (x, y, z) =>
+        `https://tile.openstreetmap.org/${z}/${x}/${y}.png`;
+
+    let url_hs = (x, y, z) =>
+        `https://caltopo.com/tile/hs_m315z45s3/${z}/${x}/${y}.png`;
+
+    let mappedTile = tile().map(([x, y, z], i) => ({
+        x,
+        y,
+        z,
+        i,
+        tx: tile().translate[0],
+        ty: tile().translate[1],
+        k: tile().scale,
+    }));
+
+    d3.select("svg")
+        .append("g")
+        .attr("class", "osm")
+        .selectAll("image")
+        .data(mappedTile)
+        .enter()
+        .append("image")
+        .attr("xlink:href", (d) => url(d.x, d.y, d.z))
+        .attr("x", (d) => (d.x + d.tx) * d.k)
+        .attr("y", (d) => (d.y + d.ty) * d.k)
+        .attr("width", (d) => d.k)
+        .attr("height", (d) => d.k);
+
+    d3.select("svg")
+        .append("g")
+        .attr("class", "hillshade")
+        .attr("style", "mix-blend-mode: multiply; opacity: 0.3")
+        .selectAll("image")
+        .data(mappedTile)
+        .enter()
+        .append("image")
+        .attr("xlink:href", (d) => url_hs(d.x, d.y, d.z))
+        .attr("x", (d) => (d.x + d.tx) * d.k)
+        .attr("y", (d) => (d.y + d.ty) * d.k)
+        .attr("width", (d) => d.k)
+        .attr("height", (d) => d.k);
+
+    let dateScale = d3
+        .scaleLinear()
+        .domain([
+        10000, 80000
+        ])
+        .range([0.8, 0]);
+
+    var simulation = d3
+        .forceSimulation()
+        .force("collide", d3.forceCollide(1.75))
+        .force(
+        "x",
+        d3
+            .forceX((d) => d.origx)
+            .strength((d) => (d.type == "cursor" ? 0 : 0.05))
+        )
+        .force(
+        "y",
+        d3
+            .forceY((d) => d.origy)
+            .strength((d) => (d.type == "cursor" ? 0 : 0.05))
+        )
+        .force(
+        "manyBody",
+        d3
+            .forceManyBody()
+            .strength((d) => (d.type == "cursor" ? -40 : 0))
+            .distanceMax(150)
+        );
+
+    d3.select("svg").on("mouseenter", () => {
+        simulation.restart();
+    });
+
+    d3.select("svg").on("mouseleave", () => {
+        simulation.stop();
+        d3.selectAll("circle")
+        .transition()
+        .duration(1000)
+        .attr("cx", (d) => d.presetx)
+        .attr("cy", (d) => d.presety)
+        .attr("r", 2)
+        .style("fill", (d) => d3.interpolateMagma(dateScale(d.seconds)));
+
+        nodes.forEach((n) => {
+        n.x = n.presetx;
+        n.y = n.presety;
+        });
+    });
+
+    d3.select("svg").on("mousemove", (e) => {
+        simulation.alpha(0.3);
+        let m = d3.pointer(e);
+        nodes[nodes.length - 1].x = m[0];
+        nodes[nodes.length - 1].y = m[1];
+        nodes[nodes.length - 1].origx = m[0];
+        nodes[nodes.length - 1].origy = m[1];
+    });
+
+    var node = d3
+        .select("svg")
+        .selectAll("circle")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr("cx", (d) => d.x)
+        .attr("cy", (d) => d.y)
+        .attr("r", 2)
+        .style("fill", (d) => d3.interpolateMagma(dateScale(d.seconds)))
+        .style("opacity", (d) => (d.type == "cursor" ? 0 : 1));
+
+    simulation.nodes(nodes).on("tick", ticked).stop();
+
+    function ticked() {
+        node.attr("cx", (d) => d.x);
+        node.attr("cy", (d) => d.y);
+    }
+});
+</script>
