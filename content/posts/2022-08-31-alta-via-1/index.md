@@ -2,6 +2,7 @@
 layout: post
 title: Alta via n. 1
 date: 2022-09-04 00:00:00 +0000
+images: [/2022/09/04/alta-via-n.-1/day-4/DSCF3121_hu0c6814adc003d2544989bf4c1d32a1d5_2566264_1800x1800_fit_q75_box.jpg]
 ---
 
 186 species documented on iNaturalist, over 317 observations. You see a lot when you're in the mountains for 12 days. Especially when you walk slow. Or vice versa.

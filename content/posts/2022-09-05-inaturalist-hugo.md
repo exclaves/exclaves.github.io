@@ -1,6 +1,7 @@
 ---
 title: iNaturalist shortcode for Hugo
 date: 2022-09-05
+images: [https://inaturalist-open-data.s3.amazonaws.com/photos/80478157/large.jpeg]
 ---
 
 For my recent post about the [Alta Via 1](/2022/09/04/alta-via-n.-1/), I wanted to integrate iNaturalist observations. To make this easier, I made a Hugo shortcode that calls the iNaturalist API and renders an observation in detail automatically.
