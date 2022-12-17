@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Building a terrarium for my orchids
-date: 2022-12-16 00:00:00 +0000
+title: Building a terrarium for the orchids
+date: 2022-12-17 00:00:00 +0000
+images: [/2022/12/17/building-a-terrarium-for-the-orchids/assets/DSCF7357.jpg]
 ---
 
 ![](assets/DSCF7357.jpg)
