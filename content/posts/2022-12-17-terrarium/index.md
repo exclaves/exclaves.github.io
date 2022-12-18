@@ -5,6 +5,8 @@ date: 2022-12-17 00:00:00 +0000
 images: [/2022/12/17/building-a-terrarium-for-the-orchids/assets/DSCF7357.jpg]
 ---
 
+![](assets/IMG_1840.jpg)
+
 ![](assets/DSCF7357.jpg)
 
 ![](assets/DSCF7346.jpg)
