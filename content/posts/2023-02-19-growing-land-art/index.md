@@ -7,7 +7,7 @@ images: [/2023/02/19/growing-land-art/assets/1670154009_13.jpg]
 
 Land artists often practice a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert and James Turrell's preternaturally manicured impact craters. Or consider the abandoned construction site aesthetic of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped Coast*. These are less site specific installations than sculptures which happen to be site in a desert or along a coastline. At best the landscape is a pretty backdrop, and at worst it is ignored or disrespected.
 
-Contemporaneously, some land artists in Britain and Western Europe practiced a different method of collaborating with landscape. However their methods presented certain challenges to conservation —- and access.
+Contemporaneously, some land artists in Britain and Western Europe practiced a different method of collaborating with landscape. However their methods presented certain challenges to conservation — and access.
 
 And so, I squint sunwards in the drought dust day of a Dutch pine forest in July. Amidst the terpenes and sand, I try to see if any of these trees are unnaturally bent or distorted. There are many, many trees. The closer I gaze, the more possible twists, a moiré beat frequency of shimmering vertical lines.
 
@@ -59,20 +59,20 @@ What are the conservation notes for such a piece? Did they anticipate the destru
 
 - - - 
 
-A few minutes cycling later, and I am at the location of the other officially-still-extant piece, *Pine Wall* by Sjoerd Buisman. Originally consisting of a line of pine trees with alternately bent trunks, it now has a single surviving tree. Another, dead, still stands. This is down from 4 as of the 2021 publication of *Gids voor Land Art in Nederland*.
+A few minutes cycling later, and I am at the location of the other officially-still-extant piece, *Pine Wall* by Sjoerd Buisman. Originally consisting of a line of pine trees with alternately bent trunks, it now has a single surviving tree. Another, dead, still stands. This is down from four as of the 2021 publication of *Gids voor Land Art in Nederland*.
 
 <div style="width: 60%; margin-left: auto; margin-right: auto;">
 
 {{< img "assets/IMG_0700.jpg" "a scan from a book with photographs of Pine Wall showing 4 standing trees" >}}
 </div>
 
-The other trees have been left where they fell, their bases still bent in the same characteristic way. A sculptural boneyard.
+The other trees have been left where they fell in the boneyard, their bases distinctively deformed.
 
 {{< img "assets/1670154010_14.jpg" "a photograph of the single remaining tree, with yellow flowers in the foreground" >}}
 
 *Pine Wall* is still on the official visitor map, for now.
 
-Of Sjoerd Buisman's other piece, *Berkenpalisade* (Birch Palisade), all I find is a single scraggly tree, revealing nothing.
+Of Buisman's other piece, *Berkenpalisade* (Birch Palisade), all I find is a single scraggly tree, revealing nothing.
 
  {{< img "assets/1670154011_15.jpg" "in a shadowy grove of pine trees, a single birch stands alone" >}}
 
@@ -102,6 +102,8 @@ Here, where every heathland is a testament to an imported animal, where kilomete
 
 Monumentally altered landscapes everywhere, and yet the iconic land art commissions I have sought are small, fragile, bio-interventions.
 
-For Heizer and Turrell, the desert landscape was an offensively blank canvas, that just needed the dust swept up and the artist's master stroke. Land art could also be collaboration, even performance. With trees, with knowledge, with heat, with geodesy, with magnetism, with rock, with earth, with land, with water.
+Heizer and Turrell saw their desert landscape as an offensively blank canvas, something that just needed the dust swept up and the artist's master stroke. 
 
-In *Pine Wall*, *Divided Oaks*, *Birch Palisade* and *Turning Pines*, Buisman and Nash continue to search for this collaboration, imperfectly and unpredictably, as their works return to the forest.
+But land art could also be collaboration, even performance - with trees, with knowledge, with heat, with geodesy, with magnetism, with rock, with earth, with land, with water.
+
+In *Pine Wall*, *Divided Oaks*, *Birch Palisade* and *Turning Pines*, Buisman and Nash search for this relationship, imperfectly and unpredictably. As their works return to the forest, the collaboration continues.
