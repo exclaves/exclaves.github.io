@@ -11,7 +11,7 @@ Contemporaneously, some land artists in Britain and Western Europe practiced a d
 
 And so, I squint sunwards in the drought dust day of a Dutch pine forest in July. Amidst the terpenes and sand, I try to see if any of these trees are unnaturally bent or distorted. There are many, many trees. The closer I gaze, the more possible twists, a moiré beat frequency of shimmering vertical lines.
 
-{{< img "assets/1670154004_6.jpg" >}}
+{{< img "assets/1670154004_6.jpg" "a dense forest of pine trees and dried grass" >}}
 
 David Nash's *Turning Pines* would be 37 years old, if it still existed at all. Which it almost certainly doesn't. It was one of four pieces commissed in 1985 by the Kroller-Muller museum in the Hoge Veluwe National Park as a fantastic set of "Growing Sculptures" for the Kroller-Muller's large sculpture park. Both Nash and Dutch sculptor Sjoerd Buisman worked in the medium of the natural world — plants, earth, forces steered, but uncontrolled. Their pieces did grow. They also died.
 
@@ -19,7 +19,7 @@ Still, might some trace remain? I've found the location referenced in an old Hog
 
 <div style="margin-left: auto; margin-right: auto;">
 
-{{< img "assets/turningpines.png" >}}
+{{< img "assets/turningpines.png" "A scan from a newspaper, reading: U vindt de Turning Pines in het bos dat op de plattegrond van het Park wordt aangeduid als 't Rieselo en dat bereikbaar is vanaf de Houtkampweg. Bij een wandelpad aldaar staat een laag bordje met de aanduiding Turning Pines. Een pijl op dit bordje geeft u de wan delrichting aan." >}}
 </div>
 
 While this should be approximately the right place, I've also found notes from 1987, just two years following the initial installation, that two of the pines had already died. Surely more have passed since then. By 1995, it was considered "unrecognizable."
@@ -27,8 +27,8 @@ While this should be approximately the right place, I've also found notes from 1
 I find the difficult part is not seeing twisty, curving, turning pines. The forest abounds in them, as it does in small clearings and apart groves of older trees.
 
 <div class="multi">
-{{< img "assets/1670154005_8.jpg" >}}
-{{< img "assets/1670154007_10.jpg" >}}
+{{< img "assets/1670154005_8.jpg" "a twisty trunk branches in three" >}}
+{{< img "assets/1670154007_10.jpg" "three large trees, one with a noticeably kinked trunk" >}}
 </div>
 
 The deeper I look, the more I see exactly the sort of "internal space" that Nash supposedly set out to create through his sculpture. It is simply the forest, growing, maturing, reclaiming what is its own.
@@ -47,14 +47,14 @@ It was in this context that Nash and Buisman created their transient and temperm
 
 I abandon my effort to find *Turning Pines* and move onward to Nash's other botanical art piece, *Divided Oaks*. This one has a definite location on the visitors map and even an official sculptural plaque. Still, it manages to be both obvious and obcscure, sited in an interstitial space between a park access road and a forgotten picnic area. This grove of youthful oaks was fated for destruction before Nash began parting their growth in synchronized sylvan swooshes.
 
-{{< img "assets/1670154008_12.jpg" >}}
-{{< img "assets/1670154009_13.jpg" >}}
+{{< img "assets/1670154008_12.jpg" "a black and white photograph of the trunks of a grove of skinny oak trees. on the left side of the image they have  curve to the left, and on the right, they curve to the right. above 4 feet, they grow as normal trees." >}}
+{{< img "assets/1670154009_13.jpg" "a black and white photograph of the sun shinking through the trunks of a grove of skinny oak trees. the base of the trees have been bent as part of the scuplture Divided Oaks" >}}
 
 What are the conservation notes for such a piece? Did they anticipate the destructive rooting of wild boars that now characterizes the "ground level" of _Divided Oaks_? Is its untended form neglect or intent?
 
 <div style="width: 60%; margin-left: auto; margin-right: auto;">
 
-{{< img "assets/1670154008_11.jpg" >}}
+{{< img "assets/1670154008_11.jpg" "a broken plaque with information on Divided Oaks" >}}
 </div>
 
 - - - 
@@ -63,28 +63,28 @@ A few minutes cycling later, and I am at the location of the other officially-st
 
 <div style="width: 60%; margin-left: auto; margin-right: auto;">
 
-{{< img "assets/IMG_0700.jpg" >}}
+{{< img "assets/IMG_0700.jpg" "a scan from a book with photographs of Pine Wall showing 4 standing trees" >}}
 </div>
 
 The other trees have been left where they fell, their bases still bent in the same characteristic way. A sculptural boneyard.
 
-{{< img "assets/1670154010_14.jpg" >}}
+{{< img "assets/1670154010_14.jpg" "a photograph of the single remaining tree, with yellow flowers in the foreground" >}}
 
 *Pine Wall* is still on the official visitor map, for now.
 
 Of Sjoerd Buisman's other piece, *Berkenpalisade* (Birch Palisade), all I find is a single scraggly tree, revealing nothing.
 
- {{< img "assets/1670154011_15.jpg" >}}
+ {{< img "assets/1670154011_15.jpg" "in a shadowy grove of pine trees, a single birch stands alone" >}}
 
 Thanks to an old exhibition catalog scanned for me by the Kroller-Muller, this sculpture has an almost definitely known site at this junction.
 
-{{< img "assets/berkenpalisade.jpg" >}}
+{{< img "assets/berkenpalisade.jpg" "a scan from a catalog, with a photograph of a row of birch trees, supported by a structure that looks like a fence. the text reads: Birch palisade. growing sculpture of 250 birch trees, secured to a wooden frame square frame, 20 x 20 m. provenance: the artist. acquired: 1985 (with the support of the Ministerie van WVC Praktiikburo Beeldende Kunstop-drachten.) related works: Berkenpalissade: 4 works on paper; Berkenberg (Birch Hill): 3 works on paper remark: dismantled in lune 2001 location: at the T-junction of Houtkampweg and the Kröller-Müller Museum." >}}
 
 However, the catalog also indicates that the piece was dismantled in 2001 due to the rapid death of several trees. I hope in vain that some piece remains.
 
 I see a lizard in the dust, my first in the Netherlands.
 
-{{< img "assets/DSCF1418.jpg" >}}
+{{< img "assets/DSCF1418.jpg" "the forest floor, a hidden lizard" >}}
 
 I look around one last time, and cycle east.
 
@@ -93,9 +93,9 @@ I look around one last time, and cycle east.
 The meditative spin of cycling zooms the landscape out. Ten minutes of pine plantation, an indistinguishable long low dune, a heuvel you can feel but not see, rising to a surprising heathland vista. Of all of the places to try, and fail, to find a human altered landscape, here.
 
 <div class="multi">
-{{< img "assets/DSCF1594.jpg" >}}
+{{< img "assets/DSCF1594.jpg" "a bikepath through a grassy heathland" >}}
 
-{{< img "assets/1670154012_16.jpg" >}}
+{{< img "assets/1670154012_16.jpg" "a heathland from above, with sharply dilineated forest edges and a pattern or symbol that appears carved in the landscape" >}}
 </div>
 
 Here, where every heathland is a testament to an imported animal, where kilometer wide glyphs are still carved into the landscape for military dress rehearsal, in a country with an artificial coastline.

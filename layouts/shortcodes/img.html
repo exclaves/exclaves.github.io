@@ -1,7 +1,8 @@
 {{ $img := $.Page.Resources.GetMatch (.Get 0)}}
 {{ $small := $img.Fit "1800x1800" }}
+{{ $alt := .Get 1 }}
 <figure>
     <a href="{{ $img.Permalink }}">
-	    <img src="{{ $small.RelPermalink }}" />
+	    <img src="{{ $small.RelPermalink }}" alt="{{ $alt }}" />
     </a>
 </figure>
