@@ -5,15 +5,15 @@ date: 2023-02-19 00:00:00 +0000
 images: [/2023/02/19/growing-land-art/assets/1670154009_13.jpg]
 ---
 
-American land artists often practice  a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert, or James Turrel's preternaturally manicured impact craters. Sometimes, land art uses the landscape as no more than a crude mirror, as in the abandoned construction sites of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped*.
+Land artists often practice a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert, James Turrell's preternaturally manicured impact craters. Or consider the abandoned construction site aesthetic of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped Coast*. These are less site specific installations than sculptures which happen to be situated in a landscape, at best a pretty backdrop, and at worst ignored or disrespected.
 
-At the same time, across the Atlantic, several British land artists practiced a different method of collaborating with landscape. However, these methods presented certain challenges to conservation and viewship.
+Contemporaneously with and following these pieces, some land artists in Britain and Western Europe practiced a different method of collaborating with landscape. However these methods presented certain challenges to conservation and viewership.
 
 And so, I squint sunwards in the drought dust day of a Dutch pine forest in July. Amidst the terpenes and sand, I try to see if any of these trees are unnaturally bent or distorted. There are many, many trees. The closer I gaze, the more possible twists, a moiré beat frequency of shimmering vertical lines from the warm soil.
 
 {{< img "assets/1670154004_6.jpg" >}}
 
-David Nash's *Turning Pines* would be 37 years old, if it still existed at all. Which it almost certainly doesn't. It was one of four pieces commissed in 1985 by the Kroller-Muller museum in the Hoge Veluwe National Park as a fantastic set of "Growing Sculptures" for the Kroller-Muller's large sculpture park. Both artists David Nash and Sjoerd Buisman worked in the medium of the natural world — plants, earth, forces steered, but uncontrolled. Their pieces did grow. They also died.
+David Nash's *Turning Pines* would be 37 years old, if it still existed at all. Which it almost certainly doesn't. It was one of four pieces commissed in 1985 by the Kroller-Muller museum in the Hoge Veluwe National Park as a fantastic set of "Growing Sculptures" for the Kroller-Muller's large sculpture park. Both Nash and Dutch sculptor Sjoerd Buisman worked in the medium of the natural world — plants, earth, forces steered, but uncontrolled. Their pieces did grow. They also died.
 
 Still, might some trace remain? I've found the location referenced in an old Hoge Veluwe newsletter, but references imprecisely in an area I've struggled to narrow down. 
 
@@ -39,9 +39,9 @@ The deeper I look, the more I see exactly the sort of "internal space" that Nash
 
 Still, some early land artists were forced to tangle with the landscape on its own terms. Robert Smithson's *Spiral Jetty* was placed on public land, viewable by anyone with the tenacity and time for a difficult overland trip. The piece itself is periodically reclaimed by the lake during wet years, emerging again, smoother and sandier in drought.
 
-Eventually land art, and Smithson, came down to earth. The bottomless financial support from Virginia Dwan in New York City that made projects like *Spiral Jetty* possible dried up, exactly at the same time that artists like Heizer and Turrel were planning their most ambitious works yet.
+Eventually land art, and, tragically, Smithson, came down to earth. The bottomless financial support from Virginia Dwan in New York City that made projects like *Spiral Jetty* possible dried up, exactly at the same time that artists like Heizer and Turrell were planning their most ambitious works yet.
 
-Projects stalled out, and artists debased themselves for new funding opportunities. (Many settled upon the kind of "destination resort" model first pioneered by the Dia Foundation and its remote Walter de Maria installation *Lightning Field*. Turrel's *Roden Crater* takes it farther, replacing the rustic artist's cabin of *Lighting Field* with a Nordic spa white glove experience. Similarly, Heizer's decades-awaited *City* will be open to merely a dozen or so visitors per day, with an entrance fee of hundreds of dollars.)
+Projects stalled out, and artists debased themselves for new funding opportunities. (Many settled upon the kind of "destination resort" model first pioneered by the Dia Foundation and its remote Walter de Maria installation *Lightning Field*. Turrell's *Roden Crater* takes it farther, replacing the rustic artist's cabin of *Lighting Field* with a Nordic spa white glove experience. Similarly, Heizer's decades-awaited *City* will be open to merely a dozen or so visitors per day, with an entrance fee of hundreds of dollars.)
 
 It was in this context that Nash and Buisman created their transient and tempermental trees.
 
@@ -80,7 +80,7 @@ Thanks to an old exhibition catalog scanned for me by the Kroller-Muller, this s
 
 {{< img "assets/berkenpalisade.jpg" >}}
 
-Elsewhere, I found a record that the piece was deliberately removed some two decades earlier due to the rapid death of several trees. I hope in vain that some piece remains.
+However, the catalog also indicates that the piece was dismantled in 2001 due to the rapid death of several trees. I hope in vain that some piece remains.
 
 I see a lizard in the dust, my first in the Netherlands.
 
@@ -90,7 +90,7 @@ I look around one last time, and cycle east.
 
 - - -
 
-The meditative spin of cycling zooms the landscape out. Ten minutes of pine plantation, a visually indistinguishable, low long dune, a heuvel you can feel, not see rising to a surprising heathland vista. Of all of the places to try, and fail, to find a human altered landscape, here.
+The meditative spin of cycling zooms the landscape out. Ten minutes of pine plantation, an indistinguishable long low dune, a heuvel you can feel but not see, rising to a surprising heathland vista. Of all of the places to try, and fail, to find a human altered landscape, here.
 
 <div class="multi">
 {{< img "assets/DSCF1594.jpg" >}}
@@ -100,8 +100,8 @@ The meditative spin of cycling zooms the landscape out. Ten minutes of pine plan
 
 Here, where every heathland is a testament to an imported animal, where kilometer wide glyphs are still carved into the landscape for military dress rehearsal, in a country with an artificial coastline.
 
-Monumentally altered landscapes elsewhere, and yet the iconic land art commissions I have partially succeeded at finding are small, fragile, bio-interventions.
+Monumentally altered landscapes everywhere, and yet the iconic land art commissions I have sought are small, fragile, bio-interventions.
 
-For Heizer and Turrel, the desert landscape was an offensively blank canvas, that just needed the dust swept up and the artist's master stroke. Land art could also be collaboration, even performance. With trees, with knowledge, with heat, with geodesy, with magnetism, with rock, with earth, with land, with water.
+For Heizer and Turrell, the desert landscape was an offensively blank canvas, that just needed the dust swept up and the artist's master stroke. Land art could also be collaboration, even performance. With trees, with knowledge, with heat, with geodesy, with magnetism, with rock, with earth, with land, with water.
 
-Buisman and Nash search for this collaboration in *Pine Wall*, *Divided Oaks*, *Birch Palisade* and *Turning Pines*, imperfectly and unpredictably, even today as they disappear.
+Buisman and Nash search for this collaboration in *Pine Wall*, *Divided Oaks*, *Birch Palisade* and *Turning Pines*, imperfectly and unpredictably, even today as they return to the forest.
