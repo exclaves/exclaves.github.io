@@ -5,11 +5,11 @@ date: 2023-02-19 00:00:00 +0000
 images: [/2023/02/19/growing-land-art/assets/1670154009_13.jpg]
 ---
 
-Land artists often practice a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert, James Turrell's preternaturally manicured impact craters. Or consider the abandoned construction site aesthetic of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped Coast*. These are less site specific installations than sculptures which happen to be situated in a landscape, at best a pretty backdrop, and at worst ignored or disrespected.
+Land artists often practice a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert and James Turrell's preternaturally manicured impact craters. Or consider the abandoned construction site aesthetic of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped Coast*. These are less site specific installations than sculptures which happen to be site in a desert or along a coastline. At best the landscape is a pretty backdrop, and at worst it is ignored or disrespected.
 
-Contemporaneously with and following these pieces, some land artists in Britain and Western Europe practiced a different method of collaborating with landscape. However these methods presented certain challenges to conservation and viewership.
+Contemporaneously, some land artists in Britain and Western Europe practiced a different method of collaborating with landscape. However their methods presented certain challenges to conservation —- and access.
 
-And so, I squint sunwards in the drought dust day of a Dutch pine forest in July. Amidst the terpenes and sand, I try to see if any of these trees are unnaturally bent or distorted. There are many, many trees. The closer I gaze, the more possible twists, a moiré beat frequency of shimmering vertical lines from the warm soil.
+And so, I squint sunwards in the drought dust day of a Dutch pine forest in July. Amidst the terpenes and sand, I try to see if any of these trees are unnaturally bent or distorted. There are many, many trees. The closer I gaze, the more possible twists, a moiré beat frequency of shimmering vertical lines.
 
 {{< img "assets/1670154004_6.jpg" >}}
 
@@ -24,7 +24,7 @@ Still, might some trace remain? I've found the location referenced in an old Hog
 
 While this should be approximately the right place, I've also found notes from 1987, just two years following the initial installation, that two of the pines had already died. Surely more have passed since then. By 1995, it was considered "unrecognizable."
 
-I find the hard part is not seeing twisty, curving, turning pines. The forest abounds in them, as it does in small clearings and apart groves of older trees.
+I find the difficult part is not seeing twisty, curving, turning pines. The forest abounds in them, as it does in small clearings and apart groves of older trees.
 
 <div class="multi">
 {{< img "assets/1670154005_8.jpg" >}}
@@ -37,7 +37,7 @@ The deeper I look, the more I see exactly the sort of "internal space" that Nash
 
 "Land art" began as explicit criticism, cynical or not, of the increasing commodification of the art industry. By building art that was monumental in scale and site-specific, it literally could not be crated and shipped to a gallery, sold and framed. However, this never stopped the gallery shows or the economic necessity of paying for art production — nor was it intended to. Monumental art required monumental bills of material. Viewed in retrospect, land art if anything was an intensification of the capitalization of art.
 
-Still, some early land artists were forced to tangle with the landscape on its own terms. Robert Smithson's *Spiral Jetty* was placed on public land, viewable by anyone with the tenacity and time for a difficult overland trip. The piece itself is periodically reclaimed by the lake during wet years, emerging again, smoother and sandier in drought.
+Still, some early land artists were forced to tangle with the landscape on its own terms. Robert Smithson's *Spiral Jetty* was placed on public land, viewable by anyone with the tenacity and time for a rough overland trip. The piece itself is periodically reclaimed by the lake during wet years, emerging again, smoother and sandier in drought.
 
 Eventually land art, and, tragically, Smithson, came down to earth. The bottomless financial support from Virginia Dwan in New York City that made projects like *Spiral Jetty* possible dried up, exactly at the same time that artists like Heizer and Turrell were planning their most ambitious works yet.
 
@@ -45,7 +45,7 @@ Projects stalled out, and artists debased themselves for new funding opportuniti
 
 It was in this context that Nash and Buisman created their transient and tempermental trees.
 
-I abandon my effort to find *Turning Pines* and move onward to Nash's other botanical art piece, *Divided Oaks*. This one has a definite location on the visitors map and even an official sculptural plaque. It is not difficult to find. Sited in an interstitial space between a park access road and a forgotten picnic area, his oaks stand 37 years old. This grove was fated for destruction before Nash began bending and parting their growth in synchronized sylvan swooshes.
+I abandon my effort to find *Turning Pines* and move onward to Nash's other botanical art piece, *Divided Oaks*. This one has a definite location on the visitors map and even an official sculptural plaque. Still, it manages to be both obvious and obcscure, sited in an interstitial space between a park access road and a forgotten picnic area. This grove of youthful oaks was fated for destruction before Nash began parting their growth in synchronized sylvan swooshes.
 
 {{< img "assets/1670154008_12.jpg" >}}
 {{< img "assets/1670154009_13.jpg" >}}
@@ -104,4 +104,4 @@ Monumentally altered landscapes everywhere, and yet the iconic land art commissi
 
 For Heizer and Turrell, the desert landscape was an offensively blank canvas, that just needed the dust swept up and the artist's master stroke. Land art could also be collaboration, even performance. With trees, with knowledge, with heat, with geodesy, with magnetism, with rock, with earth, with land, with water.
 
-Buisman and Nash search for this collaboration in *Pine Wall*, *Divided Oaks*, *Birch Palisade* and *Turning Pines*, imperfectly and unpredictably, even today as they return to the forest.
+In *Pine Wall*, *Divided Oaks*, *Birch Palisade* and *Turning Pines*, Buisman and Nash continue to search for this collaboration, imperfectly and unpredictably, as their works return to the forest.
