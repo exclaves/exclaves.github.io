@@ -5,7 +5,7 @@ date: 2023-02-19 00:00:00 +0000
 images: [/2023/02/19/growing-land-art/assets/1670154009_13.jpg]
 ---
 
-Land artists often practice a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert and James Turrell's preternaturally manicured impact craters. Or consider the abandoned construction site aesthetic of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped Coast*. These are less site specific installations than sculptures which happen to be site in a desert or along a coastline. At best the landscape is a pretty backdrop, and at worst it is ignored or disrespected.
+Land artists often practice a kind of landscape scarification. Take Michael Heizer's deep gouges in the Nevada desert and James Turrell's preternaturally manicured craters. Or consider the abandoned construction site aesthetic of Holt's *Sun Tunnels* or Christo and Jean-Claude's *Wrapped Coast*. These are less site specific installations than sculptures which happen to be site in a desert or along a coastline. At best the landscape is a pretty backdrop, and at worst it is ignored or disrespected.
 
 Contemporaneously, some land artists in Britain and Western Europe practiced a different method of collaborating with landscape. However their methods presented certain challenges to conservation — and access.
 
