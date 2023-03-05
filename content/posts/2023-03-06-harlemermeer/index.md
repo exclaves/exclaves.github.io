@@ -70,8 +70,6 @@ This book goes on to rather credulously credit "large landowners" and "intellect
 
 > Over against the mass of tenants who tottered on the edge of grinding poverty stood a small group of large landowners and intellectual farmers who were aware of the latest developments in agriculture and had sufficient capital. Helped by the expanding possibilities for export and rising prices, for them the Haarlemmermeer provided splendid opportunities.
 
-If you say so.
-
 {{< img "assets/polder.png" "An isometric diagram of the Harlemermeer polder" "Sea of Land, pp 213" >}}
 
 The Cruquius pumping station in the north-west part of the Ringvaart (upper left on the above map) was especially beautiful.
