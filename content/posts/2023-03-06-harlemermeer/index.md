@@ -12,7 +12,7 @@ This weekend I went on a bike ride I haven't done yet: following the Ringvaart* 
 <div style="flex: 2">
 <div>
 
-{{< img "assets/strava.png" "Strava screenshot with a ride called Waterwolf of 73km" >}}
+{{< img "assets/strava.png" "Strava screenshot with a ride called Waterwolf of 73 km" >}}
 
 </div>
 
@@ -40,7 +40,7 @@ After returning I used the quiet post-bike ride exhaustion to dive into a book t
 
 The first thing I needed to understand was peat. I'd known, more or less, that Holland was made of mostly reclaimed land, polders. But I hadn't realized how visible the formal differences are between the two types of land reclamation in interior Holland: peat reclamation and lake bottom reclamation.
 
-Peat landscapes were partially above the water line, and could be made productive piecemeal, draining a small section with small ditches. For this reason, they have a fine network of small irrigation channels and relatively small scale development over a long period of time. On the other hand, the lake bottom polders necessitated a communal draining of the entire region at once, and communal maintenance of the pumping infrastructure. These projects have their own internal geometry of draining, clearly visible on the map below (from _Sea of Land_.)
+Peat landscapes were partially above the water line, and could be made productive piecemeal, with an individual farmer or family capable of draining their own section with small ditches. For this reason, they have a fine network of irrigation channels and a small-scale development pattern that built up over a long period of time. On the other hand, the lake bottom polders necessitated a communal draining of the entire region at once, and communal maintenance of the pumping infrastructure. These projects have their own internal geometry of draining, clearly visible on the map below (from _Sea of Land_.)
 
 {{< img "assets/holland.png" "A map of North and South holland showing regions of peat marsh and regions of former lakes" >}}
 
@@ -63,12 +63,12 @@ Early settlers were more or less abandoned there, without sufficient resources t
 
 > SOCIAL PROBLEMS
 > 
-> Many of the settlers slid into bitter poverty, which led to all kinds of social problems. In 1860, for instance, the polder had at least 118 pubs, one for every twelve families. The residents of the marshy new land were ravaged by swamp fever, malaria, and in 1865, typhoid and cholera. The death rate in the polder and its vicinity was higher than normal, in particular among chil-dren. In 1861 they constituted 41% of the deaths in the polder, against 22% for the rest of The Netherlands. All this was despite the available knowledge and experience in combating epidemics. In the Zuidplaspolder, for instance, two emergency hospitals were set up as a precautionary measure. There the water was never allowed to become stagnant, and they began immedi ately with building on the land. Good drinking water was brought in with barges built especially for this
+> Many of the settlers slid into bitter poverty, which led to all kinds of social problems. In 1860, for instance, the polder had at least 118 pubs, one for every twelve families. The residents of the marshy new land were ravaged by swamp fever, malaria, and in 1865, typhoid and cholera. The death rate in the polder and its vicinity was higher than normal, in particular among chil-dren. In 1861 they constituted 41% of the deaths in the polder, against 22% for the rest of The Netherlands. All this was despite the available knowledge and experience in combating epidemics. In the Zuidplaspolder, for instance, two emergency hospitals were set up as a precautionary measure. There the water was never allowed to become stagnant, and they began immediately with building on the land. Good drinking water was brought in with barges built especially for this
 purpose.
 
-This book goes on to rather questionably credit "large landowners" and "intellectual farmers" with recognizing the exploitability of the land and using their "sufficient capital" to find "splendid opportunities."
+This book goes on to rather credulously credit "large landowners" and "intellectual farmers" with recognizing the exploitability of the land and using their "sufficient capital" to find "splendid opportunities."
 
-> Over against the mass of tenants who tottered on the edge of grinding poverty stood a small group of large landowners and intellectual farmers who were aware of the latest developments in agriculture and had sufficient capital. Helped by the expanding possi bilities for export and rising prices, for them the Haarlemmermeer provided splendid opportunities.
+> Over against the mass of tenants who tottered on the edge of grinding poverty stood a small group of large landowners and intellectual farmers who were aware of the latest developments in agriculture and had sufficient capital. Helped by the expanding possibilities for export and rising prices, for them the Haarlemmermeer provided splendid opportunities.
 
 If you say so.
 
@@ -82,4 +82,4 @@ It was a nice bike ride.
 
 {{< img "assets/IMG_2783.jpg" "an image of several dikes under construction, earthen mounds" "Michael Heizer, City" >}}
 
-*_vaart_ is a nice flexible word - it can mean a canal, but most commonly refers to a sailing boat trip. however, it also stretches to a flight, a canal, a transit "way" of any sort, the concept of navigation, and even the concept of travel itself, i.e., movement through space.
+*_vaart_ is a nice flexible word - it can mean a canal, but most commonly refers to a sailing boat trip. However, it also stretches to a flight, a canal, a transit "way" of any sort, the concept of navigation, and even the concept of travel itself, i.e., movement through space.
