@@ -206,3 +206,8 @@ nav {
     max-height: calc((100vw - 2em) * 2.67);
   }
 }
+
+figcaption {
+  /* margin-top: -0.5em !important; */
+  /* margin-bottom: 0.5em !important; */
+}

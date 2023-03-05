@@ -5,4 +5,7 @@
     <a href="{{ $img.Permalink }}">
 	    <img src="{{ $small.RelPermalink }}" alt="{{ $alt }}" />
     </a>
+    {{ with .Get 2 }}
+        <figcaption>{{ . }}</figcaption>
+    {{ end }}
 </figure>
