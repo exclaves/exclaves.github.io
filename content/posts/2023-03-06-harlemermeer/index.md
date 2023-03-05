@@ -82,4 +82,4 @@ It was a nice bike ride.
 
 {{< img "assets/IMG_2783.jpg" "an image of several dikes under construction, earthen mounds" "Michael Heizer, City" >}}
 
-*_vaart_ is kind of a funny word - it can mean a sailing trip, but also a flight, a canal, a transit "way" more generally, the concept of navigation, and the concept of travel itself.
+*_vaart_ is a nice flexible word - it can mean a canal, but most commonly refers to a sailing boat trip. however, it also stretches to a flight, a canal, a transit "way" of any sort, the concept of navigation, and even the concept of travel itself, i.e., movement through space.
