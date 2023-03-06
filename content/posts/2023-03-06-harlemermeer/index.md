@@ -38,7 +38,11 @@ After returning I used the quiet post-bike ride exhaustion to dive into a book t
 
 --------
 
-The first thing I needed to understand was peat. I'd known, more or less, that Holland was made of mostly reclaimed land, polders. But I hadn't realized how visible the formal differences are between the two types of land reclamation in interior Holland: peat reclamation and lake bottom reclamation.
+The first thing I needed to understand was peat. I'd known, more or less, that Holland was made of mostly reclaimed land, polders. An excellent [topographical map of the Netherlands hosted by TU Delft](https://ahn.arcgisonline.nl/ahnviewer/) shows these regions of below sea level land starkly.
+
+{{< img "assets/elevation.jpg" "a map of the elevation of The Netherlands" "The AHN elevation map of The Netherlands. Blue/green colors are approximately 1 meter below sea level and dark blue colors are 5 meters or more." >}}
+
+But I hadn't realized how visible the formal differences are between the two types of land reclamation in interior Holland: peat reclamation and lake bottom reclamation.
 
 Peat landscapes were partially above the water line, and could be made productive piecemeal, with an individual farmer or family capable of draining their own section with small ditches. For this reason, they have a fine network of irrigation channels and a small-scale development pattern that built up over a long period of time. On the other hand, the lake bottom polders necessitated a communal draining of the entire region at once, and communal maintenance of the pumping infrastructure. These projects have their own internal geometry of draining, clearly visible on the map below (from _Sea of Land_.)
 
