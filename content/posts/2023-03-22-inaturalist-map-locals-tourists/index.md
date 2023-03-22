@@ -16,7 +16,7 @@ Last summer, Dario Taraborelli suggested extending this to iNaturalist observati
 It's taken a while, but here it is:
 
 <figure>
-<iframe src="https://subject.space/projects-static/inaturalist" width="100%" height="700px"></iframe>
+<iframe src="https://subject.space/projects-static/inaturalist/" width="100%" height="700px"></iframe>
 </figure>
 
 <a href="https://subject.space/projects-static/inaturalist" target="_blank">
