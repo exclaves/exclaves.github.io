@@ -5,7 +5,7 @@ date: 2023-03-22 00:00:00 +0000
 images: [/2023/03/22/inaturalist-observations-locals-and-tourists/assets/sf_hu7fba9da1679ce4a56c592454604cb9c1_692694_1800x1800_fit_q75_box.jpg]
 ---
 
-In 2010, cartographer <a href="https://twitter.com/enf/" target="_blank">Erica Fischer</a> made some simple and spectacular <a href="https://www.flickr.com/photos/walkingsf/albums/72157624209158632/" target="_blank">maps of images added to Flickr</a>. She classified photos as either from "locals" or "tourists", based on how far their profile location was from the photo's geotag. These maps revealed fascinating psycogeographic patterns of urban exploration and photographic worthiness.
+In 2010, cartographer <a href="https://twitter.com/enf/" target="_blank">Erica Fischer</a> made some simple and spectacular <a href="https://www.flickr.com/photos/walkingsf/albums/72157624209158632/" target="_blank">maps of images added to Flickr</a>. She classified photos as either from "locals" or "tourists", based on how far their profile location was from the photo's geotag. These maps revealed fascinating psychogeographic patterns of urban exploration and photographic worthiness.
 
 Last summer, Dario Taraborelli suggested extending this to iNaturalist observations.
 
