@@ -72,7 +72,7 @@ This could indicate that despite the large number of observations in the region,
 
 ## Technical details
 
-I downloaded iNaturalist observations in <a href="https://www.gbif.org/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7" target="_blank">bulk from GBIF</a>, which means that this only includes "research-grade" observations. The data is from November 2022, but I am working on updating it with a more recent extract.
+I downloaded iNaturalist observations in <a href="https://www.gbif.org/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7" target="_blank">bulk from GBIF</a>, which means that this only includes "research-grade" observations. <s>The data is from November 2022, but I am working on updating it with a more recent extract.</s> <strong>Update: As of March 23rd, the data is current to mid-March.</strong>
 
 I initially tried to calculate the number of observations by the same user within a radius of each of their observations. However, even with a Postgres/PostGIS query that seemed to be taking advantage of every indexing opportunity it had, this would take months.
 
