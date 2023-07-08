@@ -25,8 +25,6 @@ The trail quickly climbed out of the forest and on to Oshlak ridge, a beautiful 
 {{< img "assets/DSCF9840.jpg" "the view from the ridgeline" >}}
 </div>
 
-
-
 ## Lilies!
 
 Along the north end of the ridge, near the Maja e Arnenjt summit, we found a nice little cluster of what I think is <em>Lilium albanicum</em> or a related species.
@@ -128,4 +126,8 @@ The next day, I left Kosovo via the Pristina airport, and was pleasantly surpris
 
 <div class="multi" style="width: 100%; margin-left: auto;">
 {{< img "assets/signal-2023-07-01-134701_002.jpeg" "Oshlak ridge from the sky" >}}
+</div>
+
+<div class="multi" style="width: 100%; margin-left: auto;">
+{{< img "assets/map.png" "A map of our route" >}}
 </div>
