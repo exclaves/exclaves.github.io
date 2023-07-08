@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Remember the cat?" />
+<meta property="og:description" content="I woke up this morning to find that the freshly planted patch in the back of 1611&rsquo;s back yard had been completely dug up, and around the edges, suspiciously sized footprints.
+Remember the cat? Now enemy number one.
+By putting a combination of hardware cloth, chicken wire, and old shelves found in the basement down, I constructed a (so far) effective cat barrier.
+In technical updates, I learned how to use a bit of jQuery today, and built a little logarithmic timeline display for some of Bilal&rsquo;s photos, including comparing syntactic image fingerprints in javascript and automatically hiding duplicate images (but allowing them to be revealed with a little animation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2016/05/19/remember-the-cat/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-05-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-05-19T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Remember the cat?"/>
+<meta name="twitter:description" content="I woke up this morning to find that the freshly planted patch in the back of 1611&rsquo;s back yard had been completely dug up, and around the edges, suspiciously sized footprints.
+Remember the cat? Now enemy number one.
+By putting a combination of hardware cloth, chicken wire, and old shelves found in the basement down, I constructed a (so far) effective cat barrier.
+In technical updates, I learned how to use a bit of jQuery today, and built a little logarithmic timeline display for some of Bilal&rsquo;s photos, including comparing syntactic image fingerprints in javascript and automatically hiding duplicate images (but allowing them to be revealed with a little animation."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Remember the cat?</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+            <a href="http://subject.space">← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Remember the cat?</h1>
+        <div>
+                <time>May 19, 2016</time>
+            </div>
+    </header><p>I woke up this morning to find that the freshly planted patch in the back of 1611&rsquo;s back yard had been completely dug up, and around the edges, suspiciously sized footprints.</p>
+<p>Remember the cat? Now enemy number one.</p>
+<p>By putting a combination of hardware cloth, chicken wire, and old shelves found in the basement down, I constructed a (so far) effective cat barrier.</p>
+<p><img src="/images/IMG_4671.JPG" alt="Cat barrier"></p>
+<hr>
+<p>In technical updates, I learned how to use a bit of jQuery today, and built a little logarithmic timeline display for some of Bilal&rsquo;s photos, including comparing syntactic image fingerprints in javascript and automatically hiding duplicate images (but allowing them to be revealed with a little animation.)</p>
+<p>The result was okay, but a few things are clear:</p>
+<ul>
+<li>
+<p>It would be great to adjust the clustering of events &ldquo;on the fly&rdquo; and be able to see what impact that has.</p>
+</li>
+<li>
+<p>It will be important to render multiple events side by side.</p>
+</li>
+<li>
+<p>Loading a big JSON file isn&rsquo;t quite practical.</p>
+</li>
+</ul>
+<p>So, I figured out how to process the images directly into a MongoDB database, and I will experiment further with using Meteor to flexibly render these timelines. However, first I need to determine how best to store a bunch of image assets with Meteor. Perhaps in the Mongo database directly?</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

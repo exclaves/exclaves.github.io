@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Adjustable FOV webmaps with Mapbox" />
+<meta property="og:description" content="(Skip to the demo?)
+I remember when it was a big deal when web maps started allowed arbitrary slipping and sliding, instead of moving in fixed increments. Then, it was super cool once we could rotate a map an arbitrary direction &ndash; north didn&rsquo;t have to be up anymore! Then GPS navigation made everyone familiar with the pitch of a map as an adjustable quantity too. But there are more ways of adjusting a projection!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2018/04/06/adjustable-fov-webmaps-with-mapbox/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-04-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-04-06T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Adjustable FOV webmaps with Mapbox"/>
+<meta name="twitter:description" content="(Skip to the demo?)
+I remember when it was a big deal when web maps started allowed arbitrary slipping and sliding, instead of moving in fixed increments. Then, it was super cool once we could rotate a map an arbitrary direction &ndash; north didn&rsquo;t have to be up anymore! Then GPS navigation made everyone familiar with the pitch of a map as an adjustable quantity too. But there are more ways of adjusting a projection!"/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Adjustable FOV webmaps with Mapbox</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+            <a href="http://subject.space">← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Adjustable FOV webmaps with Mapbox</h1>
+        <div>
+                <time>April 6, 2018</time>
+            </div>
+    </header><p><a href="http://subject.space/projects-static/mapbox-fov/">(Skip to the demo?)</a></p>
+<p>I remember when it was a big deal when web maps started allowed arbitrary slipping and sliding, instead of moving in fixed increments. Then, it was super cool once we could rotate a map an arbitrary direction &ndash; north didn&rsquo;t have to be up anymore! Then GPS navigation made everyone familiar with the <em>pitch</em> of a map as an adjustable quantity too. But there are more ways of adjusting a projection!</p>
+<p>Since Mapbox GL renders everything using WebGL on a canvas natively, it is straightforward to let every camera parameter be editable too. I recently <a href="github.com/loganwilliams/mapbox-gl-js">forked the repository</a> to add support for editable field of view (FOV).</p>
+<p><img src="/uploads/2018/04/06/Screen%20Shot%202018-04-05%20at%205.41.43%20PM.png" alt="">
+<em>A field of view of &ldquo;0&rdquo; results in an axonometric view, reminiscent of old isometric video games.</em></p>
+<p>The field of view property is so named because it represents an action similar to changing the angular FOV of a camera lens. However, unlike what we&rsquo;re used to with long focal length lenses, in computer rendering we can easily change this parameter without also adjusting zoom. This allows the relative <em>perspective</em> of the render to be adjusted &ndash; the angles of converging lines and the relationship in spatial scale of the foreground and background. Compare these two views of Manhattan to understand what I mean.</p>
+<p><img src="/uploads/2018/04/06/Screen%20Shot%202018-04-06%20at%2011.36.29%20AM.png" alt=""></p>
+<p><img src="/uploads/2018/04/06/Screen%20Shot%202018-04-06%20at%2011.30.29%20AM.png" alt=""></p>
+<p><a href="http://subject.space/projects-static/mapbox-fov/"><strong>Play around for yourself with this interactive demo!</strong></a></p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

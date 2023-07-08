@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Distorting a journey onto a time axis" />
+<meta property="og:description" content="Yesterday, I talked about how to build a custom map project in proj.4 and mapnik. I started this project, because I wanted to &ldquo;unfold&rdquo; a geographic journey, so that one axis was temporal, and the other was spatial.
+Before I started messing around with Proj.4, I created a quick demo of this by stretching a raster map image. However, this had legibility issues as it stretched the text, roadway widths, etc." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2016/07/20/distorting-a-journey-onto-a-time-axis/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-07-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-07-20T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Distorting a journey onto a time axis"/>
+<meta name="twitter:description" content="Yesterday, I talked about how to build a custom map project in proj.4 and mapnik. I started this project, because I wanted to &ldquo;unfold&rdquo; a geographic journey, so that one axis was temporal, and the other was spatial.
+Before I started messing around with Proj.4, I created a quick demo of this by stretching a raster map image. However, this had legibility issues as it stretched the text, roadway widths, etc."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Distorting a journey onto a time axis</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+            <a href="http://subject.space">← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Distorting a journey onto a time axis</h1>
+        <div>
+                <time>July 20, 2016</time>
+            </div>
+    </header><p>Yesterday, I talked about how to <a href="/2016/07/19/beginning-to-make-a-custom-map-projection-with-mapnik-and-proj.4/">build a custom map project in proj.4 and mapnik</a>. I started this project, because I wanted to &ldquo;unfold&rdquo; a geographic journey, so that one axis was temporal, and the other was spatial.</p>
+<p>Before I started messing around with Proj.4, I created a quick demo of this by stretching a raster map image. However, this had legibility issues as it stretched the text, roadway widths, etc.</p>
+<p><img src="/images/2016-07-20/map5.png" alt=""></p>
+<p>What am I actually trying to show with this distorted map? Imagine a series of visited places, such as the following:</p>
+<p><img src="/images/2016-07-20/map_comparison.png" alt=""></p>
+<p>Now, relax the line connecting them so that it doesn&rsquo;t have sharp edges.</p>
+<p><img src="/images/2016-07-20/second_map_comparison.png" alt=""></p>
+<p>Then, imagine unfolding the map, so that the line plotted above forms the horizontal axis, and the vertical axis is perpendicular to the line. Using a custom proj.4 projection, we can do this, while maintaining legibly rendered text!</p>
+<p><img src="/images/2016-07-20/map_demo.png" alt=""></p>
+<p>However, it is clear that this is not a particularly interpretable or usable way of rendering a map.</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

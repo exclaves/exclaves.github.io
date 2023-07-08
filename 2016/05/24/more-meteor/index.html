@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="More meteor" />
+<meta property="og:description" content="I expanded my Photo display React component to display groups of photos, and provide a user interface for expanding and contracting them.
+![Expanding/hiding duplicates](/images/2016-05-24 22_15_32.gif)
+I also added a date widget, and got pagination, subscriptions, and routing figured out super easily with FlowRouter.
+Seriously, it was super easy. I can probably handle parsing and changing the dates in a slightly more elegant way though.
+FlowRouter.route(&#39;/timeline/:date&#39;, { name: &#39;timeline&#39;, subscriptions: function(params) { let startDate = new Date(params." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2016/05/24/more-meteor/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-05-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-05-24T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="More meteor"/>
+<meta name="twitter:description" content="I expanded my Photo display React component to display groups of photos, and provide a user interface for expanding and contracting them.
+![Expanding/hiding duplicates](/images/2016-05-24 22_15_32.gif)
+I also added a date widget, and got pagination, subscriptions, and routing figured out super easily with FlowRouter.
+Seriously, it was super easy. I can probably handle parsing and changing the dates in a slightly more elegant way though.
+FlowRouter.route(&#39;/timeline/:date&#39;, { name: &#39;timeline&#39;, subscriptions: function(params) { let startDate = new Date(params."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>More meteor</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+            <a href="http://subject.space">← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>More meteor</h1>
+        <div>
+                <time>May 24, 2016</time>
+            </div>
+    </header><p>I expanded my Photo display React component to display groups of photos, and provide a user interface for expanding and contracting them.</p>
+<p>![Expanding/hiding duplicates](/images/2016-05-24 22_15_32.gif)</p>
+<p>I also added a date widget, and got pagination, subscriptions, and routing figured out super easily with <a href="https://github.com/kadirahq/flow-router">FlowRouter</a>.</p>
+<p><img src="/images/timeline_tuesday.jpg" alt="Date widget"></p>
+<p>Seriously, it was super easy. I can probably handle parsing and changing the dates in a slightly more elegant way though.</p>
+<pre tabindex="0"><code>FlowRouter.route(&#39;/timeline/:date&#39;, {
+	name: &#39;timeline&#39;,
+	subscriptions: function(params) {
+		let startDate = new Date(params.date);
+		let endDate = new Date(params.date);
+		startDate = new Date(startDate.getTime() - 2*1000*60*60*24);
+		endDate = new Date(endDate.getTime() + 3*1000*60*60*24);
+
+    	this.register(&#39;photos&#39;, Meteor.subscribe(&#39;photos&#39;, startDate, endDate));
+    },
+	action: function(params) {
+		mount(App, {date: moment(params.date)})
+	}
+});
+</code></pre><hr>
+<p>Started preparing the garden for the cherry tomato plants today. I also began thinking about how the fire pit build is going to work. I think I need some rocks. Maybe some steel, if I can find any scrap?</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

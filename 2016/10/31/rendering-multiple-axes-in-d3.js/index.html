@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Rendering multiple axes in D3.js" />
+<meta property="og:description" content="Last week, I needed to add many axes to a single D3 svg. I had a set of sets of data points, and I wanted each of these sets of data to be rendered with its own x and y axes.
+To do this, I wrote the following:
+var locationArea = bar.append(&#34;g&#34;) .attr(&#34;transform&#34;, function(d) { return &#34;translate(200,&#34; &#43; 24*(&#43;d.length) &#43; &#34;)&#34;; }) .attr(&#34;class&#34;, function(d, i) { return &#34;locations n_&#34;.concat(i) }); var locationXAxes = locationArea ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2016/10/31/rendering-multiple-axes-in-d3.js/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-10-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-10-31T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rendering multiple axes in D3.js"/>
+<meta name="twitter:description" content="Last week, I needed to add many axes to a single D3 svg. I had a set of sets of data points, and I wanted each of these sets of data to be rendered with its own x and y axes.
+To do this, I wrote the following:
+var locationArea = bar.append(&#34;g&#34;) .attr(&#34;transform&#34;, function(d) { return &#34;translate(200,&#34; &#43; 24*(&#43;d.length) &#43; &#34;)&#34;; }) .attr(&#34;class&#34;, function(d, i) { return &#34;locations n_&#34;.concat(i) }); var locationXAxes = locationArea ."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Rendering multiple axes in D3.js</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+            <a href="http://subject.space">← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Rendering multiple axes in D3.js</h1>
+        <div>
+                <time>October 31, 2016</time>
+            </div>
+    </header><p>Last week, I needed to add many axes to a single D3 svg. I had a set of sets of data points, and I wanted each of these sets of data to be rendered with its own x and y axes.</p>
+<p>To do this, I wrote the following:</p>
+<pre tabindex="0"><code>  var locationArea = bar.append(&#34;g&#34;)
+      .attr(&#34;transform&#34;, function(d) { return &#34;translate(200,&#34; + 24*(+d.length) + &#34;)&#34;; })
+      .attr(&#34;class&#34;, function(d, i) { return &#34;locations n_&#34;.concat(i) });
+
+  var locationXAxes = locationArea
+    .each(function (d, i) {
+
+      var lat_scale = d3.scale.linear()
+                      .range([-50, 50])
+                      .domain([d3.min(d.locations, function(d) { return d[0]; }),
+                               d3.max(d.locations, function(d) { return d[0]; })]);
+
+      var axis = d3.svg.axis()
+        .scale(lat_scale)
+        .orient(&#34;bottom&#34;)
+        .ticks(3);
+
+      d3.selectAll(&#34;.n_&#34;.concat(i)).append(&#34;g&#34;)
+        .attr(&#34;class&#34;, &#34;x axis&#34;)
+        .attr(&#34;transform&#34;, &#34;translate(0, 60)&#34;)
+        .call(axis);
+    });
+</code></pre><p>For each set of data points, a new D3 scale is created, and a new axis is created from that scale. Then, the group created previously is selected and the axis is appended to that specific group.</p>
+<p>There&rsquo;s probably a better way to do this, but this worked.</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

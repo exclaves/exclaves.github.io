@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://example.com/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Serving a little service with node" />
+<meta property="og:description" content="I needed to have an easy way of communicating with the Stanford language parser. I had difficulty using the stanford-simple-nlp node package in Meteor directly, and got frustrated with debugging it, so I created another local HTTP server with Node that serves a single endpoint for parsing sentences. And it works!
+var http = require(&#39;http&#39;); var StanfordSimpleNLP = require(&#39;stanford-simple-nlp&#39;); var httpdispatcher = require(&#39;httpdispatcher&#39;); // listen on port 3xxx const PORT = 3050; var stanfordSimpleNLP = new StanfordSimpleNLP." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/2016/12/20/serving-a-little-service-with-node/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-12-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-12-20T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Serving a little service with node"/>
+<meta name="twitter:description" content="I needed to have an easy way of communicating with the Stanford language parser. I had difficulty using the stanford-simple-nlp node package in Meteor directly, and got frustrated with debugging it, so I created another local HTTP server with Node that serves a single endpoint for parsing sentences. And it works!
+var http = require(&#39;http&#39;); var StanfordSimpleNLP = require(&#39;stanford-simple-nlp&#39;); var httpdispatcher = require(&#39;httpdispatcher&#39;); // listen on port 3xxx const PORT = 3050; var stanfordSimpleNLP = new StanfordSimpleNLP."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Serving a little service with node</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://example.com">tracks and traces</a></h2>
+    <nav>
+            <a href="http://subject.space">← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Serving a little service with node</h1>
+        <div>
+                <time>December 20, 2016</time>
+            </div>
+    </header><p>I needed to have an easy way of communicating with the Stanford language parser. I had difficulty using the <code>stanford-simple-nlp</code> node package in Meteor directly, and got frustrated with debugging it, so I created another local HTTP server with Node that serves a single endpoint for parsing sentences. And it works!</p>
+<pre tabindex="0"><code>var http = require(&#39;http&#39;);
+var StanfordSimpleNLP = require(&#39;stanford-simple-nlp&#39;);
+var httpdispatcher = require(&#39;httpdispatcher&#39;);
+
+// listen on port 3xxx
+const PORT = 3050; 
+
+var stanfordSimpleNLP = new StanfordSimpleNLP.StanfordSimpleNLP();
+var dispatcher = new httpdispatcher();
+
+// load the Stanford Parser. this takes a little while.
+stanfordSimpleNLP.loadPipelineSync();
+
+// Lets use our dispatcher
+function handleRequest(request, response){
+    try {
+        //log the request on console
+        console.log(request.url);
+        //Disptach
+        dispatcher.dispatch(request, response);
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+// Create an endpoint for parsing a sentence.
+dispatcher.onPost(&#34;/parse&#34;, function(req, res) {
+	var text = req.params.text;
+	console.log(&#34;Request: &#34; + text);
+
+	stanfordSimpleNLP.process(text, function(err, result) {
+		if (err) {
+			console.log(err);
+			res.writeHead(500, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
+			res.end();
+		} else {
+			res.writeHead(200, {&#39;Content-Type&#39;: &#39;text/plain&#39;});
+	    	res.end(JSON.stringify(result));
+	    }
+	});
+});
+
+// Create a server and start listening
+var server = http.createServer(handleRequest);
+
+server.listen(PORT, function(){
+    console.log(&#34;Server listening on: http://localhost:%s&#34;, PORT);
+});
+</code></pre></article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>
