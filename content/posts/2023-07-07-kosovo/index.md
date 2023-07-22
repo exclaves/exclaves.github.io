@@ -122,7 +122,7 @@ After less than an hour of waiting for a furgon amidst the honey vendors of Prev
 
 {{< img "assets/DSCF9959.jpg" "the main junction in Prevalla" >}}
 
-The next day, I left Kosovo via the Pristina airport, and was pleasantly surprised that our flight passed right over the same area. Prevalla is visible in the center, and Oshlak ridge runs along the left side.
+The next day, I left Kosovo via the Pristina airport, and was pleasantly surprised that my flight passed right over the same area. Prevalla is visible in the center, and Oshlak ridge runs along the left side.
 
 <div class="multi" style="width: 100%; margin-left: auto;">
 {{< img "assets/signal-2023-07-01-134701_002.jpeg" "Oshlak ridge from the sky" >}}
