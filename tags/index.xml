@@ -12,6 +12,24 @@
     
     
     <item>
+      <title>Solving &#39;the following layers were not correctly generated&#39; in QGIS SAGA</title>
+      <link>https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/</link>
+      <pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/</guid>
+      <description>&lt;p&gt;I was working on a map recently and tried to use SAGA in QGIS to make a multilevel b-spline raster from some scattered vector points. (More to come tomorrow!) However, I kept getting the vague error &amp;ldquo;The following layers were not correctly generated.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;As I experimented with the data, I discovered two circumstances that produce this error:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Attempting to interpolate a attribute with a space (or possibly other non-alphanumeric characters) in the name&lt;/li&gt;
+&lt;li&gt;Attempting to interpolate a non-numeric attribute&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So if you&amp;rsquo;re encountering this, check that you&amp;rsquo;re interpolating a numeric attribute with a short alphanumeric name.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Five orchids in IJmuiden</title>
       <link>https://exclav.es/2023/07/22/five-orchids-in-ijmuiden/</link>
       <pubDate>Sat, 22 Jul 2023 00:00:00 +0000</pubDate>
@@ -2378,7 +2396,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Edelweiss &lt;span&gt;(Leontopodium nivale alpinum)&lt;/span&gt;
+            Alpine Edelweiss &lt;span&gt;(Leontopodium nivale alpinum)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -5750,7 +5768,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Edelweiss &lt;span&gt;(Leontopodium nivale alpinum)&lt;/span&gt;
+            Alpine Edelweiss &lt;span&gt;(Leontopodium nivale alpinum)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -8678,7 +8696,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            alpine plantan &lt;span&gt;(Adenostyles alpina)&lt;/span&gt;
+            alpine plantain &lt;span&gt;(Adenostyles alpina)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -8961,7 +8979,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -9786,6 +9804,8 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -9803,7 +9823,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12506,7 +12526,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Common Kestrel &lt;span&gt;(Falco tinnunculus)&lt;/span&gt;
+            Eurasian Kestrel &lt;span&gt;(Falco tinnunculus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -12744,7 +12764,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Common Kestrel &lt;span&gt;(Falco tinnunculus)&lt;/span&gt;
+            Eurasian Kestrel &lt;span&gt;(Falco tinnunculus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -14282,7 +14302,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Edelweiss &lt;span&gt;(Leontopodium nivale alpinum)&lt;/span&gt;
+            Alpine Edelweiss &lt;span&gt;(Leontopodium nivale alpinum)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
