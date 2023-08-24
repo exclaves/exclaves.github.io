@@ -1,6 +1,7 @@
 ---
 title: "Sunshine maps, revisited"
 date: 2023-08-24
+images: [/2023/08/24/sunshine-maps-revisited/assets/planet_hudbdf565abae374a0d7f95df8ddf09695_674310_1800x1800_fit_box_3.png]
 ---
 
 I've always thought [these sunshine maps](https://commons.wikimedia.org/wiki/File:Europe_sunshine_hours_map.png) were a little suspicious.
