@@ -12,18 +12,120 @@
     
     
     <item>
+      <title>Sunshine maps, revisited</title>
+      <link>https://exclav.es/2023/08/24/sunshine-maps-revisited/</link>
+      <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2023/08/24/sunshine-maps-revisited/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve always thought &lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Europe_sunshine_hours_map.png&#34;&gt;these sunshine maps&lt;/a&gt; were a little suspicious.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/old_map.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/old_map_hu26306208ecd79eab592e460c5171cf4b_164188_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;a map of the annual sunshine hours in the US and Europe.&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Not just the JPEG artifacts, but is Ohio really that much sunnier than France? Britain is dreary, but is it so dreary that Estonia is brighter?&lt;/p&gt;
+&lt;p&gt;Maybe it was the gloomy weather in Amsterdam but for some reason I tried to recreate this map the other day. A few hours messing around with a &lt;a href=&#34;https://data.un.org/Data.aspx?d=CLINO&amp;amp;f=ElementCode%3A15%3BCountryCode%3AKO&#34;&gt;dataset from the World Metereological Organization&lt;/a&gt; answered many of these questions.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/europe.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/europe_hu488081c4cba95383c9aa36790f46f653_428887_1800x1800_fit_box_3.png&#34; alt=&#34;a map of solar hours in europe&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;(Same scale as first map.)&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/us.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/us_hu51ab21d619f299330d3861276a023b5a_317068_1800x1800_fit_box_3.png&#34; alt=&#34;a map of solar hours in the us&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;(Same scale as first map.)&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;Is the huge difference between the US and Europe real? Oh yes. Europe is not very sunny. Thermal clouds form less often over water than land, partially explaining the Baltic brightness.&lt;/p&gt;
+&lt;p&gt;There are many data choices that affect the output. WMO dataset is inconsistently distributed. Europe is fairly evenly sampled, however there isn&amp;rsquo;t a single station in Turkey with data. Depending on the interpolation algorithm that you use to generate the raster, cities can generate pockmarks that don&amp;rsquo;t seem logical with the local topography.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/sampling.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/sampling_hue9c863da77b0063ea9d2d51f188f89c9_918903_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;While the map on Wikimedia does not provide detailed information about the data source (citing only &amp;ldquo;national data&amp;rdquo;), I suspect that the WMO dataset shares many properties of the data used for the original maps.&lt;/p&gt;
+&lt;p&gt;This makes particularly absurd maps when applied to the entire globe.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/planet.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/planet_hudbdf565abae374a0d7f95df8ddf09695_674310_1800x1800_fit_box_3.png&#34; alt=&#34;a map of solar hours over the entire globe with some noticeably strange regions&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;(Same scale as first map.)&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;A better representation of this data is to look at solar power irradiance maps, like those from &lt;a href=&#34;https://globalsolaratlas.info/&#34;&gt;Global Solar Atlas&lt;/a&gt; which estimate the amount of power available for solar cells. This is different from sunshine hours in that it depends on the intensity of the radiation, so it emphasizes equatorial regions more than a map of sunshine hours.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/europe_2.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/europe_2_hu78e14cde93161c211a4499f749422e4b_5414162_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/us_2.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/24/sunshine-maps-revisited/assets/us_2_hu3c35170342c7832c569873cf5872354b_5558785_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;By the way, check this out if &lt;a href=&#34;https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/&#34;&gt;SAGA&amp;rsquo;s B-spline interpolation fails with &amp;ldquo;the following layers were not correctly generated.&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Solving &#39;the following layers were not correctly generated&#39; in QGIS SAGA</title>
       <link>https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/</link>
       <pubDate>Tue, 22 Aug 2023 00:00:00 +0000</pubDate>
       
       <guid>https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/</guid>
       <description>&lt;p&gt;I was working on a map recently and tried to use SAGA in QGIS to make a multilevel b-spline raster from some scattered vector points. (More to come tomorrow!) However, I kept getting the vague error &amp;ldquo;The following layers were not correctly generated.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;As I experimented with the data, I discovered two circumstances that produce this error:&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/Screenshot%202023-08-24%20at%202.47.21%20PM.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2023/08/22/solving-the-following-layers-were-not-correctly-generated-in-qgis-saga/Screenshot%202023-08-24%20at%202.47.21%20PM_hu649bc575febac8ee23a7be60cf93673d_157754_1800x1800_fit_box_3.png&#34; alt=&#34;a screenshot of the error&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;I found some &lt;img src=&#34;https://gis.stackexchange.com/questions/221924/the-following-layers-were-not-correctly-generated-grid&#34; alt=&#34;Stack Overflow&#34;&gt; posts with the same error but my problem seemed unrelated to the filename/disk space issues mentioned. As I experimented with the data, I discovered two circumstances that produce this rather vague error:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Attempting to interpolate a attribute with a space (or possibly other non-alphanumeric characters) in the name&lt;/li&gt;
-&lt;li&gt;Attempting to interpolate a non-numeric attribute&lt;/li&gt;
+&lt;li&gt;Attempting to interpolate a field with a space (or possibly other non-alphanumeric characters) in the name&lt;/li&gt;
+&lt;li&gt;Attempting to interpolate a non-numeric field&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So if you&amp;rsquo;re encountering this, check that you&amp;rsquo;re interpolating a numeric attribute with a short alphanumeric name.&lt;/p&gt;
+&lt;p&gt;So if you&amp;rsquo;re encountering this, check that you&amp;rsquo;re interpolating a numeric field with a short alphanumeric name.&lt;/p&gt;
 </description>
     </item>
     
