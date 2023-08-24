@@ -120,7 +120,7 @@
     &lt;/a&gt;
     
 &lt;/figure&gt;
-&lt;p&gt;I found some &lt;img src=&#34;https://gis.stackexchange.com/questions/221924/the-following-layers-were-not-correctly-generated-grid&#34; alt=&#34;Stack Overflow&#34;&gt; posts with the same error but my problem seemed unrelated to the filename/disk space issues mentioned. As I experimented with the data, I discovered two circumstances that produce this rather vague error:&lt;/p&gt;
+&lt;p&gt;I found some &lt;a href=&#34;https://gis.stackexchange.com/questions/221924/the-following-layers-were-not-correctly-generated-grid&#34;&gt;Stack Overflow&lt;/a&gt; posts with the same error but my problem seemed unrelated to the filename/disk space issues mentioned. As I experimented with the data, I discovered two circumstances that produce this rather vague error:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Attempting to interpolate a field with a space (or possibly other non-alphanumeric characters) in the name&lt;/li&gt;
 &lt;li&gt;Attempting to interpolate a non-numeric field&lt;/li&gt;
