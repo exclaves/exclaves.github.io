@@ -752,6 +752,8 @@
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -769,7 +771,7 @@
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -1120,7 +1122,7 @@
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Life)&lt;/span&gt;
+            pines &lt;span&gt;(Pinus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -1140,8 +1142,8 @@
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
-                &lt;div class=&#34;iconic&#34;&gt;&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -1624,6 +1626,7 @@ map.addControl(new mapboxgl.NavigationControl());
 &lt;div style=&#34;display: flex; justify-content: center&#34;&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Remember the classic &amp;quot;Locals &amp;amp; Tourists&amp;quot; dataviz project by &lt;a href=&#34;https://twitter.com/enf?ref_src=twsrc%5Etfw&#34;&gt;@enf&lt;/a&gt;? Has anyone tried applying the same method (&amp;lt;30 days posting photos from a given location: you&amp;#39;re a &amp;quot;tourist&amp;quot;; &amp;gt;=30 days: you&amp;#39;re &amp;quot;local&amp;quot;) to &lt;a href=&#34;https://twitter.com/Team_eBird?ref_src=twsrc%5Etfw&#34;&gt;@Team_eBird&lt;/a&gt; / &lt;a href=&#34;https://twitter.com/inaturalist?ref_src=twsrc%5Etfw&#34;&gt;@inaturalist&lt;/a&gt; data to measure local community participation? &lt;a href=&#34;https://t.co/1QdSZKB2RH&#34;&gt;pic.twitter.com/1QdSZKB2RH&lt;/a&gt;&lt;/p&gt;&amp;mdash; Dario Taraborelli (@ReaderMeter) &lt;a href=&#34;https://twitter.com/ReaderMeter/status/1536038627213398016?ref_src=twsrc%5Etfw&#34;&gt;June 12, 2022&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
 
 &lt;/div&gt;
 &lt;p&gt;It&amp;rsquo;s taken a while, but here it is:&lt;/p&gt;
@@ -2464,6 +2467,8 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -2481,7 +2486,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -3023,7 +3028,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -3372,6 +3377,8 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -3389,7 +3396,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -3684,7 +3691,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -4097,7 +4104,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -4682,7 +4689,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -5314,7 +5321,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -5348,7 +5355,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -5382,7 +5389,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -5774,6 +5781,8 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -5791,7 +5800,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -7302,7 +7311,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -7385,6 +7394,8 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -7402,7 +7413,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -7416,6 +7427,8 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             Dark-red Helleborine &lt;span&gt;(Epipactis atrorubens)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
+                
+                    ✅
                 
             &lt;/div&gt;
         &lt;/div&gt;
@@ -7434,7 +7447,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -7814,7 +7827,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Woolly Thistle &lt;span&gt;(Cirsium eriophorum)&lt;/span&gt;
+            Woolly Thistle &lt;span&gt;(Lophiolepis eriophora)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -8433,7 +8446,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -8700,7 +8713,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Phoxinus)&lt;/span&gt;
+            Balkan Italic minnow &lt;span&gt;(Phoxinus lumaireul)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -9521,7 +9534,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -10487,7 +10500,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -10521,7 +10534,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -10589,7 +10602,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -10689,7 +10702,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -10723,7 +10736,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -11995,7 +12008,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12409,7 +12422,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12443,7 +12456,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12747,7 +12760,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12815,7 +12828,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12849,7 +12862,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -12985,7 +12998,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -13121,7 +13134,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -13353,7 +13366,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -14589,7 +14602,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -14600,7 +14613,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Common House Martin &lt;span&gt;(Delichon urbicum)&lt;/span&gt;
+            Western house-martin &lt;span&gt;(Delichon urbicum)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -14623,7 +14636,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -15600,6 +15613,39 @@ d3.json(&#34;/av1-viz/nodes.json&#34;).then((nodes) =&gt; {
 &lt;/script&gt;&lt;blockquote&gt;
 &lt;/blockquote&gt;
 </description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Analyzing the Oakland Police Department&#39;s use of helicopters</title>
+      <link>https://exclav.es/2020/09/21/analyzing-the-oakland-police-departments-use-of-helicopters/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2020/09/21/analyzing-the-oakland-police-departments-use-of-helicopters/</guid>
+      <description>&lt;p&gt;I analyzed historic data from ADS-B Exchange to map out the most common places that Oakland Police Department chooses to deploy their helicopters. The data shows concerning patterns of geographic inequity, with residents of certain neighborhoods forced to deal with the noise and environmental pollution from low-flying helicopters much more than others.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2020/09/21/analyzing-the-oakland-police-departments-use-of-helicopters/map.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2020/09/21/analyzing-the-oakland-police-departments-use-of-helicopters/map_hu4e681a296930fbef2e7663dc3dd65e7a_353746_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;a map showing that usage of police helicopters is very high in certain neighborhoods of East Oakland, and very low in other, generally wealthier neighborhoods&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;While some of this &amp;ldquo;merely&amp;rdquo; reflects the location of the airport and neighborhoods with more police calls, data I FOIAd from the OPD also shows a pattern of pro-active surveillance of low-income neighborhoods.&lt;/p&gt;
+&lt;p&gt;This map attracted some attention on Twitter. I&amp;rsquo;ve archived my original post here, as I&amp;rsquo;ve since deleted all posts from Twitter.&lt;/p&gt;
+&lt;div style=&#34;width: 60%; margin-left: 20%;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2020/09/21/analyzing-the-oakland-police-departments-use-of-helicopters/screenshot.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2020/09/21/analyzing-the-oakland-police-departments-use-of-helicopters/screenshot_huc1c04417355ecfe7d24487dd7fc7cb71_1219699_1800x1800_fit_box_3.png&#34; alt=&#34;a screenshot of a tweet showing geographic inequity in use of police helicopters in Oakland, California&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;</description>
     </item>
     
     
