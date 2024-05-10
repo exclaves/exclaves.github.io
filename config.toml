@@ -5,6 +5,7 @@ languageCode = "en-US"
 enableInlineShortcodes = true
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+timeout = "90s"
 
 [params]
   description = "in progress. blog of Logan Williams/subject.space."
