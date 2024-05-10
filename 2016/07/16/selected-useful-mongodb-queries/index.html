@@ -8,23 +8,24 @@
     
     <link rel="stylesheet" href="/css/style.min.css">
 
-    <meta property="og:title" content="Selected useful Mongodb queries" />
-<meta property="og:description" content="Group by date:
+    <meta property="og:url" content="https://exclav.es/2016/07/16/selected-useful-mongodb-queries/">
+  <meta property="og:site_name" content="tracks and traces">
+  <meta property="og:title" content="Selected useful Mongodb queries">
+  <meta property="og:description" content="Group by date:
 db.getCollection(&#39;images&#39;).aggregate( [ { $group: { _id : { month: { $month: &#34;$datetime.utc_timestamp&#34; }, day: { $dayOfMonth: &#34;$datetime.utc_timestamp&#34; }, year: { $year: &#34;$datetime.utc_timestamp&#34; } }, count: { $sum: 1 }, latitude: { $avg: &#34;$latitude&#34;}, longitude: { $avg: &#34;$longitude&#34;}, } } ] ) Creating a 2-D geospatial index on an Earth-spheroid.
 db.images.createIndex({&#34;location&#34;: &#34;2dsphere&#34;}) Finding documents near a point:
-db.images.find({ &#34;location&#34;: { $near: { $geometry: { type: &#34;Point&#34;, coordinates: [-122.1624, 37." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://exclav.es/2016/07/16/selected-useful-mongodb-queries/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-07-16T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-07-16T00:00:00+00:00" />
+db.images.find({ &#34;location&#34;: { $near: { $geometry: { type: &#34;Point&#34;, coordinates: [-122.1624, 37.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-07-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-07-16T00:00:00+00:00">
 
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Selected useful Mongodb queries"/>
+    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Selected useful Mongodb queries">
 <meta name="twitter:description" content="Group by date:
 db.getCollection(&#39;images&#39;).aggregate( [ { $group: { _id : { month: { $month: &#34;$datetime.utc_timestamp&#34; }, day: { $dayOfMonth: &#34;$datetime.utc_timestamp&#34; }, year: { $year: &#34;$datetime.utc_timestamp&#34; } }, count: { $sum: 1 }, latitude: { $avg: &#34;$latitude&#34;}, longitude: { $avg: &#34;$longitude&#34;}, } } ] ) Creating a 2-D geospatial index on an Earth-spheroid.
 db.images.createIndex({&#34;location&#34;: &#34;2dsphere&#34;}) Finding documents near a point:
-db.images.find({ &#34;location&#34;: { $near: { $geometry: { type: &#34;Point&#34;, coordinates: [-122.1624, 37."/>
+db.images.find({ &#34;location&#34;: { $near: { $geometry: { type: &#34;Point&#34;, coordinates: [-122.1624, 37.">
 
 
     <link rel="stylesheet" href="/css/override.css" />
@@ -32,7 +33,7 @@ db.images.find({ &#34;location&#34;: { $near: { $geometry: { type: &#34;Point&#3
     <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
 </head>
 <body><header id="banner">
-    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <h2><a href="https://exclav.es/">tracks and traces</a></h2>
     <nav>
             <a href="http://subject.space">← back to portfolio</a>
     </nav>

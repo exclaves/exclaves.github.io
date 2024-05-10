@@ -8,21 +8,22 @@
     
     <link rel="stylesheet" href="/css/style.min.css">
 
-    <meta property="og:title" content="IR sensor notes" />
-<meta property="og:description" content="I2C what it mean: http://www.ti.com/lit/an/slva704/slva704.pdf
+    <meta property="og:url" content="https://exclav.es/2016/10/24/ir-sensor-notes/">
+  <meta property="og:site_name" content="tracks and traces">
+  <meta property="og:title" content="IR sensor notes">
+  <meta property="og:description" content="I2C what it mean: http://www.ti.com/lit/an/slva704/slva704.pdf
 address of device seems to be 0x1A and not 0x34 as reported by datasheet via i2cdetect:
-pi@raspberrypi:~ $ i2cdetect -y 1 0 1 2 3 4 5 6 7 8 9 a b c d e f 00: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 10: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 1a &ndash; &ndash; &ndash; &ndash; &ndash; 20: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 30: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 40: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 50: 50 &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 60: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 70: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://exclav.es/2016/10/24/ir-sensor-notes/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-10-24T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-10-24T00:00:00+00:00" />
+pi@raspberrypi:~ $ i2cdetect -y 1 0 1 2 3 4 5 6 7 8 9 a b c d e f 00: – – – – – – – – – – – – – 10: – – – – – – – – – – 1a – – – – – 20: – – – – – – – – – – – – – – – – 30: – – – – – – – – – – – – – – – – 40: – – – – – – – – – – – – – – – – 50: 50 – – – – – – – – – – – – – – – 60: – – – – – – – – – – – – – – – – 70: – – – – – – – –">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-10-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-10-24T00:00:00+00:00">
 
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="IR sensor notes"/>
+    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="IR sensor notes">
 <meta name="twitter:description" content="I2C what it mean: http://www.ti.com/lit/an/slva704/slva704.pdf
 address of device seems to be 0x1A and not 0x34 as reported by datasheet via i2cdetect:
-pi@raspberrypi:~ $ i2cdetect -y 1 0 1 2 3 4 5 6 7 8 9 a b c d e f 00: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 10: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 1a &ndash; &ndash; &ndash; &ndash; &ndash; 20: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 30: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 40: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 50: 50 &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 60: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 70: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash;"/>
+pi@raspberrypi:~ $ i2cdetect -y 1 0 1 2 3 4 5 6 7 8 9 a b c d e f 00: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 10: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 1a &ndash; &ndash; &ndash; &ndash; &ndash; 20: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 30: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 40: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 50: 50 &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 60: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; 70: &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash; &ndash;">
 
 
     <link rel="stylesheet" href="/css/override.css" />
@@ -30,7 +31,7 @@ pi@raspberrypi:~ $ i2cdetect -y 1 0 1 2 3 4 5 6 7 8 9 a b c d e f 00: &ndash; &n
     <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
 </head>
 <body><header id="banner">
-    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <h2><a href="https://exclav.es/">tracks and traces</a></h2>
     <nav>
             <a href="http://subject.space">← back to portfolio</a>
     </nav>
