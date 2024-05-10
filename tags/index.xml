@@ -18,6 +18,8 @@
       
       <guid>https://exclav.es/2024/05/10/turn-any-website-into-a-beautiful-lullaby/</guid>
       <description>&lt;p&gt;converts a webpage to a bitmap and throws those bytes at your audio output&lt;/p&gt;
+&lt;p&gt;it&#39;s a bookmarklet, remember those?&lt;/p&gt;
+&lt;p&gt;made extremely quickly for the Recurse Center&#39;s Never Graduate Week 2024 &lt;a href=&#34;https://wambamjam.recurse.com/&#34;&gt;WAM BAM JAM&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;drag-the-link-below-to-your-bookmarks-bar&#34;&gt;Drag the link below to your bookmarks bar:&lt;/h2&gt;
 &lt;div style=&#34; margin-top: 10px;&#34;&gt;
     &lt;span style=&#34;background-color: #ccc;
@@ -29,7 +31,7 @@
 &lt;h2&gt;Some links to try out:&lt;/h2&gt;
 &lt;ul&gt;
     &lt;li&gt;
-        &lt;a href=&#34;simple.html&#34;&gt;a simple test, relax&lt;/a&gt;
+        &lt;a href=&#34;https://data-lake-house.fra1.cdn.digitaloceanspaces.com/simple.html&#34;&gt;a simple test, relax&lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
         &lt;a href=&#34;https://img.freepik.com/free-vector/flat-distorted-checkered-background_23-2148968770.jpg?w=2000&amp;t=st=1715273962~exp=1715274562~hmac=94ecb6d6815e4df0c9dbd2bf1e174945103824c3b419b207f38efb377467e650&#34;&gt;checkerboard&lt;/a&gt;
@@ -53,7 +55,7 @@
         &lt;a href=&#34;https://csszengarden.com/211/&#34;&gt;css zen garden&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;source-code&#34;&gt;source code&lt;/h2&gt;
+&lt;h2 id=&#34;source-code&#34;&gt;Source code&lt;/h2&gt;
 &lt;script src=&#34;https://gist.github.com/loganwilliams/e31a38a81efae86d093da87ef251213e.js&#34;&gt;&lt;/script&gt;
 
 </description>
