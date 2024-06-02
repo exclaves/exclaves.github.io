@@ -213,3 +213,7 @@ figcaption {
     width: 108%;
   }
 }
+
+iframe {
+  max-width: 100vw;
+}
