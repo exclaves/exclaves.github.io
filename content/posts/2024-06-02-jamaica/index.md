@@ -6,9 +6,10 @@ images:
   [
     /2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/image2_hu183df7362cc55b0290b0ad9dc1d50375_213464_1800x1800_fit_q75_box.jpg,
   ]
+description: Written to share some sights and sounds, and in the hopes that this is useful to other nature lovers planning independent travel to Jamaica outside the resort-industrial-complex.
 ---
 
-Written to share some photos and in the hopes that this is useful to other nature lovers planning independent travel to Jamaica outside the resort-industrial-complex. We found it rather difficult to find up-to-date information to plan our trip, and there is quite a bit of fear-mongering on the internet. We had a wonderful time exploring with our own rental car, hiking, birdwatching, and meeting people in Jamaica, and would highly recommend a visit to this ecologically diverse and culturally unique country.
+Written to share some sights and sounds, and in the hopes that this is useful to other nature lovers planning independent travel to Jamaica outside the resort-industrial-complex. We found it rather difficult to find up-to-date information to plan our trip, and there is quite a bit of fear-mongering on the internet. We had a wonderful time exploring with our own rental car, hiking, birdwatching, and meeting people in Jamaica, and would highly recommend a visit to this ecologically diverse and culturally unique country.
 
 {{< img "images/map2.png" "a map of Jamaica highlighting some places from this trip" "Some key locations on our trip." >}}
 
