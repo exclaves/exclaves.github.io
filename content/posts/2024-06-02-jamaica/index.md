@@ -303,9 +303,9 @@ Kingston Dub Club, music/nightclub, ★★★★
 
 Alison flew back to Amsterdam, and I spent the next week with the Media Institute of the Caribbean’s Investigative Journalism workshop, where I shared some training material on online open-source investigation with journalists from around the Caribbean.
 
-I also had the opportunity to explore Kingston a bit more. I can't overstate how fun it is to listen to the music people are listening to here. One evening at TriniYaad, an excellent Trinidadian food stand, I heard someone singing along to a song playing on the PA. Neither myself nor Shazam could identify the neo-soul-esque reggae number, so I asked her who the artist was. "Oh!" she said, "it's me."
+I also had the opportunity to explore Kingston a bit more. I can't overstate how fun it is to listen to the music people are listening to here. One evening at TriniYaad, an excellent Trinidadian food stand, I heard someone singing along to a song playing on the PA. Neither myself nor Shazam could identify the neo-soul-esque reggae number, so I asked her who the artist was. "Oh!" she said, "it's [me](https://www.youtube.com/watch?v=TumGsilRHx4)."
 
-From taxicabs to school buses to journalist outings, the common denominator of music was Afrobeats and Soca.
+From taxicabs to school buses to journalist outings, the common denominator of music was Afrobeats and Soca. I didn't make it to any Dancehall parties unfortunately but [Dancehall Ketch Up](https://dancehallketchup.com/parties-in-kingston/) is the place for info.
 
 **Places:**<br />
 TriniYaad, restaurant, ★★★★
