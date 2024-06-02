@@ -35,7 +35,7 @@ Ecoscape, hotel, ★★★★★
 
 We woke up at sunrise for the dawn chorus, which was exuberant. There’s always a learning curve to birding in a new place, and this was no exception. The **Jamaican woodpeckers** in particular taunted us. Also, due to a lack of data, Merlin’s Sound ID does not work very well for Jamaican species, many of which are endemic or have a limited Caribbean range.
 
-Still, we sighted five endemics before breakfast, **Orangequit**, **Jamaican Oriole**, **White-chinned Thrush**, **Yellow-billed parrot**, and **Red-billed streamertail**, one of the two birds national of Jamaica, as well as a handful of warblers, including **American Redstart**, **Black-throated Blue Warbler**, **Magnolia Warbler**, and **Black-and-white Warbler**.
+Still, we sighted five endemics before breakfast. Active **Orangequits**, a colorful **Jamaican Oriole**, many many Robin-like **White-chinned Thrushes**, **Yellow-billed parrots** commuting from tree-top to tree-top, and a **Red-billed streamertail** in the garden. This beautiful hummingbird is one of the two birds national of Jamaica. Besides the endemics, we also spotted a handful of warblers foraging high in palm fruits amongst the **Bananaquits**, including **American Redstart**, **Black-throated Blue Warbler**, **Magnolia Warbler**, and **Black-and-white Warbler**.
 
 The wonderful property caretaker, Nick, arrived later in the morning with fresh coconuts and took us on a walk around the local community, pointing out edible trees such as ackee on the way. At one point two tiny **Green-rumped Parrotlets** flew across our path — tiny green parrots, escaped non-native pets, and very controversial. We ended with a lazy afternoon at a local swimming hole.
 
@@ -48,7 +48,7 @@ The wonderful property caretaker, Nick, arrived later in the morning with fresh 
 
 I have a running “joke” that bioluminescent algae don’t exist, and that it’s just the whitewater reflecting the moon. So it was necessary to visit the “Luminous Lagoon” by Falmouth, where a shallow bay has a very large population of _Pyrodinium_, a local bioluminescent dinoflagellate.
 
-It was predictably touristy, but still fun. Instead of watching the rather sad "dance show," we just focused on the **Magnificent Frigatebirds** and **Brown Pelicans** (in full breeding plumage) flying around the lagoon.
+It was predictably touristy, but still fun. Instead of watching the rather sad "dance show," we just focused on the **Magnificent Frigatebirds** and **Brown Pelicans** (in full breeding plumage) flying around the lagoon amongst the roosting **Yellow-crowned Night Herons** and **Cattle Egrets**.
 
 <div class="multi" style="width: 80%; margin-left: 10%;">
 {{< img "images/image4.jpg" "sunset at the luminous lagoon" >}}
@@ -73,7 +73,7 @@ Luminous Lagoon, dinoflagellate tours, ★★★
 
 ### Day 3
 
-Rain in the morning dampened the chorus but we still got up early and made some nice endemic sightings: **Loggerhead Kingbird**, **Jamaican Becard**, with a male and a female flying in and out of their amazing hanging nest, **Jamaican Vireo**, **Jamaican Lizard-Cuckoo**, and **Jamaican Spindalis**. The mournful song of the **Rufous-throated Solitaire** kept us company. We never saw this reclusive thrush, though we heard it more around this Airbnb than anywhere else on the trip.
+Rain in the morning dampened the chorus but we still got up early and made some nice endemic sightings: **Loggerhead Kingbirds** on a powerline, **Jamaican Becard**, with a male and a female flying in and out of their amazing hanging nest, **Jamaican Vireo**, the curious and creepy **Jamaican Lizard-Cuckoo**, and **Jamaican Spindalis**. The mournful song of the **Rufous-throated Solitaire** kept us company. We never saw this reclusive thrush, though we heard it more around this Airbnb than anywhere else on the trip.
 
 {{< inat "https://www.inaturalist.org/observations/218381704" >}}
 
@@ -105,7 +105,7 @@ While researching birding sites in Jamaica, one place kept coming up — [Eccles
 
 On the way though, we made a detour to the town of Hector’s River, where a colony of **White-tailed tropicbirds** roosts on the headland.
 
-{{< img "images/image11.jpg" "the headland at hectors river" "There's a White-Tailed Tropicbird in this photo if you look reallly closely" >}}
+{{< img "images/image11.jpg" "the headland at hectors river" "There are two White-Tailed Tropicbird in this photo if you look reallly closely" >}}
 
 We drove slowly along Ecclesdown Road, stopping after about 2 km to get out and walk around and bird. We quickly had a nice view of a **Jamaican tody** (delightfully, known locally as "Robin Redbreast"), which have a habit of vocalizing before jumping out to the road on a highly visible branch and curiously looking about.
 
@@ -127,7 +127,7 @@ After seeing the same person hiking up Ecclesdown Road with a machete to cut ban
 
 When we saw him the fourth time, we offered to hire him for a few hours to walk around with us, to which, after some quick discussion with his colleague hiking up with him, he agreed. Some people I’ve told this story to think that he was trying to get us to do this all along, but I’m not sure – he seemed quite surprised and uncertain about it.
 
-We proceeded to have a pleasant couple hours birding together in the mid-morning. Ecclesdown Road is indeed a great place, with lots of open views on one side, and varied forests throughout. We saw **Black-Billed Streamertail** (the other one of the two national birds, which were a single species until recently), **Jamaican Vireo**, **Jamaican Spindalis**, **Jamaican Euphonia**, and lots of parrots, though unfortunately not with a good enough look to distinguish Yellow-billed from the rare Black-billed.
+We proceeded to have a pleasant couple hours birding together in the mid-morning. Ecclesdown Road is indeed a great place, with lots of open views on one side, and varied forests throughout. We saw **Black-Billed Streamertail** (the other one of the two national birds, which were a single species until recently), **Jamaican Vireo** amongst dense vegetation, the beautiful **Jamaican Spindalis**, **Jamaican Euphonia**, and lots of parrots, though unfortunately not with a good enough look to distinguish Yellow-billed from the rare Black-billed.
 
 We did a lot of walking around on our own in remote places we didn't know very well, and it generally felt okay, but to be honest I'm not sure what risks we might not have been observant of.
 
@@ -135,7 +135,7 @@ For lunch we returned to the Boston Jerk Center, where we ate the previous night
 
 We spent a relaxing afternoon just down the road at Winnifred Beach. The swell is much better for swimming here than at Boston Bay, and the beach is chill, well looked after, and inexpensive.
 
-In the early evening, we scouted out somewhere else to bird the next morning, since we didn't feel comfortable going back to Ecclesdown Road by ourselves, and it's not actually that easy to just find someone from the government to hike around with you. The excellent, though out of date, guide at [Birdfinding.info](https://birdfinding.info/jamaica-san-san/) recommended a road behind the San San Police Station, which immediately enters dense rainforest. In the late afternoon heat, the shade of this forest was a relief, and we found **Smooth-billed Ani**, **Rufous-tailed Flycatcher**, **Greater** **Antillean Bullfinch**, **Zenaida Dove** and beautiful views of a male **Jamaican Oriole**.
+In the early evening, we scouted out somewhere else to bird the next morning, since we didn't feel comfortable going back to Ecclesdown Road by ourselves, and it's not actually that easy to just find someone from the government to hike around with you. The excellent, though out of date, guide at [Birdfinding.info](https://birdfinding.info/jamaica-san-san/) recommended a road behind the San San Police Station, which immediately enters dense rainforest. In the late afternoon heat, the shade of this forest was a relief, and we found **Smooth-billed Ani**, **Rufous-tailed Flycatcher**, **Greater Antillean Bullfinch**, **Zenaida Dove** and beautiful views of a male **Jamaican Oriole**.
 
 We ended the evening with a quick stop at Goblin Hill Villas, where staff cheerfully let us bird on the grounds. We didn’t see too much, but had a nice view of a **Little Blue Heron** foraging on the grassy bluffs. Like most of the places we stayed, the hotel seemed almost empty.
 
@@ -227,7 +227,7 @@ For example, this morning, we went to one of the recommended sites in the Hardwa
 {{< img "images/Screenshot 2024-05-26 at 7.14.52 PM.png" "" >}}
 </div>
 
-Unfortunately, no Jamaican Blackbird. After walking the road for a while, we drove over to Holywell Park, near the top of Hardwar Gap. This small park has a number of short well-maintained hiking trails. The forest is a mix of secondary forest, human-cleared meadows, and small patches of primary forest, most of which have been hard hit by hurricanes. It's a nice place to walk around, and the late-morning birding was decent. We saw a tremendous number of nesting **Blue-mountain vireos**, **Jamaican Lizard-Cuckoo** and two **Arrowhead warblers**, one of my favorite endemics.
+Unfortunately, no Jamaican Blackbird. After walking the road for a while, we drove over to Holywell Park, near the top of Hardwar Gap. This small park has a number of short well-maintained hiking trails. The forest is a mix of secondary forest, human-cleared meadows, and small patches of primary forest, most of which have been hard hit by hurricanes. It's a nice place to walk around, and the late-morning birding was decent. We saw a tremendous number of nesting **Blue-mountain vireos**, **Jamaican Lizard-Cuckoo** and two **Arrowhead warblers** creeping along a tree trunk, one of my favorite endemics.
 
 {{< img "images/DSCF2976.gif" "Jamaican lizard cuckoo" "Jamaican Lizard-Cuckoo" >}}
 
@@ -342,7 +342,7 @@ The Hellshire Hills would have been worth going to even if we didn't find any bi
 
 {{< img "images/image6.jpg" "a dry coastal landscape, with a beach in the distance and lots of cactus" >}}
 
-But of course we saw birds, including **Merlin**, **Bahama Mockingbird**, **Saffron Finch**, **Stolid Flycatcher**, **Sad Flycatcher**, **Blue-winged teal**, and a great view of a **Jamaican Oriole** feeding on cactus blossoms in a very Arizona way.
+But of course we saw birds, including **Merlin**, **Bahama Mockingbird** (larger and scruffier looking than the **Northern Mockingbird**, and only found in these dry hills), introduced **Saffron Finches** (native to South America), the rather hard to separate **Stolid Flycatcher** and **Sad Flycatcher**, the first duck of the whole trip, a **Blue-winged teal**, and a great view of a **Jamaican Oriole** feeding on cactus blossoms in a very Arizona way.
 
 <div class="multi" style="width: 50%; margin-left: 25%;">
 {{< inat "https://www.inaturalist.org/observations/216588987" >}}
