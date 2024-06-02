@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Trip Report: Jamaica Birdwatching, Music and Hiking"
+title: "Trip Report: Jamaica Birdwatching, Music, and Hiking"
 date: 2024-06-02 00:00:00 +0000
 images:
   [
