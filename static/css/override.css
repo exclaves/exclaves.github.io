@@ -215,5 +215,5 @@ figcaption {
 }
 
 iframe {
-  max-width: 100vw;
+  max-width: calc(100vw - 2em);
 }

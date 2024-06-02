@@ -299,7 +299,7 @@ National Gallery of Jamaica, art museum, ★★★<br />
 Devon House Bakery, food, ★★★★<br />
 Kingston Dub Club, music/nightclub, ★★★★
 
-### Day 8-10
+### Day 8-11
 
 Alison flew back to Amsterdam, and I spent the next week with the Media Institute of the Caribbean’s Investigative Journalism workshop, where I shared some training material on online open-source investigation with journalists from around the Caribbean.
 
@@ -314,7 +314,7 @@ TriniYaad, restaurant, ★★★★
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-_eOLb2rKsE?si=WBwZji2CsblxjM_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Day 11
+### Day 12
 
 I went over to Hope Botanical Gardens after work and had a great evening birding and botanizing.
 
@@ -332,7 +332,7 @@ While following a **Jamaican Woodpecker** around with my binoculars, something c
 **Places:**<br />
 Hope Gardens, birding/hanging out, ★★★★★
 
-### Day 12
+### Day 13
 
 After the workshop, I went for a birding trip with Dwayne Swaby, arranged by Ricardo Miller of [Arrowhead Birding](https://www.arrowheadbirding.com/), with the goal of visiting some habitats I haven't had much of an opportunity to see yet: wetlands and the dry limestone hills to the west of Kingston. Like pretty much everything in Jamaica, this tour was expensive, but with Alison gone I was less thrilled about exploring Kingston's suburban sewage ponds solo.
 
@@ -381,7 +381,7 @@ Hellshire Hills, birding, ★★★★<br />
 Jamaica Institute, museum, ★★<br />
 Rockers International, record store, ★★★★★
 
-### Day 13
+### Day 14
 
 I start heading back towards Montego Bay after a quick morning stop at the Bob Marley House museum. It's alright, again made more interesting by reading _A Brief History of Seven Killings_ at the same time. (Always worth it to read a book set in the place you’re visiting as you’re visiting it.) The museum was a nice way to spend a morning, but the places in Kingston that Alison and I visited on our arrival day felt more essential.
 
@@ -405,7 +405,7 @@ Jobson Bay Eco Beach, beach, ★★★★<br />
 Fisherman's Inn, ★★★<br />
 Unnamed bar with jerk chicken by Jobson Bay, ★★★★
 
-### Day 14
+### Day 15
 
 Cockpit Country has a really interesting limestone geology, which has created a landscape of steep hillocks, with small valley lowlands in between. The porous land is prone to collapse and also means there's no surface water, but the valleys can be fertile places to farm and the rugged, treacherous landscape allowed escaped slaves to successfully defend themselves in the First Maroon Wars.
 
@@ -434,7 +434,7 @@ Cockpit Country Adventures, tour operator, ★★★★★<br />
 Kinloss to Albert Town, hike, ★★★★<br />
 Pablo's Ganja Bar, food, ★★★★
 
-### Day 15
+### Day 16
 
 The gate of the hotel was locked when I woke up. Unable to drive anywhere, I hopped the fence and started walking. There's a roadblock closing off a section of road that heads through a mangrove swamp towards Falmouth, and I thought it might have some decent birding, with a few ponds scattered in the forest towards the midway point. It's fairly remote, but never felt unsafe, and made for a nice morning walk, with **Antillean Nighthawk**, **Vervain Hummingbird**, **Spotted Sandpiper**, **Yellow-faced Grassquit** and **Common Gallinule**.
 
