@@ -342,10 +342,20 @@ The Hellshire Hills would have been worth going to even if we didn't find any bi
 
 {{< img "images/image6.jpg" "a dry coastal landscape, with a beach in the distance and lots of cactus" >}}
 
+<div class="multi">
+{{< inat "https://www.inaturalist.org/observations/220065929" >}}
+{{< inat "https://www.inaturalist.org/observations/220065935" >}}
+</div>
+
 But of course we saw birds, including **Merlin**, **Bahama Mockingbird** (larger and scruffier looking than the **Northern Mockingbird**, and only found in these dry hills), introduced **Saffron Finches** (native to South America), the rather hard to separate **Stolid Flycatcher** and **Sad Flycatcher**, the first duck of the whole trip, a **Blue-winged teal**, and a great view of a **Jamaican Oriole** feeding on cactus blossoms in a very Arizona way.
 
 <div class="multi" style="width: 50%; margin-left: 25%;">
 {{< inat "https://www.inaturalist.org/observations/216588987" >}}
+</div>
+
+<div class="multi">
+{{< inat "https://www.inaturalist.org/observations/220065942" >}}
+{{< inat "https://www.inaturalist.org/observations/220065927" >}}
 </div>
 
 Next we visited some small chicken farm ponds where a couple **Masked Ducks** can usually be found. We saw 12, a high count for Dwayne at this location!
@@ -356,7 +366,19 @@ Next we visited some small chicken farm ponds where a couple **Masked Ducks** ca
 
 Finally, we ended with a stop at Juici Patties and a walk around Hope Gardens, where Dwayne showed me another 5 (!) **Northern Potoos** that I had missed the previous evening.
 
+<div class="multi">
 {{< inat "https://www.inaturalist.org/observations/212668561" >}}
+</div>
+
+<div class="multi">
+<div class="multi" style="flex-direction: column; width: 40%;">
+{{< inat "https://www.inaturalist.org/observations/220065906" >}}
+{{< inat "https://www.inaturalist.org/observations/220065897" >}}
+{{< inat "https://www.inaturalist.org/observations/220065892" >}}
+</div>
+{{< inat "https://www.inaturalist.org/observations/220065905" >}}
+</div>
+
 
 That afternoon, I visited the Jamaica Institute, after discovering the lovely Jamaica Journal at the National Gallery gift shop a few days previously. They seem confused that someone was visiting their small museum, and unfortunately there wasn't much to see.
 
