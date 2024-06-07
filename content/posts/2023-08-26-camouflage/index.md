@@ -5,7 +5,7 @@ date: 2023-08-26 17:41:00 +0000
 images: []
 ---
 
-<strong>KEYWORD: camouflage</strong>
+<strong>[KEYWORD](https://exclav.es/2020/06/05/some-things-ive-photographed/): camouflage</strong>
 
 <style>
     body {

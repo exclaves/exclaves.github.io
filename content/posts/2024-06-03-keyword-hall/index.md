@@ -8,7 +8,7 @@ images:
   ]
 ---
 
-<strong>KEYWORD: hall</strong>
+<strong>[KEYWORD](https://exclav.es/2020/06/05/some-things-ive-photographed/): hall</strong>
 
 <style>
     body {
