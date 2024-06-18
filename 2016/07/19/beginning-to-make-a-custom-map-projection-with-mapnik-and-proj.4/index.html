@@ -1,28 +1,29 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
     
-    <link rel="shortcut icon" href="https://exclav.es/favicon.ico">
+    <link rel="shortcut icon" href="http://localhost:1313/favicon.ico">
     
     <link rel="stylesheet" href="/css/style.min.css">
 
-    <meta property="og:title" content="Beginning to make a custom map projection with mapnik and proj.4" />
-<meta property="og:description" content="Installing mapnik and linking to a custom, self-compiled proj.4 library I manually compiled proj.4 from downloaded source code.
-I edited the Homebrew formula for mapnik2 (couldn&rsquo;t get it to work with mapnik 3) so that it would link the version of proj.4 I just compiled by setting the location of these libraries to where proj.4 make install puts them and not where Homebrew expects them:
-&#34;PROJ_INCLUDES=/usr/local/proj/include&#34;, &#34;PROJ_LIBS=/usr/local/proj/lib&#34;, Then I compiled and installed mapnik, using the cairo option because that seems to be the only way to get Homebrew to compile it/relink the proj." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://exclav.es/2016/07/19/beginning-to-make-a-custom-map-projection-with-mapnik-and-proj.4/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-07-19T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-07-19T00:00:00+00:00" />
+    <meta property="og:url" content="http://localhost:1313/2016/07/19/beginning-to-make-a-custom-map-projection-with-mapnik-and-proj.4/">
+  <meta property="og:site_name" content="tracks and traces">
+  <meta property="og:title" content="Beginning to make a custom map projection with mapnik and proj.4">
+  <meta property="og:description" content="Installing mapnik and linking to a custom, self-compiled proj.4 library I manually compiled proj.4 from downloaded source code.
+I edited the Homebrew formula for mapnik2 (couldn’t get it to work with mapnik 3) so that it would link the version of proj.4 I just compiled by setting the location of these libraries to where proj.4 make install puts them and not where Homebrew expects them:
+&#34;PROJ_INCLUDES=/usr/local/proj/include&#34;, &#34;PROJ_LIBS=/usr/local/proj/lib&#34;, Then I compiled and installed mapnik, using the cairo option because that seems to be the only way to get Homebrew to compile it/relink the proj.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-07-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-07-19T00:00:00+00:00">
 
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Beginning to make a custom map projection with mapnik and proj.4"/>
+    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Beginning to make a custom map projection with mapnik and proj.4">
 <meta name="twitter:description" content="Installing mapnik and linking to a custom, self-compiled proj.4 library I manually compiled proj.4 from downloaded source code.
 I edited the Homebrew formula for mapnik2 (couldn&rsquo;t get it to work with mapnik 3) so that it would link the version of proj.4 I just compiled by setting the location of these libraries to where proj.4 make install puts them and not where Homebrew expects them:
-&#34;PROJ_INCLUDES=/usr/local/proj/include&#34;, &#34;PROJ_LIBS=/usr/local/proj/lib&#34;, Then I compiled and installed mapnik, using the cairo option because that seems to be the only way to get Homebrew to compile it/relink the proj."/>
+&#34;PROJ_INCLUDES=/usr/local/proj/include&#34;, &#34;PROJ_LIBS=/usr/local/proj/lib&#34;, Then I compiled and installed mapnik, using the cairo option because that seems to be the only way to get Homebrew to compile it/relink the proj.">
 
 
     <link rel="stylesheet" href="/css/override.css" />
@@ -30,7 +31,7 @@ I edited the Homebrew formula for mapnik2 (couldn&rsquo;t get it to work with ma
     <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
 </head>
 <body><header id="banner">
-    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <h2><a href="http://localhost:1313/">tracks and traces</a></h2>
     <nav>
             <a href="http://subject.space">← back to portfolio</a>
     </nav>

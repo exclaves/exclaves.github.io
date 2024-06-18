@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html><head>
+<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
     
-    <link rel="shortcut icon" href="https://exclav.es/favicon.ico">
+    <link rel="shortcut icon" href="http://localhost:1313/favicon.ico">
     
     <link rel="stylesheet" href="/css/style.min.css">
 
-    <meta property="og:title" content="Detecting nearly duplicate images using wavelet transforms" />
-<meta property="og:description" content="n.b. This is a very early draft of this post, expect typos, grammatical errors, factual inaccuracies, etc.
-One of the first things that became obvious while working on Vignette was the need to identify and group nearly duplicate images. Like myself, the friend who donated his photos to this project frequently takes multiple photos of the same scene in quick succession. This is a smart strategy &ndash; storage is cheap and it hedges against focus issues, exposure problems, and motion blur." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://exclav.es/2016/07/04/detecting-nearly-duplicate-images-using-wavelet-transforms/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-07-04T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-07-04T00:00:00+00:00" />
+    <meta property="og:url" content="http://localhost:1313/2016/07/04/detecting-nearly-duplicate-images-using-wavelet-transforms/">
+  <meta property="og:site_name" content="tracks and traces">
+  <meta property="og:title" content="Detecting nearly duplicate images using wavelet transforms">
+  <meta property="og:description" content="n.b. This is a very early draft of this post, expect typos, grammatical errors, factual inaccuracies, etc.
+One of the first things that became obvious while working on Vignette was the need to identify and group nearly duplicate images. Like myself, the friend who donated his photos to this project frequently takes multiple photos of the same scene in quick succession. This is a smart strategy – storage is cheap and it hedges against focus issues, exposure problems, and motion blur.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2016-07-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2016-07-04T00:00:00+00:00">
 
-
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Detecting nearly duplicate images using wavelet transforms"/>
+    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Detecting nearly duplicate images using wavelet transforms">
 <meta name="twitter:description" content="n.b. This is a very early draft of this post, expect typos, grammatical errors, factual inaccuracies, etc.
-One of the first things that became obvious while working on Vignette was the need to identify and group nearly duplicate images. Like myself, the friend who donated his photos to this project frequently takes multiple photos of the same scene in quick succession. This is a smart strategy &ndash; storage is cheap and it hedges against focus issues, exposure problems, and motion blur."/>
+One of the first things that became obvious while working on Vignette was the need to identify and group nearly duplicate images. Like myself, the friend who donated his photos to this project frequently takes multiple photos of the same scene in quick succession. This is a smart strategy &ndash; storage is cheap and it hedges against focus issues, exposure problems, and motion blur.">
 
 
     <link rel="stylesheet" href="/css/override.css" />
@@ -28,7 +29,7 @@ One of the first things that became obvious while working on Vignette was the ne
     <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
 </head>
 <body><header id="banner">
-    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <h2><a href="http://localhost:1313/">tracks and traces</a></h2>
     <nav>
             <a href="http://subject.space">← back to portfolio</a>
     </nav>
@@ -42,7 +43,7 @@ One of the first things that became obvious while working on Vignette was the ne
             </div>
     </header><p><em>n.b. This is a very early draft of this post, expect typos, grammatical errors, factual inaccuracies, etc.</em></p>
 <p>One of the first things that became obvious while working on Vignette was the need to identify and group nearly duplicate images. Like myself, the friend who donated his photos to this project frequently takes multiple photos of the same scene in quick succession. This is a smart strategy &ndash; storage is cheap and it hedges against focus issues, exposure problems, and motion blur. However, it can make browsing through photos somewhat tedious, and more importantly, can make it easier to lose sight of the larger &ldquo;picture&rdquo; while looking back on a day or experience.</p>
-<p><img src="/images/2016-07-04/duplicates.png" alt="Several &amp;ldquo;near-duplicate&amp;rdquo; images"></p>
+<p><img src="/images/2016-07-04/duplicates.png" alt="Several &ldquo;near-duplicate&rdquo; images"></p>
 <p>Note, critically, that these duplicate images are not <em>exactly</em> the same &ndash; there are minor differences in framing/orientation, in exposure, and in white balance. Therefore, we call these images &ldquo;near duplicates.&rdquo; Identifying and grouping these near duplicate images is a non-trivial task.</p>
 <h2 id="the-naive-approach-direct-comparison">The naive approach: direct comparison</h2>
 <p>A naive approach for comparing near duplicate images might be to look at the pixel values directly. For example, we could calculate the Euclidean distance between two images. (<code>sqrt(sum((A-B)^2)</code>), where A and B are image vectors.) However, this does not work very well.</p>
@@ -160,7 +161,7 @@ def get_fingerprint(im, ncoeffs=40, level=4):
 </code></pre><p><em><strong>Todo:</strong> expand this section with more details. Make a more formalized training process for this.</em></p>
 <h2 id="a-better-approach-image-features">A better approach: image features</h2>
 <p>However, this wavelet-based near duplicate image detector still has plenty of room for improvement. Notice that the near duplicate images used as an example at the beginning of the article are actually arranged in several distinct groups.</p>
-<p><img src="/images/2016-07-04/duplicates.png" alt="Several &amp;ldquo;near-duplicate&amp;rdquo; images"></p>
+<p><img src="/images/2016-07-04/duplicates.png" alt="Several &ldquo;near-duplicate&rdquo; images"></p>
 <p>This is because the wavelet-based near duplicate image detector does not recognize the ungrouped images as duplicates. Yet, it is not difficult to argue that at least some of them ought to be considered duplicates of each other.</p>
 <p>A better method for detecting near-duplicates might be using a feature detector to compare common features between images, and then test for spatial consistency of those features. We will do this next week, using <a href="https://en.wikipedia.org/wiki/Speeded_up_robust_features">SURF</a>, <a href="http://www.cs.ubc.ca/research/flann/">FLANN</a>, and <a href="https://en.wikipedia.org/wiki/RANSAC">RANSAC</a>.</p>
 </article>
