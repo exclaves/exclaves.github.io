@@ -8,20 +8,19 @@
     
     <link rel="stylesheet" href="/css/style.min.css">
 
-    <meta property="og:url" content="https://exclav.es/2016/10/26/talkin-ir-sensor-blues/">
-  <meta property="og:site_name" content="tracks and traces">
-  <meta property="og:title" content="Talkin&#39; IR sensor blues">
-  <meta property="og:description" content="I received the sensor that I purchased from Heimann Sensor a couple weeks ago, and today was able to succesfully read an image off of it. The sensor communicates over I2C, which I have used before, but have never had to dive extremely deeply into. However, in debugging the communication with this sensor, I had to dive quite deeply into the specific timing of the I2C specification.
-With the device connected to a Raspberry Pi, and with the Pi configured correctly for I2C, I was able to see the devices connected with the i2cdetect command.">
-  <meta property="og:locale" content="en-US">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2016-10-26T00:00:00+00:00">
-    <meta property="article:modified_time" content="2016-10-26T00:00:00+00:00">
+    <meta property="og:title" content="Talkin&#39; IR sensor blues" />
+<meta property="og:description" content="I received the sensor that I purchased from Heimann Sensor a couple weeks ago, and today was able to succesfully read an image off of it. The sensor communicates over I2C, which I have used before, but have never had to dive extremely deeply into. However, in debugging the communication with this sensor, I had to dive quite deeply into the specific timing of the I2C specification.
+With the device connected to a Raspberry Pi, and with the Pi configured correctly for I2C, I was able to see the devices connected with the i2cdetect command." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://exclav.es/2016/10/26/talkin-ir-sensor-blues/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-10-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2016-10-26T00:00:00+00:00" />
 
-    <meta name="twitter:card" content="summary"><meta name="twitter:title" content="Talkin&#39; IR sensor blues">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Talkin&#39; IR sensor blues"/>
 <meta name="twitter:description" content="I received the sensor that I purchased from Heimann Sensor a couple weeks ago, and today was able to succesfully read an image off of it. The sensor communicates over I2C, which I have used before, but have never had to dive extremely deeply into. However, in debugging the communication with this sensor, I had to dive quite deeply into the specific timing of the I2C specification.
-With the device connected to a Raspberry Pi, and with the Pi configured correctly for I2C, I was able to see the devices connected with the i2cdetect command.">
+With the device connected to a Raspberry Pi, and with the Pi configured correctly for I2C, I was able to see the devices connected with the i2cdetect command."/>
 
 
     <link rel="stylesheet" href="/css/override.css" />
@@ -29,7 +28,7 @@ With the device connected to a Raspberry Pi, and with the Pi configured correctl
     <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
 </head>
 <body><header id="banner">
-    <h2><a href="https://exclav.es/">tracks and traces</a></h2>
+    <h2><a href="https://exclav.es">tracks and traces</a></h2>
     <nav>
             <a href="http://subject.space">← back to portfolio</a>
     </nav>
@@ -71,7 +70,7 @@ With the device connected to a Raspberry Pi, and with the Pi configured correctl
 <pre tabindex="0"><code>a = [126, 167, 131, 110, 129, 159, 130, 92, 131, 143, 131, 26, 130, 80, 131, 85, 130, 87, 128, 174, 130, 9, 130, 149, 131, 7, 130, 210, 131, 5, 130, 202]
 </code></pre><p>To solve this I needed to interface with the I2C bus directly, rather than through <code>smbus</code>.</p>
 <p>I ended up using the Python library <a href="https://python-periphery.readthedocs.io/en/latest/">python-periphery</a> to accomplish this, and it worked very well. The test script before sets up the device, following a prescribed set of configuration options published in the datasheet, before reading the data from the sensor in a set of four blocks and saving it using pickle.</p>
-<script src="https://gist.github.com/loganwilliams/9ec1a7f977695e35196ac4169b85e492.js"></script>
+<script type="application/javascript" src="https://gist.github.com/loganwilliams/9ec1a7f977695e35196ac4169b85e492.js"></script>
 
 <h3 id="results">Results</h3>
 <p>When I looked at one of the captured images, I saw this:</p>
