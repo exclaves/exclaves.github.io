@@ -193,12 +193,12 @@ summary {
 
 nav {
   display: block !important;
-  margin-left: -1em;
+  margin-left: -1.12em;
 }
 
 nav .doubleback {
   display: block;
-  margin-left: -1em;
+  margin-left: -0.88em;
 }
 
 @media (max-width: 769px) {
