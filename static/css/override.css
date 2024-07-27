@@ -196,10 +196,23 @@ nav {
   margin-left: -1em;
 }
 
+nav .doubleback {
+  display: block;
+  margin-left: -1em;
+}
+
 @media (max-width: 769px) {
   svg {
     max-width: 100%;
     max-height: calc((100vw - 2em) * 2.67);
+  }
+
+  nav {
+    margin-left: 0em;
+  }
+
+  nav .doubleback {
+    margin-left: 0em;
   }
 }
 
