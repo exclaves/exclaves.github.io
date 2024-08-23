@@ -21,6 +21,7 @@
     body {
         background-color: black !important;
         color: white !important;
+        overflow-x: hidden;
     }
 
     a, p {
@@ -285,7 +286,7 @@
     &lt;/a&gt;
     
 &lt;/figure&gt;
-&lt;div style=&#34;width: 88%&#34;&gt;
+&lt;div style=&#34;width: 33%; flex-shrink: 0;&#34;&gt;
 
 
 
@@ -491,7 +492,8 @@
 &lt;/figure&gt;
 &lt;/div&gt;
 &lt;p&gt;The fjell is wide and empty. We only see two other people the entire day, fishing at Loennechenbua, the DNT&amp;rsquo;s smallest hut (two beds.)&lt;/p&gt;
-&lt;div class=&#34;multi&#34;&gt;
+&lt;div class=&#34;inatgroup&#34; style=&#34;width: calc(108% + 3.5em); margin-left: calc(-3.8% - 0.5em);&#34;&gt;
+&lt;div style=&#34;width: 33%; min-width: 150px;&#34;&gt;
 
 
 
@@ -528,6 +530,7 @@
     &lt;/a&gt;
 
 &lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;width: 33%; min-width: 150px;&#34;&gt;
 
 
 
@@ -564,6 +567,7 @@
     &lt;/a&gt;
 
 &lt;/div&gt;
+&lt;/div&gt;&lt;div style=&#34;width: 33%; min-width: 150px;&#34;&gt;
 
 
 
@@ -600,7 +604,7 @@
     &lt;/a&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
 &lt;div class=&#34;multi&#34;&gt;
 
 
@@ -1262,7 +1266,7 @@
 &lt;source src=&#34;./train_trim.mp4&#34; type=&#34;video/mp4&#34;&gt;
 &lt;/video&gt;
 &lt;/div&gt;
-&lt;h2 id=&#34;miscellanenous-mushrooms&#34;&gt;Miscellanenous mushrooms&lt;/h2&gt;
+&lt;h2 id=&#34;miscellaneous-mushrooms&#34;&gt;Miscellaneous mushrooms&lt;/h2&gt;
 &lt;div class=&#34;inatgroup&#34;&gt;
 
 
