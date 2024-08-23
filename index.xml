@@ -1264,14 +1264,14 @@
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;miscellanenous-mushrooms&#34;&gt;Miscellanenous mushrooms&lt;/h2&gt;
-&lt;div class=&#34;multi&#34;&gt;
+&lt;div class=&#34;inatgroup&#34;&gt;
 
 
 
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Brown Funnel Polypore &lt;span&gt;(Coltricia perennis)&lt;/span&gt;
@@ -1307,7 +1307,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Orange Birch Bolete &lt;span&gt;(Leccinum versipelle)&lt;/span&gt;
@@ -1343,7 +1343,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Yellow Swamp Brittlegill &lt;span&gt;(Russula claroflava)&lt;/span&gt;
@@ -1379,7 +1379,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Fly Agaric &lt;span&gt;(Amanita muscaria)&lt;/span&gt;
@@ -1415,7 +1415,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Peeling Puffball &lt;span&gt;(Lycoperdon marginatum)&lt;/span&gt;
@@ -1445,15 +1445,13 @@
     &lt;/a&gt;
 
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;multi&#34;&gt;
+&lt;p&gt;
 
 
 
 
 
-
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Fly Agaric &lt;span&gt;(Amanita muscaria)&lt;/span&gt;
@@ -1489,7 +1487,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Pear-shaped Puffball &lt;span&gt;(Apioperdon pyriforme)&lt;/span&gt;
@@ -1525,7 +1523,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Royal fly agaric &lt;span&gt;(Amanita regalis)&lt;/span&gt;
@@ -1561,7 +1559,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             orange peel fungus &lt;span&gt;(Aleuria aurantia)&lt;/span&gt;
@@ -1597,7 +1595,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Webcaps &lt;span&gt;(Cortinarius)&lt;/span&gt;
@@ -1626,16 +1624,14 @@
         &lt;/div&gt;
     &lt;/a&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&#34;multi&#34;&gt;
+&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;
 
 
 
 
 
-
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
              &lt;span&gt;(Puellarinae)&lt;/span&gt;
@@ -1671,7 +1667,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Orange Birch Bolete &lt;span&gt;(Leccinum versipelle)&lt;/span&gt;
@@ -1707,7 +1703,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Golden Chanterelle &lt;span&gt;(Cantharellus cibarius)&lt;/span&gt;
@@ -1743,7 +1739,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             Orange Birch Bolete &lt;span&gt;(Leccinum versipelle)&lt;/span&gt;
@@ -1779,7 +1775,7 @@
 
 
 
-&lt;div class=&#34;inaturalist&#34;&gt;
+&lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
             brittlegills &lt;span&gt;(Russula)&lt;/span&gt;
@@ -1808,7 +1804,7 @@
         &lt;/div&gt;
     &lt;/a&gt;
 
-&lt;/div&gt;
+&lt;/div&gt;&lt;/p&gt;
 &lt;/div&gt;</description>
     </item>
     
