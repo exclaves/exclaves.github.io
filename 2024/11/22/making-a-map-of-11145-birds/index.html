@@ -87,39 +87,39 @@ I can stare for hours at the range maps in bird guides. A single species with ha
 <h3 id="packing-the-data">Packing the data</h3>
 <p>To do this, I made an NRRD file that&rsquo;s 512 x 512 x 1394 bytes. Then this is loaded into ThreeJS as a UInt8 texture. It&rsquo;s important to set interpolation to nearest neighbor, as interpolation between packed values doesn&rsquo;t work.</p>
 <pre tabindex="0"><code>function createTexture(volume) {
-// Texture to hold the volume. We have scalars, so we put our data in the red channel.
-// Also see https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE
-const texture = new THREE.DataArrayTexture(
-    volume.data,
-    volume.xLength,
-    volume.yLength,
-    volume.zLength
-);
-
-texture.format = THREE.RedFormat;
-texture.type = THREE.UnsignedByteType;
-texture.internalFormat = &#34;R8&#34;;
-texture.minFilter = texture.magFilter = THREE.NearestFilter;
-texture.unpackAlignment = 1;
-texture.needsUpdate = true;
-
-material.uniforms[name].value = texture;
-
-if (sizename) {
-    material.uniforms[sizename].value = new THREE.Vector3(
-    volume.xLength,
-    volume.yLength,
-    volume.zLength
+    // Texture to hold the volume. We have scalars, so we put our data in the red channel.
+    // Also see https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE
+    const texture = new THREE.DataArrayTexture(
+        volume.data,
+        volume.xLength,
+        volume.yLength,
+        volume.zLength
     );
-}
 
-render();
+    texture.format = THREE.RedFormat;
+    texture.type = THREE.UnsignedByteType;
+    texture.internalFormat = &#34;R8&#34;;
+    texture.minFilter = texture.magFilter = THREE.NearestFilter;
+    texture.unpackAlignment = 1;
+    texture.needsUpdate = true;
+
+    material.uniforms[name].value = texture;
+
+    if (sizename) {
+        material.uniforms[sizename].value = new THREE.Vector3(
+        volume.xLength,
+        volume.yLength,
+        volume.zLength
+        );
+    }
+
+    render();
 };
 </code></pre><p>The <code>THREE.DataArrayTexture</code> object is just an array of 2D textures, which seemed well suited for this usecase. Inside the fragment shader, that&rsquo;s a <code>sampler2DArray</code> that&rsquo;s accessed with <code>texture</code>. (Before I tried this, I loaded a three-dimensional texture, which supported the same <code>texture</code> access. I think the only difference is the normalization of the third coordinate, but I&rsquo;m not sure!)</p>
 <p>With all the bits packed into this texture, the core of the fragment shader is the reduction of a weighted sum across all of these species at the current pixel position.</p>
 <p>Adjusting the map mode changes the weight value:</p>
 <ul>
-<li>In the default mode (0 below) the weight is the number of species at that mouse position, creating the species range maps that captivated me.</li>
+<li>In the default mode (<code>0</code>) the weight is the number of species at that mouse position, creating the species range maps that captivated me.</li>
 <li>The other modes use the life lists as a weight, where a bird is only counted if it is seen/recognized; or alternatively only if it hasn&rsquo;t.</li>
 </ul>
 <pre tabindex="0"><code>// Loop over each layer of the packed data. We want to color each pixel based on the number of species
@@ -167,7 +167,6 @@ for(i = 0; i &lt; packed_size; i += 1) {
 <p>Now the working value is a raw count of birds. Before this can be applied to a colormap, it needs to be scaled/normalized in some way.</p>
 <p>This can either be a global factor, or a per-pixel count to compute the percentage of possible birds at that location.</p>
 <p>The first case is more complicated as I can&rsquo;t necessarily compute the maximum number of species over the whole map &ndash; the computation of each pixel in the shader has only its local view. Since I didn&rsquo;t want to come up with some javascript two-pass solution, I had to make some guesses. For the seen birds, this is half the total number of seen birds in that list &ndash; though this obviously fails in the extrema. For someone who has seen 10,000 birds, this would map counts from 0-5000 &ndash; despite the fact the global maximum of birds seen in one spot is much less than this.</p>
-<p>(video goes here)</p>
 <pre tabindex="0"><code>if(u_normalize &gt; 0) {
     maxvec = texture2D(u_maxdata, vec2(uv.x, uv.y));
 } else {
