@@ -142,6 +142,9 @@ for(i = 0; i &amp;lt; packed_size; i += 1) {
 &lt;p&gt;Now the working value is a raw count of birds. Before this can be applied to a colormap, it needs to be scaled/normalized in some way.&lt;/p&gt;
 &lt;p&gt;This can either be a global factor, or a per-pixel count to compute the percentage of possible birds at that location.&lt;/p&gt;
 &lt;p&gt;The first case is more complicated as I can&amp;rsquo;t necessarily compute the maximum number of species over the whole map &amp;ndash; the computation of each pixel in the shader has only its local view. Since I didn&amp;rsquo;t want to come up with some javascript two-pass solution, I had to make some guesses. For the seen birds, this is half the total number of seen birds in that list &amp;ndash; though this obviously fails in the extrema. For someone who has seen 10,000 birds, this would map counts from 0-5000 &amp;ndash; despite the fact the global maximum of birds seen in one spot is much less than this.&lt;/p&gt;
+&lt;video controls style=&#34;display: block; max-width: 800px; margin-left: auto; margin-right: auto;&#34; autoplay muted&gt;
+&lt;source src=&#34;modes.mp4&#34; /&gt;
+&lt;/video&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;if(u_normalize &amp;gt; 0) {
     maxvec = texture2D(u_maxdata, vec2(uv.x, uv.y));
 } else {
