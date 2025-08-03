@@ -20,7 +20,7 @@
         <img src="{{ replace (index $result.observation_photos 0).photo.url "square" "large" }}" />
     </a>
 
-    <a href="{{ $result.uri }}">
+    <a href="{{ $result.uri }}" target="_blank">
         <div class="details">
             <div class="left">
                 <div class="date">{{ $result.observed_on_string }}</div>

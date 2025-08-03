@@ -1,4 +1,9 @@
 {{ define "main" }}
 {{ .Content }}
+<style>
+    .back {
+        display: none;
+    }
+</style>
 {{- partial "posts.html" . -}}
 {{ end }}
