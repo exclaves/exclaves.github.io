@@ -4,8 +4,6 @@ title: "Dinacon 2025: Passive Acoustic Listening"
 date: 2025-08-03 00:00:00 +0000
 ---
 
-*by Logan Williams*
-
 {{< img "images/image9.jpg" "Underwater scene with marine life" "" >}}
 
 Whale songs were first noticed by accident, when analysts tracking Russian submarines at the height of the cold war heard cetacean interference instead. An engineer sent some recordings to Roger Payne, a biologist friend of his, who did something that proved pivotal: he played the hours-long recordings on his hi-fi at home, while he went about his day.
