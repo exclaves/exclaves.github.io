@@ -1,7 +1,10 @@
 ---
 layout: post
 title: "Dinacon 2025: Photos and observations"
-date: 2025-08-21 00:00:00 +0000
+date: 2025-08-23 00:00:00 +0000
+images: [
+    /2025/08/23/dinacon-2025-photos-and-observations/images/20250707-07-33-02-DSC04909_hufce17d194c0dbf0839fa4c203429edff_365723_1800x1800_fit_q75_box.jpg
+]
 ---
 
 <style>
@@ -502,7 +505,7 @@ Sunset swimmers.
 
 ### July 9
 
-Ahac has arranged one of the quintessential Bali tourist hikes — Mt. Batur at sunrise — and I can’t resist. X and Y join us, and to my delight, we are again guided by Gin!
+Ahac has arranged one of the quintessential Bali tourist hikes — Mt. Batur at sunrise — and I can’t resist. Andy and Luci join us, and to my delight, we are again guided by Gin!
 
 Colin tries to prank us with Gin’s cooperation, of sorts.
 
