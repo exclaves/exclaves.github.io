@@ -12,6 +12,254 @@
     
     
     <item>
+      <title>ITP Workshops: Observation, satellites, infrared sight, underwater ears</title>
+      <link>https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/</link>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/</guid>
+      <description>&lt;p&gt;I led four sessions at &lt;a href=&#34;https://itp.nyu.edu/camp/2025/about&#34;&gt;ITP Camp 2025&lt;/a&gt;, preserved here.&lt;/p&gt;
+&lt;h2 id=&#34;on-observation&#34;&gt;On Observation&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A presentation and a discussion about observation: what we observe, how we do it, and what it means.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll talk about the history of weather stations, borrow ideas from birdwatching and science, and learn about tech tools for observation: from optics to machine learning.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A2942.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A2942_hu7ad1ac99054391d67c1762337081c3fb_8279034_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.02.44%E2%80%AFAM.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.02.44%E2%80%AFAM_hud7e5688b872db268a5868d9f65746984_175960_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.03.23%E2%80%AFAM.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.03.23%E2%80%AFAM_hu3e45bdfba779d74b4c784750c9dfefde_3027930_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.02.56%E2%80%AFAM.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.02.56%E2%80%AFAM_hu55376c1d890083631f1e9bd2a2c73bfd_1079032_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.03.09%E2%80%AFAM.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/Screenshot%202025-08-25%20at%209.03.09%E2%80%AFAM_hub55f5b3860c4e73633d8b2d66859bed7_3820408_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;Portions of this talk made it into &lt;a href=&#34;https://media.ccc.de/v/why2025-240-is-ai-for-the-birds-the-beauty-of-backyard-birdsong-data&#34;&gt;my presentation at WHY2025&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;intro-to-satellite-and-aerial-imagery&#34;&gt;Intro to Satellite and Aerial Imagery&lt;/h2&gt;
+&lt;p&gt;with &lt;a href=&#34;https://bdon.org/&#34;&gt;Brandon Liu&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Make some maps with expensive sky cameras&amp;hellip; for free!&lt;/p&gt;
+&lt;p&gt;This session is a general introduction to finding and using satellite + aerial imagery, including:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Examples of creative projects using imagery&lt;/li&gt;
+&lt;li&gt;Finding free images online, through Google Earth, ESA Sentinel 2, USDA NAIP, Microsoft and other catalogs&lt;/li&gt;
+&lt;li&gt;Basics of raster file formats&lt;/li&gt;
+&lt;li&gt;Differences between imagery types: raw RGB images, mosaics, aerial, and SAR&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A3617.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A3617_hu65a17387fb11d2aca08874357a7ea2bd_8594935_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A3622.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A3622_hub36390c3131db9aa31c280d05e85c2e6_8783197_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;diy-infrared-vision-goggles&#34;&gt;DIY Infrared Vision Goggles&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Did you know you can already see in infrared?&lt;/p&gt;
+&lt;p&gt;In this session we&amp;rsquo;ll make very DIY, very low-fi infrared goggles (and talk a little bit about light and color along the way.) These goggles work by blocking visible light, but allowing infrared light through. After your eyes adjust for a few minutes, you will be able to see the world in infrared. They need a lot of light, so they only works in direct sunlight. When we&amp;rsquo;re done building, we&amp;rsquo;ll go outside to test them out.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5289.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5289_hu1a7c86d3bb0fa3d76f7d780856248f5e_7003941_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5290.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5290_hubfdaede3f766ded8ebc80dfc378b9205_8035485_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6402.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6402_hu072000f71a089726d4b5d7dd4b2c1913_2241389_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;Anoushka S. presented some photos taken through the infrared goggles at the Show All Things show.&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;make-hydrophones-and-contact-mics-internal-and-submerged-resonance&#34;&gt;Make Hydrophones and Contact Mics: Internal and Submerged Resonance&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In this workshop, we will build contact microphones and hydrophones. With these tools, we can listen to the internal resonances of objects, and hear underwater.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll talk quickly about how these mics work and how the sounds you can capture differ from what we hear with our ears. Then we&amp;rsquo;ll go over the construction process, including the simple amplifier circuit we&amp;rsquo;ll need to build for the piezo. The rest of the workshop will be hands on construction.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The construction process is now &lt;a href=&#34;https://exclav.es/2025/08/03/dinacon-2025-passive-acoustic-listening/#hydrophone-build-process&#34;&gt;documented online&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5881.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5881_hub6df9c4de5d6f56e0637df0905dfc156_5062366_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5884.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5884_hu688a145c012254e5a486f3a6633f3fc5_5527103_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5886.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5886_huf764bbf85a7e3eb63ea4c82f25b97de9_12733530_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5888.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A5888_huab8482608cb57380a6ed1999e7aa55e0_5545923_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;show-all-things-show&#34;&gt;Show All Things Show&lt;/h2&gt;
+&lt;p&gt;I exhibited a few different projects at the Show All Things show:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://subject.space/projects-static/medium-year-bird-calendar/&#34;&gt;A Medium Year&lt;/a&gt;, a calendar of personal, environmental, and avian observations throughout the year 2024. This later became part of a &lt;a href=&#34;https://media.ccc.de/v/why2025-240-is-ai-for-the-birds-the-beauty-of-backyard-birdsong-data&#34;&gt;presentation at WHY2025&lt;/a&gt;, and is now &lt;a href=&#34;https://subject.space/projects-static/medium-year-bird-calendar/&#34;&gt;released publicly&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Hundreds of bicycles&lt;/li&gt;
+&lt;li&gt;An interactive sonic playground for hydrophones and contact mics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6551.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6551_hub69ade2aa60d8ff95659f36c227d4663_5689108_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A7103.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A7103_huc84b589eb1cc7b1ffb151eb9e4c814b5_8211351_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6834.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6834_hu44a6084f37182176c85e46b22edb957e_7815742_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6303.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6303_hu815bf30080dcd4ed7000f239599031eb_2807213_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6689.JPG&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/25/itp-workshops-observation-satellites-infrared-sight-underwater-ears/images/5W3A6689_hua24c5f2c270ff8d98ab5d3b787947c67_6937451_1800x1800_fit_q75_box.JPG&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Thanks to all the counselors for documentation photos!&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Dinacon 2025: Photos and observations</title>
       <link>https://exclav.es/2025/08/23/dinacon-2025-photos-and-observations/</link>
       <pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate>
