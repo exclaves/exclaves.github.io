@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -82,12 +84,12 @@ main#content h3 {
     font-size: 1.9rem;
 }
 
-main#content h1 + p,
-main#content h2 + p,
-main#content h3 + p,
-main#content h4 + p,
-main#content h5 + p,
-main#content h6 + p {
+main#content h1+p,
+main#content h2+p,
+main#content h3+p,
+main#content h4+p,
+main#content h5+p,
+main#content h6+p {
     margin-top: 5px;
 }
 
@@ -147,7 +149,7 @@ main#content header#post-header h1 {
     line-height: 1.15;
 }
 
-main#content header#post-header > div {
+main#content header#post-header>div {
     display: block;
     font-size: 0.85em;
     color: #767676;
@@ -171,11 +173,13 @@ main#content #toc nav#TableOfContents {
     margin-top: 4px;
 }
 
-main#content #toc nav#TableOfContents > ul, main#content #toc nav#TableOfContents > ol {
+main#content #toc nav#TableOfContents>ul,
+main#content #toc nav#TableOfContents>ol {
     margin-left: -40px;
 }
 
-main#content #toc ul, main#content #toc ol {
+main#content #toc ul,
+main#content #toc ol {
     font-size: 0.98em;
     margin: 0;
     padding: 0 0 0 40px;
@@ -278,4 +282,29 @@ footer#footer {
     font-weight: 400;
     color: #b3b3b3;
     margin: 40px 0;
+}
+
+.post-meta {
+    display: flex;
+}
+
+.post-meta>div {
+    margin-right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+.post-word-count::after {
+    content: "📝";
+}
+
+.post-inat-count:not(:empty)::after {
+    content: "🌿";
+}
+
+.post-image-count::after {
+    content: "🖼️";
 }

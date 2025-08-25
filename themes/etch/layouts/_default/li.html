@@ -1,4 +1,23 @@
-<li>
+{{ $counter := $.Page.Scratch.Get "inatcounter"}}
+
+<li style="display: flex; align-items: center;">
+    <div class="post-meta">
+        <div class="post-word-count">
+            {{ .WordCount }}
+        </div>
+        {{ if .Resources.ByType "image" }}
+        <div class="post-image-count">
+            {{ with .Resources.ByType "image" }}
+            {{ len . }}
+            {{ end }}
+        </div>
+        {{ end }}
+        {{ if $counter }}
+        <div class="post-inat-count">
+            {{ $counter }}
+        </div>
+        {{ end }}
+    </div>
     <a href="{{ .Permalink }}">
         {{ .Title }}
         <small><time>{{ .Date | time.Format (i18n "posts.date") }}</time></small>

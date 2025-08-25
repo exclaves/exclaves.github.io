@@ -40,5 +40,11 @@
         </a>
 
     </div>
+    {{ with $.Page.Scratch.Get "inatcounter" }}
+        {{ $.Page.Scratch.Set "inatcounter" (add . 1) }}
+    {{ else }}
+        {{/* first call, so inatcounter is 1 */}}
+        {{ $.Page.Scratch.Set "inatcounter" 1 }}
+    {{ end }}
 {{ end }}
 </div>
