@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://exclav.es/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Using iNaturalist with non-geotagged photos: approximate bulk geotagging" />
+<meta property="og:description" content="While hiking, I like to take photos of nature things to figure out later and post to iNaturalist. But most non-phone cameras don&rsquo;t add geotags (geographic location info) to images, and uploading these to iNat is a pain.
+One way to solve this is by logging your own position with a smartwatch or app, but my smartwatch was stolen and I often don&rsquo;t have the cellphone battery for Strava." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/" /><meta property="og:image" content="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/3_hu7fba9da1679ce4a56c592454604cb9c1_667842_1800x1800_fit_q75_box.jpeg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-11-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-11-25T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/3_hu7fba9da1679ce4a56c592454604cb9c1_667842_1800x1800_fit_q75_box.jpeg"/>
+
+<meta name="twitter:title" content="Using iNaturalist with non-geotagged photos: approximate bulk geotagging"/>
+<meta name="twitter:description" content="While hiking, I like to take photos of nature things to figure out later and post to iNaturalist. But most non-phone cameras don&rsquo;t add geotags (geographic location info) to images, and uploading these to iNat is a pain.
+One way to solve this is by logging your own position with a smartwatch or app, but my smartwatch was stolen and I often don&rsquo;t have the cellphone battery for Strava."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Using iNaturalist with non-geotagged photos: approximate bulk geotagging</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <nav>
+        <a class="back" href="http://exclav.es">← back to blog</a><br />
+        <a class="doubleback" href="http://subject.space">←← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Using iNaturalist with non-geotagged photos: approximate bulk geotagging</h1>
+        <div>
+                <time>November 25, 2025</time>
+            </div>
+    </header><style>
+    .inaturalist img {
+        filter: brightness(100%);
+    }
+</style>
+<p>While hiking, I like to <a href="https://exclav.es/2024/08/21/dovrefjell/">take photos</a> <a href="https://exclav.es/2025/08/23/dinacon-2025-photos-and-observations/">of nature things</a> to figure out later and post to <a href="https://www.inaturalist.org/people/1125610">iNaturalist</a>. But most non-phone cameras don&rsquo;t add geotags (geographic location info) to images, and uploading these to iNat is a pain.</p>
+<p>One way to solve this is by logging your own position with a smartwatch or app, but my smartwatch was stolen and I often don&rsquo;t have the cellphone battery for Strava.</p>
+<p>However, I do remember where I was, and have photos that tie those locations to times. I made a tool, <a href="https://subject.space/linetime/#/">Linetime</a> (<a href="https://github.com/loganwilliams/linetime">source</a>), for adding timestamps to a GPX file, which I can use for bulk geotagging photos in Lightroom.</p>
+<h2 id="my-inaturalist-geotagging-method">My iNaturalist geotagging method</h2>
+<p>Using a tool like <a href="https://caltopo.com/">CalTopo</a>, I trace out the route that I explored. In the case of a day hiking, I usually know exactly what trails I took, and they often exist in OpenStreetMap data.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/1.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/1_hu7fba9da1679ce4a56c592454604cb9c1_778667_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+<p>Export the route from CalTopo and import into <a href="https://subject.space/linetime/#/">Linetime</a>.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/2.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/2_hu2a4fd7533169777f9bc7fbefee32d117_1427688_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+<p>Find images with known locations and grab the timestamps.</p>
+<div class="multi">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/3.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/3_hu7fba9da1679ce4a56c592454604cb9c1_667842_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/4.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/4_hu7fba9da1679ce4a56c592454604cb9c1_964027_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>Set keypoints in <a href="https://subject.space/linetime/#/">Linetime</a>. After doing this, other points will have their time interpolated by distance along the line.</p>
+<div class="multi">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/5.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/5_hu5521961a942b2328908909f17023e664_315879_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/6.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/6_hu8cfea143120c2bb508507f41aad6f2cc_444291_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>It&rsquo;s important to have a keypoint at the beginning and end.</p>
+<div class="multi" style="width: 100%; margin-left: auto;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/7.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/7_hu7fba9da1679ce4a56c592454604cb9c1_375228_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>I normally add around 8 keypoints.</p>
+<div class="multi" style="width: 100%; margin-left: auto;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/8.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/8_hu1ff9987e18d053567db2297a0db27e1e_3441147_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>The interpolation is often surprisingly accurate from a small number of points. This picture was taken on top of a ridge at 4:41 PM, and the interpolated time in the route is 4:39 PM.</p>
+<div class="multi">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/9.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/9_hu7fba9da1679ce4a56c592454604cb9c1_629556_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/10.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/10_hu7fba9da1679ce4a56c592454604cb9c1_666310_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>Download the GPX trace from <a href="https://subject.space/linetime/#/">Linetime</a>, then import into Lightroom and geotag the photos.</p>
+<div class="multi">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/11.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/11_hu7fba9da1679ce4a56c592454604cb9c1_601756_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/12.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/12_hu7fba9da1679ce4a56c592454604cb9c1_503278_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>The positions might not always be 100% accurate, but they will be within a few hundred meters. Arguably this is a better default for certain sensitive organisms.</p>
+<div class="multi">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/13.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/13_hu7fba9da1679ce4a56c592454604cb9c1_431310_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/14.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/14_hu7fba9da1679ce4a56c592454604cb9c1_210147_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<div class="multi" style="width: 100%; margin-left: auto;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/15.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/15_hu7fba9da1679ce4a56c592454604cb9c1_1254985_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>I usually flag all of the photos with organisms in Lightroom, export, and then use the web interface in iNaturalist to bulk upload. No more manually locating each image from memory!</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/16.jpeg">
+	    <img src="/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/images/16_hu7fba9da1679ce4a56c592454604cb9c1_2319709_1800x1800_fit_q75_box.jpeg" alt="" />
+    </a>
+    
+</figure>
+<h2 id="the-observations-from-this-hike">The observations from this hike</h2>
+<p>Using an <a href="https://exclav.es/2022/09/05/inaturalist-shortcode-for-hugo/">iNaturalist Hugo shortcode</a> I wrote, including all of the observations below is just <code>{{&lt; inatday 16 11 2025 &gt;}}</code>.</p>
+
+
+
+
+
+
+
+<div class="inatgroup">
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Black Redstart <span>(Phoenicurus ochruros)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660415/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660415/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194676">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:00 AM</div>
+                    <div class="location">
+                        Attica, Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Ivy-leaved cyclamen <span>(Cyclamen hederifolium)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660425/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660425/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194675">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:06 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Greek Cyclamen <span>(Cyclamen graecum)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660425/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660425/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328195736">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:06 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            European Robin <span>(Erithacus rubecula)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660421/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660421/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194677">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:08 AM</div>
+                    <div class="location">
+                        Attica, Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Ray-finned Fishes <span>(Actinopterygii)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660453/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660453/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194679">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:12 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Actinopterygii</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Blue Rock-Thrush <span>(Monticola solitarius)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660450/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660450/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194680">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:20 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Blue Rock-Thrush <span>(Monticola solitarius)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660458/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660458/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194681">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:22 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">2 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+             <span>(Umbilicus)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660481/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660481/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194682">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:25 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Wall Pennywort <span>(Umbilicus rupestris)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660483/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660483/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194683">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:33 AM</div>
+                    <div class="location">
+                        Vlichos, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Garden Snail <span>(Cornu aspersum)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660486/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660486/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194684">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:34 AM</div>
+                    <div class="location">
+                        Vlichos, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Mollusca</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            silverleaf nightshade <span>(Solanum elaeagnifolium)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660498/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660498/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194686">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:36 AM</div>
+                    <div class="location">
+                        Vlichos, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Yellow-legged Gull <span>(Larus michahellis)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660501/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660501/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194687">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:40 AM</div>
+                    <div class="location">
+                        Vlichos, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Hooded Crow <span>(Corvus cornix)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660494/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660494/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194688">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:48 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Common Raven <span>(Corvus corax)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660524/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660524/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194690">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:49 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Friar&#39;s-cowl <span>(Arisarum vulgare)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660537/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660537/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194691">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:56 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+             <span>(Crocus laevigatus)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660537/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660537/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194692">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 10:56 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Common Chiffchaff <span>(Phylloscopus collybita)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660523/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660523/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194695">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:02 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Black Redstart <span>(Phoenicurus ochruros)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660544/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660544/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194696">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:05 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+             <span>(Acrotylus)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660542/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660542/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194697">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:08 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Insecta</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Black Redstart <span>(Phoenicurus ochruros)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660548/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660548/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194698">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:11 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+             <span>(Crocus cancellatus)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660569/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660569/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194699">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:42 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Mediterranean Meadow Saffron <span>(Colchicum cupanii)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660577/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660577/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194700">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:43 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Woodlark <span>(Lullula arborea)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660561/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660561/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194702">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:48 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Sardinian Warbler <span>(Curruca melanocephala)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660581/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660581/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194701">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 11:53 AM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Marbled Crab <span>(Pachygrapsus marmoratus)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660611/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660611/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194703">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 12:24 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Animalia</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Hygroscopic Earthstar <span>(Astraeus hygrometricus)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660607/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660607/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194704">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 12:46 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Fungi</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Greek Cyclamen <span>(Cyclamen graecum)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660629/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660629/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194706">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 12:47 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Greek Cyclamen <span>(Cyclamen graecum)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660626/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660626/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194707">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 12:51 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Common Chaffinch <span>(Fringilla coelebs)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660624/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660624/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194708">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 12:57 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Arachnids <span>(Arachnida)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660633/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660633/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194709">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 1:07 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Arachnida</div>
+                    <div class="ids">3 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Red Admiral <span>(Vanessa atalanta)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660643/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660643/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194710">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 1:08 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Insecta</div>
+                    <div class="ids">3 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Black Redstart <span>(Phoenicurus ochruros)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660641/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660641/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194712">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 1:23 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Snowy Inkcap <span>(Coprinopsis nivea)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660647/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660647/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194714">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 2:12 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Fungi</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Common Firecrest <span>(Regulus ignicapilla)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660653/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660653/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194713">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 2:14 PM</div>
+                    <div class="location">
+                        Episkopi 180 40, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">2 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Eurasian Siskin <span>(Spinus spinus)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660655/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660655/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194715">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 2:16 PM</div>
+                    <div class="location">
+                        Episkopi 180 40, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Eurasian Siskin <span>(Spinus spinus)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660662/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660662/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194716">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 2:17 PM</div>
+                    <div class="location">
+                        Episkopi 180 40, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Common Raven <span>(Corvus corax)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660668/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660668/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194717">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 2:36 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            European Shag <span>(Gulosus aristotelis)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660666/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660666/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194721">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 3:21 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Autumn Squill <span>(Prospero autumnale)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660678/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660678/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194722">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 3:29 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Bonelli&#39;s Eagle <span>(Aquila fasciata)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660697/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660697/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194723">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 3:53 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">2 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Mediterranean Meadow Saffron <span>(Colchicum cupanii)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660723/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660723/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194724">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 4:01 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            Birds <span>(Aves)</span>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660767/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660767/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194725">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 4:35 PM</div>
+                    <div class="location">
+                        Attica, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Aves</div>
+                    <div class="ids">0 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    
+    <div class="inaturalist small">
+        <div class="title">
+            <div class="left">
+            tree tobacco <span>(Nicotiana glauca)</span>
+            </div>
+            <div class="right">
+                
+                    ✅
+                
+            </div>
+        </div>
+
+        <a href="https://inaturalist-open-data.s3.amazonaws.com/photos/594660736/original.jpg">
+            <img src="https://inaturalist-open-data.s3.amazonaws.com/photos/594660736/medium.jpg" />
+        </a>
+
+        <a href="https://www.inaturalist.org/observations/328194728">
+            <div class="details">
+                <div class="left">
+                    <div class="date">2025/11/16 5:28 PM</div>
+                    <div class="location">
+                        Idra 180 40, Greece</span>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="iconic">Plantae</div>
+                    <div class="ids">1 IDs</div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>

@@ -17,7 +17,8 @@ module sensor_filter_bracket(module_height = 5, total_height = 8, outer_radius =
 <meta property="article:modified_time" content="2016-12-16T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Modeling a part in OpenSCAD"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Modeling a part in OpenSCAD"/>
 <meta name="twitter:description" content="Today, Chris introduced me to an open source alternative to SolidWorks for parametric modeling, OpenSCAD. It&rsquo;s a bit different in that everything is defined programatically, but that has its advantages too. I was able to throw together a little camera/filter bracket without too much trouble at all.
 module sensor_filter_bracket(module_height = 5, total_height = 8, outer_radius = 5, inner_radius = 2, filter_height = 0.1, filter_width = 5) { difference() { // This is the main cylinder cylinder(h=total_height, r=outer_radius, center=false, $fn=100); // Remove a cutout for the sensor module translate([0, 0, -0."/>
 
