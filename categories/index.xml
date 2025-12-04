@@ -12,6 +12,141 @@
     
     
     <item>
+      <title>Analyzing bus stop spacing with GTFS data</title>
+      <link>https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/</link>
+      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/</guid>
+      <description>&lt;p&gt;Early morning on the &lt;a href=&#34;https://en.wikipedia.org/wiki/B48_(New_York_City_bus)&#34;&gt;B48&lt;/a&gt;, my mind turns, as so oft it does, to thoughts of the &lt;a href=&#34;https://www.mta.info/project/brooklyn-bus-network-redesign&#34;&gt;Brooklyn Bus Network Redesign&lt;/a&gt;.
+Alas, the dream remains distant, and here in 2025 the bus still makes a scheduled stop on almost every 270 ft block.&lt;/p&gt;
+&lt;p&gt;The bus lurches forward just as the light ahead turns red. New York City must have some of the closest bus stop spacing in the world. Could GTFS transit data &lt;em&gt;prove&lt;/em&gt; this?&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Okay, well probably not, since public GTFS data doesn&amp;rsquo;t exist everywhere and it&amp;rsquo;s an approximation of how transit works in practice. But some fundamental patterns are clear!&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: 10%;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/graph.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/graph_hudbbf0a83c75b03d5ec7871acd25b2d95_265757_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;While transit experts generally recommend &lt;a href=&#34;https://humantransit.org/2011/04/comments-of-the-week-ideal-stop-spacing-is-400m.html&#34;&gt;stop spacing around 400 meters&lt;/a&gt; for local bus lines, New York City averages much closer &amp;ndash; the most common spacing distance is around 240 meters. However, New York is far from alone with this distinction, and other North American cities such as Toronto have similar distributions. In contrast, European cities (Prague pictured above) tend to have infrequent stopping patterns for buses, especially in the suburbs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Not all New York boroughs share this pattern. The biggest contrast is between Brooklyn and Queens, both sprawling outer boroughs with a mix of high density and sububrban neighborhoods. However, Brooklyn has some of the tightest stop spacing in the city, while Queens buses run more efficiently&lt;sup&gt;*&lt;/sup&gt; with 300-330 meter stop spacing the most common.&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: 10%;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queens.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queens_huf39918518cc0acc447e61ee1f8d563cc_109970_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;figure style=&#34;margin-top: -0.5em;&#34;&gt;&lt;figcaption&gt;Including &lt;a href=&#34;https://en.wikipedia.org/wiki/MTA_Regional_Bus_Operations&#34;&gt;MTA Bus Company&lt;/a&gt; routes with Queens data.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;This is due to the &lt;a href=&#34;https://www.mta.info/project/queens-bus-network-redesign&#34;&gt;Queens Bus Network Redesign&lt;/a&gt;, and using old GTFS data I found on the internet, it is possible to compare the difference.&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: 10%;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queensredesign.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queensredesign_hudbbf0a83c75b03d5ec7871acd25b2d95_225866_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;figure style=&#34;margin-top: -0.5em;&#34;&gt;&lt;figcaption&gt;Excluding &lt;a href=&#34;https://en.wikipedia.org/wiki/MTA_Regional_Bus_Operations&#34;&gt;MTA Bus Company&lt;/a&gt; routes, because I&#39;m not sure it would be comparable to this old GTFS data.&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;May the Brooklyn redesign come soon!&lt;/p&gt;
+&lt;h3 id=&#34;los-angeles&#34;&gt;Los Angeles&lt;/h3&gt;
+&lt;p&gt;Los Angeles shows a clear pattern due to the &lt;a href=&#34;https://en.wikipedia.org/wiki/Public_Land_Survey_System&#34;&gt;&amp;ldquo;Jefferson grid&amp;rdquo;&lt;/a&gt; used to survey and expropriate lands of the West. The mile-square grid was divided up into 1/2 and 1/4 mile subdivisions as neighborhoods developed, and the Los Angeles Metro bus data shows a strong mode at 1/4 mile (400 meters).&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: 10%;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/la.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/la_huc9321393aa8a52e0be4b10dc0091faf8_80056_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/Sidelobes&#34;&gt;&amp;ldquo;sidelobes&amp;rdquo;&lt;/a&gt; at about 365 meters and 435 meters are sitations where bus stops are both on the inner or outer side of a grid subdivision, shown below:&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/innergrid.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/innergrid_hu9cb608ca3f0bed978757ff7e4c0151c4_542152_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;There is also a secondary mode visible at 1/8 of a miles (200 meters.)&lt;/p&gt;
+&lt;h2 id=&#34;the-closest-bus-stops-in-new-york&#34;&gt;The closest bus stops in New York&lt;/h2&gt;
+&lt;p&gt;The two closest bus stops in New York are along the B60 route in Brooklyn. Between Greene Ave and Bleecker Street, a &amp;ldquo;short block&amp;rdquo; in the Bushwick grid, the B60 stops twice. Both bus stops are easily visible in this Google Street View image, they are only 40 meters from each other.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/b60.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/b60_hu1cc60f641579a0bd9aede6e6f5d3a57d_862477_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;And in the Google Maps aerial view.&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin-left: auto&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/closeup.png&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/closeup_hu3912250708658d934567ebe2f7d560d7_4819803_1800x1800_fit_box_3.png&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;A &lt;a href=&#34;https://www.google.com/maps/d/viewer?mid=1GSm6Eq5rtiBotl2bSx6rsUuzXHAIHfs&amp;amp;ll=40.725343504169615%2C-73.94450938949363&amp;amp;z=12&#34;&gt;map of New York City bus stops within 100 meters (330ft) and 150 meters (500ft)&lt;/a&gt; reveals clear borough-by-borough variation. Queens has very few close bus stops. Manhattan&amp;rsquo;s close stops might be a necessary consequence of its extreme density, but Brooklyn&amp;rsquo;s are a consequence of a poorly aged bus network layout.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/map.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/map_hu7fba9da1679ce4a56c592454604cb9c1_4602168_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;h3 id=&#34;view-the-whole-maphttpswwwgooglecommapsdviewermid1gsm6eq5rtibotl2bsx6rsuuzxhaihfsll407253435041696152c-7394450938949363z12&#34;&gt;&lt;a href=&#34;https://www.google.com/maps/d/viewer?mid=1GSm6Eq5rtiBotl2bSx6rsUuzXHAIHfs&amp;amp;ll=40.725343504169615%2C-73.94450938949363&amp;amp;z=12&#34;&gt;View the whole map.&lt;/a&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;source-code-and-other-cities&#34;&gt;Source code and other cities&lt;/h2&gt;
+&lt;p&gt;No less than three GTFS tables must be joined to figure out which stops service which routes: &amp;ldquo;stops&amp;rdquo; (has the geographic location of stops), &amp;ldquo;trips&amp;rdquo; (has info for each trip run, including route and direction), and &amp;ldquo;stop_times&amp;rdquo; (has the times that each trip run stops at each stop and in which order).&lt;/p&gt;
+&lt;p&gt;The Jupyter notebook below loads GTFS data and calculates the distance between sequential stop on each route in the GTFS schedule. You can load any city&amp;rsquo;s GTFS data to make a custom plot. Note that GTFS data is often inaccurate, and might contain &amp;ldquo;fake&amp;rdquo; stops that serve some technical purpose.&lt;/p&gt;
+&lt;style&gt;
+    .sr-only {
+        display: none;
+    }
+
+    .render-viewer {
+        height: 2590px !important;
+    }
+&lt;/style&gt;
+&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/ea2813de8e72e679c59b7d3d4f627a0c.js&#34;&gt;&lt;/script&gt;
+
+&lt;h2 id=&#34;see-also&#34;&gt;See also&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.ny.gov/Transportation/MTA-Bus-Route-Segment-Speeds-Beginning-2025/kufs-yh3x/about_data&#34;&gt;MTA Bus Route Segment Speeds: Beginning 2025&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://data.ny.gov/Transportation/MTA-Bus-Route-Segment-Speeds-2023-2024/58t6-89vi/about_data&#34;&gt;MTA Bus Route Segment Speeds: 2023 - 2024
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;sup&gt;*&lt;/sup&gt; Though not necessarily faster&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
       <title>Using iNaturalist with non-geotagged photos: approximate bulk geotagging</title>
       <link>https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/</link>
       <pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate>
@@ -336,7 +471,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -347,9 +482,11 @@
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Ray-finned Fishes &lt;span&gt;(Actinopterygii)&lt;/span&gt;
+            Saddled Seabream &lt;span&gt;(Oblada melanurus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
+                
+                    ✅
                 
             &lt;/div&gt;
         &lt;/div&gt;
@@ -363,12 +500,12 @@
                 &lt;div class=&#34;left&#34;&gt;
                     &lt;div class=&#34;date&#34;&gt;2025/11/16 10:12 AM&lt;/div&gt;
                     &lt;div class=&#34;location&#34;&gt;
-                        Attica, Greece&lt;/span&gt;
+                        Attica, Attica, GR&lt;/span&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Actinopterygii&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -515,6 +652,8 @@
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -532,7 +671,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Mollusca&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -811,7 +950,7 @@
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Acrotylus)&lt;/span&gt;
+            Bandwing Grasshoppers &lt;span&gt;(Oedipodinae)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -832,7 +971,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Insecta&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -949,6 +1088,8 @@
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -966,7 +1107,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -1015,6 +1156,8 @@
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
+                    ✅
+                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -1032,7 +1175,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Animalia&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -1179,7 +1322,7 @@
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Arachnids &lt;span&gt;(Arachnida)&lt;/span&gt;
+            Harvestmen &lt;span&gt;(Opiliones)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -1200,7 +1343,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Arachnida&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -1447,7 +1590,7 @@
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            European Shag &lt;span&gt;(Gulosus aristotelis)&lt;/span&gt;
+            Mediterranean Shag &lt;span&gt;(Gulosus aristotelis desmarestii)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -1470,7 +1613,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -1583,9 +1726,11 @@
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Birds &lt;span&gt;(Aves)&lt;/span&gt;
+            Song Thrush &lt;span&gt;(Turdus philomelos)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
+                
+                    ✅
                 
             &lt;/div&gt;
         &lt;/div&gt;
@@ -1604,7 +1749,7 @@
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;

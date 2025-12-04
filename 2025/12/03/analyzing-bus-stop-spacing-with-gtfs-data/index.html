@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://exclav.es/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Analyzing bus stop spacing with GTFS data" />
+<meta property="og:description" content="Early morning on the B48, my mind turns, as so oft it does, to thoughts of the Brooklyn Bus Network Redesign. Alas, the dream remains distant, and here in 2025 the bus still makes a scheduled stop on almost every 270 ft block.
+The bus lurches forward just as the light ahead turns red. New York City must have some of the closest bus stop spacing in the world. Could GTFS transit data prove this?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-12-03T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-12-03T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Analyzing bus stop spacing with GTFS data"/>
+<meta name="twitter:description" content="Early morning on the B48, my mind turns, as so oft it does, to thoughts of the Brooklyn Bus Network Redesign. Alas, the dream remains distant, and here in 2025 the bus still makes a scheduled stop on almost every 270 ft block.
+The bus lurches forward just as the light ahead turns red. New York City must have some of the closest bus stop spacing in the world. Could GTFS transit data prove this?"/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Analyzing bus stop spacing with GTFS data</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <nav>
+        <a class="back" href="http://exclav.es">← back to blog</a><br />
+        <a class="doubleback" href="http://subject.space">←← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Analyzing bus stop spacing with GTFS data</h1>
+        <div>
+                <time>December 3, 2025</time>
+            </div>
+    </header><p>Early morning on the <a href="https://en.wikipedia.org/wiki/B48_(New_York_City_bus)">B48</a>, my mind turns, as so oft it does, to thoughts of the <a href="https://www.mta.info/project/brooklyn-bus-network-redesign">Brooklyn Bus Network Redesign</a>.
+Alas, the dream remains distant, and here in 2025 the bus still makes a scheduled stop on almost every 270 ft block.</p>
+<p>The bus lurches forward just as the light ahead turns red. New York City must have some of the closest bus stop spacing in the world. Could GTFS transit data <em>prove</em> this?</p>
+<hr>
+<p>Okay, well probably not, since public GTFS data doesn&rsquo;t exist everywhere and it&rsquo;s an approximation of how transit works in practice. But some fundamental patterns are clear!</p>
+<div class="multi" style="width: 80%; margin-left: 10%;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/graph.jpg">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/graph_hudbbf0a83c75b03d5ec7871acd25b2d95_265757_1800x1800_fit_q75_box.jpg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>While transit experts generally recommend <a href="https://humantransit.org/2011/04/comments-of-the-week-ideal-stop-spacing-is-400m.html">stop spacing around 400 meters</a> for local bus lines, New York City averages much closer &ndash; the most common spacing distance is around 240 meters. However, New York is far from alone with this distinction, and other North American cities such as Toronto have similar distributions. In contrast, European cities (Prague pictured above) tend to have infrequent stopping patterns for buses, especially in the suburbs.</p>
+<hr>
+<p>Not all New York boroughs share this pattern. The biggest contrast is between Brooklyn and Queens, both sprawling outer boroughs with a mix of high density and sububrban neighborhoods. However, Brooklyn has some of the tightest stop spacing in the city, while Queens buses run more efficiently<sup>*</sup> with 300-330 meter stop spacing the most common.</p>
+<div class="multi" style="width: 80%; margin-left: 10%;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queens.png">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queens_huf39918518cc0acc447e61ee1f8d563cc_109970_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+</div>
+<figure style="margin-top: -0.5em;"><figcaption>Including <a href="https://en.wikipedia.org/wiki/MTA_Regional_Bus_Operations">MTA Bus Company</a> routes with Queens data.</figcaption></figure>
+<p>This is due to the <a href="https://www.mta.info/project/queens-bus-network-redesign">Queens Bus Network Redesign</a>, and using old GTFS data I found on the internet, it is possible to compare the difference.</p>
+<div class="multi" style="width: 80%; margin-left: 10%;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queensredesign.jpg">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/queensredesign_hudbbf0a83c75b03d5ec7871acd25b2d95_225866_1800x1800_fit_q75_box.jpg" alt="" />
+    </a>
+    
+</figure>
+</div>
+<figure style="margin-top: -0.5em;"><figcaption>Excluding <a href="https://en.wikipedia.org/wiki/MTA_Regional_Bus_Operations">MTA Bus Company</a> routes, because I'm not sure it would be comparable to this old GTFS data.</figcaption></figure>
+<p>May the Brooklyn redesign come soon!</p>
+<h3 id="los-angeles">Los Angeles</h3>
+<p>Los Angeles shows a clear pattern due to the <a href="https://en.wikipedia.org/wiki/Public_Land_Survey_System">&ldquo;Jefferson grid&rdquo;</a> used to survey and expropriate lands of the West. The mile-square grid was divided up into 1/2 and 1/4 mile subdivisions as neighborhoods developed, and the Los Angeles Metro bus data shows a strong mode at 1/4 mile (400 meters).</p>
+<div class="multi" style="width: 80%; margin-left: 10%;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/la.png">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/la_huc9321393aa8a52e0be4b10dc0091faf8_80056_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>The <a href="https://en.wikipedia.org/wiki/Sidelobes">&ldquo;sidelobes&rdquo;</a> at about 365 meters and 435 meters are sitations where bus stops are both on the inner or outer side of a grid subdivision, shown below:</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/innergrid.png">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/innergrid_hu9cb608ca3f0bed978757ff7e4c0151c4_542152_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+<p>There is also a secondary mode visible at 1/8 of a miles (200 meters.)</p>
+<h2 id="the-closest-bus-stops-in-new-york">The closest bus stops in New York</h2>
+<p>The two closest bus stops in New York are along the B60 route in Brooklyn. Between Greene Ave and Bleecker Street, a &ldquo;short block&rdquo; in the Bushwick grid, the B60 stops twice. Both bus stops are easily visible in this Google Street View image, they are only 40 meters from each other.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/b60.jpg">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/b60_hu1cc60f641579a0bd9aede6e6f5d3a57d_862477_1800x1800_fit_q75_box.jpg" alt="" />
+    </a>
+    
+</figure>
+<p>And in the Google Maps aerial view.</p>
+<div class="multi" style="width: 100%; margin-left: auto">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/closeup.png">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/closeup_hu3912250708658d934567ebe2f7d560d7_4819803_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>A <a href="https://www.google.com/maps/d/viewer?mid=1GSm6Eq5rtiBotl2bSx6rsUuzXHAIHfs&amp;ll=40.725343504169615%2C-73.94450938949363&amp;z=12">map of New York City bus stops within 100 meters (330ft) and 150 meters (500ft)</a> reveals clear borough-by-borough variation. Queens has very few close bus stops. Manhattan&rsquo;s close stops might be a necessary consequence of its extreme density, but Brooklyn&rsquo;s are a consequence of a poorly aged bus network layout.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/map.jpg">
+	    <img src="/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/images/map_hu7fba9da1679ce4a56c592454604cb9c1_4602168_1800x1800_fit_q75_box.jpg" alt="" />
+    </a>
+    
+</figure>
+<h3 id="view-the-whole-maphttpswwwgooglecommapsdviewermid1gsm6eq5rtibotl2bsx6rsuuzxhaihfsll407253435041696152c-7394450938949363z12"><a href="https://www.google.com/maps/d/viewer?mid=1GSm6Eq5rtiBotl2bSx6rsUuzXHAIHfs&amp;ll=40.725343504169615%2C-73.94450938949363&amp;z=12">View the whole map.</a></h3>
+<h2 id="source-code-and-other-cities">Source code and other cities</h2>
+<p>No less than three GTFS tables must be joined to figure out which stops service which routes: &ldquo;stops&rdquo; (has the geographic location of stops), &ldquo;trips&rdquo; (has info for each trip run, including route and direction), and &ldquo;stop_times&rdquo; (has the times that each trip run stops at each stop and in which order).</p>
+<p>The Jupyter notebook below loads GTFS data and calculates the distance between sequential stop on each route in the GTFS schedule. You can load any city&rsquo;s GTFS data to make a custom plot. Note that GTFS data is often inaccurate, and might contain &ldquo;fake&rdquo; stops that serve some technical purpose.</p>
+<style>
+    .sr-only {
+        display: none;
+    }
+
+    .render-viewer {
+        height: 2590px !important;
+    }
+</style>
+<script type="application/javascript" src="https://gist.github.com/loganwilliams/ea2813de8e72e679c59b7d3d4f627a0c.js"></script>
+
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="https://data.ny.gov/Transportation/MTA-Bus-Route-Segment-Speeds-Beginning-2025/kufs-yh3x/about_data">MTA Bus Route Segment Speeds: Beginning 2025</a></li>
+<li><a href="https://data.ny.gov/Transportation/MTA-Bus-Route-Segment-Speeds-2023-2024/58t6-89vi/about_data">MTA Bus Route Segment Speeds: 2023 - 2024
+</a></li>
+</ul>
+<p><sup>*</sup> Though not necessarily faster&hellip;</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>
