@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/</loc>
-    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://exclav.es/posts/</loc>
-    <lastmod>2025-12-03T00:00:00+00:00</lastmod>
+    <lastmod>2025-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://exclav.es/2025/12/08/the-cheapest-items-at-ikea/</loc>
+    <lastmod>2025-12-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://exclav.es/</loc>
+    <lastmod>2025-12-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://exclav.es/2025/12/03/analyzing-bus-stop-spacing-with-gtfs-data/</loc>
     <lastmod>2025-12-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://exclav.es/2025/11/25/using-inaturalist-with-non-geotagged-photos-approximate-bulk-geotagging/</loc>
