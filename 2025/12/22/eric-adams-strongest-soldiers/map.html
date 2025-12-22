@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric Adams Vote Percentage Map</title>
+    <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            width: 100%;
+            height: 100vh;
+        }
+        .map-overlay {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(30, 30, 30, 0.9);
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            z-index: 1000;
+            color: #fff;
+        }
+        .legend {
+            margin-top: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        .legend-color {
+            width: 30px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #333;
+        }
+        .toggle-control {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #555;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #4CAF50;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        .toggle-label {
+            color: #fff;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="map-overlay">
+        <h3 style="margin: 0 0 10px 0; color: #fff;" id="title">Eric Adams Vote Percentage</h3>
+        <div class="toggle-control">
+            <span class="toggle-label">Percentage</span>
+            <label class="toggle-switch">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Vote Count</span>
+        </div>
+        <div class="legend" id="legend"></div>
+    </div>
+
+    <script>
+        // Load GeoJSON
+        async function loadGeoJSON() {
+            const response = await fetch('ed2025_with_votes.geojson');
+            const geojson = await response.json();
+
+            // Calculate percentage from vote counts for each feature
+            geojson.features.forEach(feature => {
+                const props = feature.properties;
+                const ericVotes = props.eric_adams_votes || 0;
+                const totalVotes = props.total_votes || 0;
+                
+                // Calculate percentage from vote counts
+                if (totalVotes > 0) {
+                    props.eric_adams_percentage = (ericVotes / totalVotes) * 100;
+                } else {
+                    props.eric_adams_percentage = 0;
+                }
+            });
+
+            // Calculate min and max percentages
+            const percentages = geojson.features.map(f => 
+                f.properties.eric_adams_percentage || 0
+            );
+            const minPct = Math.min(...percentages);
+            const maxPct = Math.max(...percentages);
+
+            // Calculate min and max vote counts
+            const voteCounts = geojson.features.map(f => 
+                f.properties.eric_adams_votes || 0
+            );
+            const minVotes = Math.min(...voteCounts);
+            const maxVotes = Math.max(...voteCounts);
+
+            // Calculate bounds from coordinates (already in lat/lng)
+            let minLon = Infinity, minLat = Infinity, maxLon = -Infinity, maxLat = -Infinity;
+            let validCoords = 0;
+            
+            const processCoords = (c) => {
+                if (!Array.isArray(c)) return;
+                if (Array.isArray(c[0])) {
+                    c.forEach(processCoords);
+                } else if (c.length >= 2 && typeof c[0] === 'number' && typeof c[1] === 'number') {
+                    const [lon, lat] = c;
+                    // Validate coordinates are in valid WGS84 ranges
+                    if (lon >= -180 && lon <= 180 && lat >= -90 && lat <= 90 && 
+                        isFinite(lon) && isFinite(lat)) {
+                        minLon = Math.min(minLon, lon);
+                        maxLon = Math.max(maxLon, lon);
+                        minLat = Math.min(minLat, lat);
+                        maxLat = Math.max(maxLat, lat);
+                        validCoords++;
+                    }
+                }
+            };
+            
+            geojson.features.forEach(feature => {
+                if (feature.geometry && feature.geometry.coordinates) {
+                    processCoords(feature.geometry.coordinates);
+                }
+            });
+
+            // If no valid coordinates found, use default NYC bounds
+            if (!isFinite(minLon) || validCoords === 0) {
+                console.warn('No valid coordinates found, using default NYC bounds');
+                minLon = -74.3;
+                maxLon = -73.7;
+                minLat = 40.5;
+                maxLat = 40.9;
+            }
+
+            return { geojson, minPct, maxPct, minVotes, maxVotes, bounds: [[minLon, minLat], [maxLon, maxLat]] };
+        }
+
+        // Magma color palette (from dark purple/black to yellow/white)
+        const magmaColors = [
+            [0, 0, 4],      // #000004 - very dark purple/black
+            [30, 16, 71],   // #1e1047 - dark purple
+            [90, 24, 107],  // #5a186b - purple
+            [157, 55, 135], // #9d3787 - magenta
+            [230, 81, 100], // #e65164 - red-pink
+            [252, 185, 125],// #fcb97d - yellow
+            [252, 253, 191] // #fcfdbf - light yellow/white
+        ];
+
+        // Color interpolation function with sqrt scale and magma palette
+        function getColor(value, scaleMin, scaleMax) {
+            // Clamp value to scale range
+            const clamped = Math.max(scaleMin, Math.min(scaleMax, value));
+            // Apply sqrt transformation
+            const sqrtMin = Math.sqrt(Math.max(0, scaleMin));
+            const sqrtMax = Math.sqrt(scaleMax);
+            const sqrtVal = Math.sqrt(Math.max(0, clamped));
+            const normalized = (sqrtVal - sqrtMin) / (sqrtMax - sqrtMin);
+            
+            // Interpolate through magma colors
+            const colorIndex = normalized * (magmaColors.length - 1);
+            const lowerIndex = Math.floor(colorIndex);
+            const upperIndex = Math.min(magmaColors.length - 1, Math.ceil(colorIndex));
+            const t = colorIndex - lowerIndex;
+            
+            const lowerColor = magmaColors[lowerIndex];
+            const upperColor = magmaColors[upperIndex];
+            
+            const r = Math.round(lowerColor[0] + (upperColor[0] - lowerColor[0]) * t);
+            const g = Math.round(lowerColor[1] + (upperColor[1] - lowerColor[1]) * t);
+            const b = Math.round(lowerColor[2] + (upperColor[2] - lowerColor[2]) * t);
+            
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // Function to create color stops for MapLibre expression
+        function createColorStops(scaleMin, scaleMax) {
+            const sqrtMin = Math.sqrt(Math.max(0, scaleMin));
+            const sqrtMax = Math.sqrt(scaleMax);
+            const colorStops = [];
+            const numStops = magmaColors.length;
+            
+            for (let i = 0; i < numStops; i++) {
+                const t = i / (numStops - 1);
+                const sqrtValue = sqrtMin + (sqrtMax - sqrtMin) * t;
+                const color = magmaColors[i];
+                const hexColor = `#${color[0].toString(16).padStart(2, '0')}${color[1].toString(16).padStart(2, '0')}${color[2].toString(16).padStart(2, '0')}`;
+                colorStops.push(sqrtValue, hexColor);
+            }
+            
+            return colorStops;
+        }
+
+        // Initialize map
+        async function initMap() {
+            try {
+                const { geojson, minPct, maxPct, minVotes, maxVotes, bounds } = await loadGeoJSON();
+
+                // Validate bounds
+                let centerLon = (bounds[0][0] + bounds[1][0]) / 2;
+                let centerLat = (bounds[0][1] + bounds[1][1]) / 2;
+                
+                if (!isFinite(centerLon) || !isFinite(centerLat) || 
+                    centerLat < -90 || centerLat > 90 || centerLon < -180 || centerLon > 180) {
+                    console.error('Invalid bounds, using default NYC center');
+                    centerLon = -73.95;
+                    centerLat = 40.7;
+                }
+
+                const map = new maplibregl.Map({
+                    container: 'map',
+                    style: {
+                        version: 8,
+                        sources: {
+                            'carto-dark': {
+                                type: 'raster',
+                                tiles: [
+                                    'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+                                    'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+                                    'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'
+                                ],
+                                tileSize: 256
+                            }
+                        },
+                        layers: [
+                            {
+                                id: 'carto-dark-layer',
+                                type: 'raster',
+                                source: 'carto-dark',
+                                minzoom: 0,
+                                maxzoom: 22
+                            }
+                        ]
+                    },
+                    center: [centerLon, centerLat],
+                    zoom: 10
+                });
+
+            map.on('load', () => {
+                // Add GeoJSON source
+                map.addSource('districts', {
+                    type: 'geojson',
+                    data: geojson
+                });
+
+                // Current mode: true = vote count, false = percentage
+                let showVoteCount = false;
+                
+                // Percentage scale range: 0-10%
+                const pctScaleMin = 0;
+                const pctScaleMax = 10;
+                
+                // Vote count scale: use min/max from data
+                const voteScaleMin = minVotes;
+                const voteScaleMax = maxVotes;
+
+                // Function to update the map layer and legend
+                function updateMap(mode) {
+                    showVoteCount = mode;
+                    const scaleMin = mode ? voteScaleMin : pctScaleMin;
+                    const scaleMax = mode ? voteScaleMax : pctScaleMax;
+                    const dataField = mode ? 'eric_adams_votes' : 'eric_adams_percentage';
+                    
+                    // Update layer paint property
+                    const colorStops = createColorStops(scaleMin, scaleMax);
+                    map.setPaintProperty('districts-fill', 'fill-color', [
+                        'interpolate',
+                        ['linear'],
+                        ['sqrt', ['max', scaleMin, ['min', scaleMax, ['get', dataField]]]],
+                        ...colorStops
+                    ]);
+                    
+                    // Update title
+                    const title = document.getElementById('title');
+                    title.textContent = mode ? 'Eric Adams Vote Count' : 'Eric Adams Vote Percentage';
+                    
+                    // Update legend
+                    const legend = document.getElementById('legend');
+                    legend.innerHTML = ''; // Clear existing legend
+                    const steps = 5;
+                    for (let i = 0; i <= steps; i++) {
+                        const value = scaleMin + (scaleMax - scaleMin) * (i / steps);
+                        const color = getColor(value, scaleMin, scaleMax);
+                        const item = document.createElement('div');
+                        item.className = 'legend-item';
+                        const colorBox = document.createElement('div');
+                        colorBox.className = 'legend-color';
+                        colorBox.style.backgroundColor = color;
+                        const label = document.createElement('span');
+                        if (mode) {
+                            label.textContent = Math.round(value).toLocaleString();
+                        } else {
+                            label.textContent = `${value.toFixed(1)}%`;
+                        }
+                        label.style.color = '#fff';
+                        item.appendChild(colorBox);
+                        item.appendChild(label);
+                        legend.appendChild(item);
+                    }
+                }
+                
+                // Initial layer setup (percentage mode)
+                const initialColorStops = createColorStops(pctScaleMin, pctScaleMax);
+                map.addLayer({
+                    id: 'districts-fill',
+                    type: 'fill',
+                    source: 'districts',
+                    paint: {
+                        'fill-color': [
+                            'interpolate',
+                            ['linear'],
+                            ['sqrt', ['max', pctScaleMin, ['min', pctScaleMax, ['get', 'eric_adams_percentage']]]],
+                            ...initialColorStops
+                        ],
+                        'fill-opacity': 0.8
+                    }
+                });
+
+                // Set up toggle handler
+                const toggle = document.getElementById('modeToggle');
+                toggle.addEventListener('change', (e) => {
+                    updateMap(e.target.checked);
+                });
+
+                // Initial legend (percentage mode)
+                updateMap(false);
+
+                // Fit map to bounds (validate bounds first)
+                if (isFinite(bounds[0][0]) && isFinite(bounds[0][1]) && 
+                    isFinite(bounds[1][0]) && isFinite(bounds[1][1])) {
+                    try {
+                        map.fitBounds(bounds, {
+                            padding: 50
+                        });
+                    } catch (e) {
+                        console.warn('Error fitting bounds:', e);
+                    }
+                }
+
+                // Add popup on hover
+                const popup = new maplibregl.Popup({
+                    closeOnClick: false,
+                    closeButton: false
+                });
+
+                map.on('mousemove', 'districts-fill', (e) => {
+                    const props = e.features[0].properties;
+                    const pct = props.eric_adams_percentage || 0;
+                    const votes = props.eric_adams_votes || 0;
+                    const total = props.total_votes || 0;
+                    
+                    map.getCanvas().style.cursor = 'pointer';
+                    
+                    popup.setLngLat(e.lngLat)
+                        .setHTML(`
+                            <strong>Election District ${props.ElectDist}</strong><br>
+                            Eric Adams: ${votes} votes<br>
+                            Total Votes: ${total}<br>
+                            Percentage: ${pct.toFixed(2)}%
+                        `)
+                        .addTo(map);
+                });
+
+                map.on('mouseleave', 'districts-fill', () => {
+                    map.getCanvas().style.cursor = '';
+                    popup.remove();
+                });
+            });
+
+            } catch (error) {
+                console.error('Error initializing map:', error);
+                document.getElementById('map').innerHTML = 
+                    '<div style="padding: 20px; text-align: center;">Error loading map. Please check the console.</div>';
+            }
+        }
+
+        initMap().catch(error => {
+            console.error('Failed to initialize map:', error);
+            document.getElementById('map').innerHTML = 
+                '<div style="padding: 20px; text-align: center;">Error loading map. Please check the console.</div>';
+        });
+    </script>
+</body>
+</html>
