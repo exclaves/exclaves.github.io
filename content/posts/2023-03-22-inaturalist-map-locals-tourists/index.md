@@ -9,9 +9,7 @@ In 2010, cartographer <a href="https://twitter.com/enf/" target="_blank">Erica F
 
 Last summer, Dario Taraborelli suggested extending this to iNaturalist observations.
 
-<div style="display: flex; justify-content: center">
-{{< tweet user="ReaderMeter" id="1536038627213398016" >}}
-</div>
+<blockquote class="twitter-tweet" data-twitter-extracted-i1764100166656284386="true"><p lang="en" dir="ltr">Remember the classic "Locals &amp; Tourists" dataviz project by <a href="https://twitter.com/enf?ref_src=twsrc%5Etfw">@enf</a>? Has anyone tried applying the same method (&lt;30 days posting photos from a given location: you're a "tourist"; &gt;=30 days: you're "local") to <a href="https://twitter.com/Team_eBird?ref_src=twsrc%5Etfw">@Team_eBird</a> / <a href="https://twitter.com/inaturalist?ref_src=twsrc%5Etfw">@inaturalist</a> data to measure local community participation? <a href="https://t.co/1QdSZKB2RH">pic.twitter.com/1QdSZKB2RH</a></p>— Dario Taraborelli (@ReaderMeter) <a href="https://twitter.com/ReaderMeter/status/1536038627213398016?ref_src=twsrc%5Etfw">June 12, 2022</a></blockquote>
 
 It's taken a while, but here it is:
 
