@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="in progress. blog of Logan Williams/subject.space.">
+    
+    <link rel="shortcut icon" href="https://exclav.es/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <meta property="og:title" content="Updates to iNaturalist &#34;locals&#34; and &#34;tourists&#34;" />
+<meta property="og:description" content="Back in 2023, I downloaded every research grade observation from iNaturalist and made a map that classified each one as a &ldquo;local&rdquo; or a &ldquo;tourist,&rdquo; depending on the length of the observer&rsquo;s history in that area.
+iNaturalist has only grown since, and updating the data for 2025 was long overdue! Dario shared it in the iNat forum earlier this week, and this wave of interest was good motivation.
+As of this week, the data has been updated to use observations until August 5, 2025." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/" /><meta property="og:image" content="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%205.00.20%E2%80%AFPM_hu5f80ce2f61b4c5965a1a1752bbf7bfe1_3885826_1800x1800_fit_box_3.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-08-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-08-20T00:00:00+00:00" />
+
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%205.00.20%E2%80%AFPM_hu5f80ce2f61b4c5965a1a1752bbf7bfe1_3885826_1800x1800_fit_box_3.png"/>
+
+<meta name="twitter:title" content="Updates to iNaturalist &#34;locals&#34; and &#34;tourists&#34;"/>
+<meta name="twitter:description" content="Back in 2023, I downloaded every research grade observation from iNaturalist and made a map that classified each one as a &ldquo;local&rdquo; or a &ldquo;tourist,&rdquo; depending on the length of the observer&rsquo;s history in that area.
+iNaturalist has only grown since, and updating the data for 2025 was long overdue! Dario shared it in the iNat forum earlier this week, and this wave of interest was good motivation.
+As of this week, the data has been updated to use observations until August 5, 2025."/>
+
+
+    <link rel="stylesheet" href="/css/override.css" />
+    <title>Updates to iNaturalist &#34;locals&#34; and &#34;tourists&#34;</title>
+    <script defer data-domain="exclav.es" src="https://plausible.io/js/script.js"></script>
+</head>
+<body><header id="banner">
+    <h2><a href="https://exclav.es">tracks and traces</a></h2>
+    <nav>
+        <a class="back" href="http://exclav.es">← back to blog</a><br />
+        <a class="doubleback" href="http://subject.space">←← back to portfolio</a>
+    </nav>
+</header>
+<main id="content">
+<article>
+    <header id="post-header">
+        <h1>Updates to iNaturalist &#34;locals&#34; and &#34;tourists&#34;</h1>
+        <div>
+                <time>August 20, 2025</time>
+            </div>
+    </header><style>
+    figure, video, .multi {
+        width: 100% !important;
+        margin: auto !important;
+    }
+
+    figure img {
+        max-width: 100% !important;
+    }
+</style>
+<p>Back in 2023, I downloaded every <a href="https://www.gbif.org/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7">research grade observation</a> from iNaturalist and made a <a href="https://exclav.es/2023/03/22/inaturalist-observations-locals-and-tourists/">map that classified each one as a &ldquo;local&rdquo; or a &ldquo;tourist,&rdquo;</a> depending on the length of the observer&rsquo;s history in that area.</p>
+<p>iNaturalist has only grown since, and updating the data for 2025 was long overdue! Dario <a href="https://forum.inaturalist.org/t/locals-and-tourists-on-inaturalist-a-data-visualization-project/68982">shared it in the iNat forum</a> earlier this week, and this wave of interest was good motivation.</p>
+<p>As of this week, the data has been updated to use observations until August 5, 2025. Thank you to past me for taking detailed notes about the data processing and deployment steps.</p>
+<p>Along the way I also added a new feature — statistics on observations over time to complement the map.</p>
+<h3 id="observations-over-time">Observations over time</h3>
+<p>The data contains rich time detail that I never tried to represent in the map visualization directly. For this update, I added a synchronized stacked bar chart that shows the observations per month for your current view.</p>
+<div class="multi">
+<video style="width: 100%" nocontrols autoplay muted loop playsinline src="inat-example.mp4" title="stats graph in inat locals and tourists"></video>
+</div>
+<p>When zoomed out, observations accumulate into aggregate clusters that don&rsquo;t contain detailed time information. Because of this limitation, the stats view only works while quite zoomed in. Through careful <a href="https://github.com/felt/tippecanoe">tippecanoe</a> massaging, zoom 11 and above contain exclusively raw points to enable this feature.</p>
+<h4 id="some-things-to-see-in-the-time-series">Some things to see in the time series</h4>
+<p>The growth of iNaturalist in the UK, and seasonal patterns in London. Note that the seasonal pattern is stronger for &ldquo;tourists&rdquo; than for &ldquo;locals&rdquo;!</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%205.00.20%E2%80%AFPM.png">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%205.00.20%E2%80%AFPM_hu5f80ce2f61b4c5965a1a1752bbf7bfe1_3885826_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+<p>Palm Springs, California has the opposite seasonal variation.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%205.02.41%E2%80%AFPM.png">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%205.02.41%E2%80%AFPM_huf2ca13bebd5cbb4fce35791c3bb72a33_1230939_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+<p>The overall growth of tourism in Colombia is apparent, especially in cities like Bogotá.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%204.58.41%E2%80%AFPM.png">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%204.58.41%E2%80%AFPM_hu7a0b326924a2f1244bb4b870b9bbf889_1831118_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+<p>As is the impact of COVID-19 on tourism in Costa Rica, here at Lake Arenal.</p>
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%204.55.43%E2%80%AFPM.png">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%204.55.43%E2%80%AFPM_hu254c20476a2eff93bc266e283fdda9bb_1034668_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+<h2 id="observations-on-inat-forums">Observations on iNat forums</h2>
+<p>It&rsquo;s been great to see what other people notice about the map in their iNaturalist posts.</p>
+<p>Vireya looked in Australia:</p>
+<div class="multi" style="width: 70% !important; margin: auto !important;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%208.48.50%E2%80%AFPM.png">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%202025-08-20%20at%208.48.50%E2%80%AFPM_hua6b9b01a50f080f81195d11afa6ea9d1_585204_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>Tom Wainwright wondered about the tendency of rural observers to travel geographically farther, and if that could explain some of the urban/rural correlation with local/tourist he saw in Oregon.</p>
+<div class="multi" style="width: 70% !important; margin: auto !important;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%20from%202025-08-17%2015-24-23.png">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/Screenshot%20from%202025-08-17%2015-24-23_hube4cec4e7c08cf773fa7b6b75ac7849a_347454_1800x1800_fit_box_3.png" alt="" />
+    </a>
+    
+</figure>
+</div>
+<p>User keirmorse noticed that the main official trails at Pinnacles National Park were mainly &ldquo;tourist&rdquo; observations, while the backcountry areas were almost exclusively &ldquo;local.&rdquo;</p>
+<div class="multi" style="width: 70% !important; margin: auto !important;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/image.jpg">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/image_huf62ce3d5e722a11af54afdcdc6175a7c_99704_1800x1800_fit_q75_box.jpg" alt="" />
+    </a>
+    
+</figure>
+</div>
+Dario explored the difference between the old and udpated datasets and made a GIF of changes in Costa Rica while toggling between 2023 and 2025.
+<div class="multi" style="width: 70% !important; margin: auto !important;">
+
+
+
+<figure>
+    <a href="https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/ezgif-3c0ea257a50169.gif">
+	    <img src="/2025/08/20/updates-to-inaturalist-locals-and-tourists/ezgif-3c0ea257a50169_huc61d84a39343bb46683ae964fecb5c68_1883039_1800x1800_fit_box.gif" alt="GIF of Costa Rica between 2023 and 2025" />
+    </a>
+    
+</figure>
+</div>
+<p>Still other iNaturalist forum users discussed finding their own observations on the map, seeing where others in their community were exploring nature, and the map&rsquo;s utility as a biodiversity &ldquo;hotspot&rdquo; finder. I&rsquo;m really grateful to folks in the iNat forum for sharing how they use the tool and what they noticed.</p>
+<p>If you have any questions or thoughts, please reach out to me over <a href="mailto:logan.williams@alum.mit.edu">email</a>.</p>
+</article>
+
+        </main><footer id="footer">
+    Logan Williams
+</footer>
+
+<script type="text/javascript" src="/js/lightbox.js"></script>
+<link rel="stylesheet" href="/css/lightbox.css">
+<script type="text/javascript" src="/js/accordion.js"></script>
+<script type="text/javascript">
+    var els = document.getElementsByTagName("img");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*2) +  "deg)";
+    }
+
+    var els = document.getElementsByClassName("inaturalist");
+    for (var i = 0; i < els.length; i++) {
+        var el = els[i];
+        el.style.transform = "rotate(" + ((Math.random()-0.5)*1.5) +  "deg)";
+    }
+</script></body>
+</html>
