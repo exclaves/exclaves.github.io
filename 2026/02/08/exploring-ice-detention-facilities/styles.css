@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    font-family: serif;
+    background: white;
+    color: black;
+    line-height: 1.5;
+} */
+
+.container {
+    /* max-width: 1400px; */
+    /* margin: 0 auto; */
+    /* padding: 2rem; */
+}
+
+/* header {
+    border-bottom: 1px solid black;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+} */
+
+/* h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+} */
+
+.date-range {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.date-range-dates {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.date-range-attribution {
+    color: #666;
+}
+
+.date-range-attribution a {
+    color: #666;
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* 
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.5rem;
+} */
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    justify-content: space-between;
+}
+
+input, select {
+    padding: 0.5rem;
+    border: 1px solid black;
+    /* font-family: serif; */
+    /* font-size: 1rem; */
+}
+
+.table-container {
+    /* Persistent outer border even while scrolling */
+    border: 1px solid black;
+    overflow: auto;
+    max-height: 600px;
+}
+
+table {
+    width: 100%;
+    min-width: 2000px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid black;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Allow headers to wrap and make them narrower */
+th {
+    white-space: normal;
+    padding: 0.4rem 0.5rem;
+    line-height: 1.2;
+    background: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* Borders can disappear / double up with sticky + border-collapse.
+       Draw consistent 1px lines with inset shadows instead. */
+    border-top: 0;
+    border-bottom: 0;
+    /* Only the header/content separator; top edge is handled by .table-container border */
+    box-shadow: inset 0 -1px 0 0 black;
+}
+
+/* Allow facility name to wrap and make it narrower */
+th.sticky-col, td.sticky-col {
+    white-space: normal;
+    max-width: 150px;
+    padding: 0.4rem 0.5rem;
+}
+
+/* Make operator column narrower with wrapping */
+th[data-metric="operator"], 
+td.operator-col {
+    white-space: normal;
+    max-width: 100px;
+    padding: 0.4rem 0.5rem;
+}
+
+/* Make delta columns narrower (but not sticky columns) */
+th.delta-col:not(.sticky-col), td.delta-col:not(.sticky-col) {
+    padding: 0.5rem 0.5rem;
+}
+
+th.sticky-col {
+    z-index: 15;
+    /* Keep the right edge of the sticky Facility header visible while scrolling horizontally */
+    box-shadow: inset -1px 0 0 0 black, inset 0 -1px 0 0 black;
+}
+
+th.sortable {
+    cursor: pointer;
+}
+
+th.sortable:hover {
+    background: #f0f0f0;
+}
+
+.sticky-col {
+    position: sticky;
+    left: 0;
+    background: white;
+    z-index: 5;
+    /* Keep the sticky column divider visible while scrolling horizontally */
+    box-shadow: inset -1px 0 0 0 black;
+}
+
+td.sticky-col {
+    font-weight: bold;
+}
+
+/* Avoid double-thick header/body separator (header shadow + first row top border) */
+tbody tr:first-child td {
+    border-top: 0;
+}
+
+/* Avoid double outer border (table edges + container border) */
+#facilitiesTable th:first-child,
+#facilitiesTable td:first-child {
+    border-left: 0;
+}
+
+#facilitiesTable th:last-child,
+#facilitiesTable td:last-child {
+    border-right: 0;
+}
+
+#facilitiesTable tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+tr:hover {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.metric-cell {
+    text-align: right;
+}
+
+.metric-cell.positive {
+    color: black;
+}
+
+.metric-cell.negative {
+    color: black;
+}
+
+.status-badge {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+.status-badge.added {
+    background: white;
+}
+
+.status-badge.removed {
+    background: white;
+}
+
+.status-badge.changed {
+    background: white;
+}
+
+.map-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.map-container {
+    border: 1px solid black;
+    height: 600px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.type-info {
+    display: inline-block;
+    color: #666;
+    cursor: help;
+    margin-left: 0.25rem;
+    /* font-size: 0.85em; */
+    position: relative;
+}
+
+.type-tooltip {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid black;
+    padding: 0.75rem;
+    z-index: 1000;
+    width: 400px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    /* font-size: 0.85rem; */
+    line-height: 1.5;
+    top: 100%;
+    left: 0;
+    margin-top: 0.5rem;
+    white-space: normal;
+}
+
+.type-info:hover .type-tooltip {
+    display: block;
+}
+
+.map-legend {
+    margin-left: auto;
+    padding: 0.5rem;
+    border: 1px solid black;
+    min-width: 200px;
+}
+
+.legend-scale {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.legend-title {
+    font-weight: bold;
+    /* font-size: 0.9rem; */
+    margin-bottom: 0.25rem;
+}
+
+.legend-gradient {
+    height: 20px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.legend-labels {
+    display: flex;
+    justify-content: space-between;
+    /* font-size: 0.8rem; */
+}
+
+.empty-state {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+}
+
+.no-change {
+    color: #999;
+}
+
+.maplibregl-popup-content {
+    background: white !important;
+    border: 1px solid black !important;
+    padding: 0.5rem !important;
+    /* font-family: serif !important; */
+    /* font-size: 0.9rem !important; */
+}
+
+.maplibregl-popup-close-button {
+    color: black !important;
+    /* font-size: 1rem !important; */
+}
+
+h2, h3 {
+    margin-bottom: 0.5em !important;
+}
+
+hr {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+ul {
+    margin-left: 1em;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    /* .container {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    } */
+
+    .date-range {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    input, select {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .table-container {
+        max-height: 400px;
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.4rem 0.3rem;
+        font-size: 0.85rem;
+    }
+
+    .map-controls {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .map-controls > div {
+        width: 100%;
+    }
+
+    .map-controls label {
+        display: block;
+        margin-bottom: 0.25rem;
+    }
+
+    .map-controls select {
+        width: 100%;
+    }
+
+    .map-legend {
+        margin-left: 0;
+        width: 100%;
+        min-width: auto;
+    }
+
+    .map-container {
+        height: 400px;
+    }
+
+    .legend-title {
+        font-size: 0.8rem;
+    }
+
+    .legend-labels {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* .container {
+        padding: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    } */
+
+    .table-container {
+        font-size: 0.75rem;
+        max-height: 350px;
+    }
+
+    th, td {
+        padding: 0.3rem 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+}
+
+
