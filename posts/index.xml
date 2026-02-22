@@ -6,9 +6,129 @@
     <description>Recent content in Posts on tracks and traces</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 10 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Feb 2026 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://exclav.es/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>What the United States Owns: a federal real property profile map</title>
+      <link>https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/</link>
+      <pubDate>Sun, 22 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/</guid>
+      <description>&lt;p&gt;The federal government of the United States has a vast footprint. Real property &amp;ndash; that is, land, buildings and other fixed structures that can&amp;rsquo;t be easily moved &amp;ndash; posessed by the United States includes military bases and border checkpoints, scenic highways and historic bridges, court houses, post offices, warehouses for schools, warehouses for spaceflight, warehouses on Pacific islands, propagation buildings and the Reptile Discover Center, buoys and gunranges, laboratories for nuclear research and laboratories for tree fruit, schools and childcare centers and airport control towers, barracks and datacenters, ranger stations and weather radar systems and greenhouses in Panama and hopitals and farm field offices and so on.&lt;/p&gt;
+&lt;p&gt;A map of this footprint footprint shows the cities and rivers and mountains of the United States as much as it shows the political history of the United States. We all interact with the federal government, but so often with a &lt;em&gt;different&lt;/em&gt; federal government.&lt;/p&gt;
+&lt;iframe src=&#34;https://subject.space/projects-static/frpp/&#34; width=&#34;100%&#34; style=&#34;height: calc(100vh - 80px); max-height: 1000px&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Click the fullscreen button in the upper right to go fullscreen, or &lt;a href=&#34;https://subject.space/projects-static/frpp&#34; target=&#34;_blank&#34;&gt;click here to open in a new tab&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;foia-exemptions&#34;&gt;FOIA exemptions&lt;/h3&gt;
+&lt;p&gt;One of the columns in the FRPP dataset is &amp;ldquo;FOIA Exemption&amp;rdquo;. There is just one property in the dataset with an exemption of &amp;ldquo;Geological Information&amp;rdquo;. Under the Department of Homeland Security. I wonder what its deal is.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/af3f44bc0b1a7cf1.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/af3f44bc0b1a7cf1_hu3dfea4f6b9a851cd4fda7f8b57f051e7_55387_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;h3 id=&#34;highlighted-places&#34;&gt;Highlighted places&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/frpp/?agency=AGRICULTURE&amp;amp;owned=1&amp;amp;leased=1&amp;amp;lng=-100.27708&amp;amp;lat=32.51491&amp;amp;zoom=4.26&#34;&gt;Department of Agriculture&lt;/a&gt;. In the West, the Department of Agriculture means forests. In the East, the agency serves a different role and follow a different pattern.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/agriculture.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/agriculture_huda5bd0d160f168711bb1863f1dd88560_3354187_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Someone told me it&amp;rsquo;s all happening at the &lt;a href=&#34;https://subject.space/projects-static/frpp/?agency=SMITHSONIAN&amp;amp;owned=1&amp;amp;leased=1&amp;amp;lng=-77.02258&amp;amp;lat=38.91093&amp;amp;zoom=13.17&#34;&gt;zoo&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/smithsonianzoo.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/smithsonianzoo_hu818bb39b464346a336c48c12880014ff_1920941_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/frpp/?category=Building%257CData%2520Centers&amp;amp;owned=1&amp;amp;leased=1&amp;amp;lng=-102.21041&amp;amp;lat=38.83439&amp;amp;zoom=4.30&#34;&gt;Government data centers&lt;/a&gt;&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/datacenters.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/datacenters_hu2c515b8397c869325d28aa9ad915126c_939387_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;The &lt;a href=&#34;https://subject.space/projects-static/frpp/?agency=STATE&amp;amp;owned=1&amp;amp;leased=1&amp;amp;lng=5.64922&amp;amp;lat=-21.30009&amp;amp;zoom=1.85&#34;&gt;global diplomatic footprint&lt;/a&gt; of the US State Department.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/state.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/state_hubb00f581a24c56d4da3bafaca8932d64_484745_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/frpp/?agency=INTERIOR&amp;amp;bureau=BUREAU%2520OF%2520RECLAMATION&amp;amp;owned=1&amp;amp;leased=1&amp;amp;lng=-97.57463&amp;amp;lat=32.97502&amp;amp;zoom=4.11&#34;&gt;The Bureau of Reclamation&lt;/a&gt; built the West.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/reclamation.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/reclamation_hubb00f581a24c56d4da3bafaca8932d64_673272_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/frpp/?category=Structure%257CNavigation%2520and%2520Traffic%2520Aids%2520%28other%2520than%2520buildings%29&amp;amp;owned=1&amp;amp;leased=1&amp;amp;lng=-85.95060&amp;amp;lat=35.93923&amp;amp;zoom=5.12&#34;&gt;Navigation aids&lt;/a&gt;. It&amp;rsquo;s so &lt;a href=&#34;https://www.filmcomment.com/wp-content/uploads/sites/2/2020/04/Screen-Shot-2020-04-07-at-3.28.19-PM_INLINE-e1587663087876-960x0-c-default.jpg&#34; target=&#34;_blank&#34;&gt;geographical&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/navigation.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/navigation_hubb00f581a24c56d4da3bafaca8932d64_859453_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/frpp/?owned=1&amp;amp;leased=1&amp;amp;yearMin=1400&amp;amp;yearMax=1750&amp;amp;lng=-76.40989&amp;amp;lat=37.97694&amp;amp;zoom=5.91&#34;&gt;Old properties&lt;/a&gt; are mostly under the National Parks Service, but there are a few elsewhere, for example at Veteran&amp;rsquo;s Affairs.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/old.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/old_hubb00f581a24c56d4da3bafaca8932d64_620401_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/frpp/?owned=1&amp;amp;leased=1&amp;amp;yearMin=1400&amp;amp;yearMax=1750&amp;amp;lng=-83.60464&amp;amp;lat=32.84046&amp;amp;zoom=16.18&amp;amp;satellite=1&#34;&gt;The oldest property&lt;/a&gt; is at the Ocmulgee Mounds in present Georgia.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/ocmulgee.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/ocmulgee_hubb00f581a24c56d4da3bafaca8932d64_1279337_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/bafkreibi7nzzpc4d5kebag63z5icrmsm26hbrrjky2p7vwlyww5rjeiaq4.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/02/22/what-the-united-states-owns-a-federal-real-property-profile-map/_hu24b12b641d37a8e6a871a1d8f7ac4edf_869574_b57de774f04fd2a9ed8fac33899de50e.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;data-sources&#34;&gt;Data sources&lt;/h3&gt;
+&lt;p&gt;Data is from &lt;a href=&#34;https://www.gsa.gov/policy-regulations/policy/real-property-policy-division-overview/asset-management/federal-real-property-profile/federal-real-property-public-data-set&#34;&gt;Federal Real Property Profile data&lt;/a&gt;, &lt;a href=&#34;https://www.usgs.gov/programs/national-geospatial-program/national-map&#34;&gt;National Map data&lt;/a&gt; and &lt;a href=&#34;https://about.usps.com/who/legal/foia/owned-facilities.htm&#34;&gt;USPS FOIA data&lt;/a&gt;. The quality of geocoding varies in these public datasets, please assume locations are approximate. Some of the locations did not contain geolocation info, or were geolocated to &lt;a href=&#34;https://en.wikipedia.org/wiki/Null_Island&#34;&gt;Null Island&lt;/a&gt;. For these I used the Mapbox geocoder with the data available, which was often only to a city/town name.&lt;/p&gt;
+</description>
+    </item>
     
     
     
@@ -8293,7 +8413,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Reptilia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
