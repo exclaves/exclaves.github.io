@@ -6,9 +6,763 @@
     <description>Recent content in Posts on tracks and traces</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 20 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://exclav.es/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>I don&#39;t think NYC&#39;s property tax system makes much sense</title>
+      <link>https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/</link>
+      <pubDate>Thu, 11 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/</guid>
+      <description>&lt;p&gt;Who do you think pays more in property tax, the owner of this five-story Bed-Stuy brownstone?&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-1.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-1_hu02aa61ae1d9de35cbe238d2676170cb9_264101_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-2.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-2_hu02aa61ae1d9de35cbe238d2676170cb9_383492_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-fp.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-fp_hu02aa61ae1d9de35cbe238d2676170cb9_149294_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;Or this tiny one-bedroom Bed-Stuy condo (right)?&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155_hu02aa61ae1d9de35cbe238d2676170cb9_212956_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155-2.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155-2_hu02aa61ae1d9de35cbe238d2676170cb9_211426_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155-fp.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155-fp_huaf7a4fae9c69f814c75c8953bc1a42ec_119017_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;That&amp;rsquo;s right, it&amp;rsquo;s the tiny condo owner.&lt;/p&gt;
+&lt;p&gt;Am I missing something, or is New York City&amp;rsquo;s property tax system pretty wild?&lt;/p&gt;
+&lt;p&gt;After reading so many pieces about Mayor Mamdani&amp;rsquo;s &lt;a href=&#34;https://comptroller.nyc.gov/reports/the-pied-a-terre-tax-and-its-potential-revenues/&#34; target=&#34;_blank&#34;&gt;pied-a-terre tax&lt;/a&gt;, the properties that might fall through the cracks, and the political landscape of New York City&amp;rsquo;s property ownership, I wondered what it looked like overall. I searched for a map of NYC tax assessments and couldn&amp;rsquo;t find something that mapped out the whole city at once, so somehow I decided the best thing to do was &lt;a href=&#34;https://subject.space/projects-static/nyc-property&#34; target=&#34;_blank&#34;&gt;make my own map&lt;/a&gt;. I can&amp;rsquo;t resist a &lt;a href=&#34;https://github.com/mapbox/tippecanoe&#34;&gt;tippecanoe&lt;/a&gt; challenge.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+&lt;iframe style=&#34;width: 100%; height: 700px; max-height: 80vh; border: 1px solid black;&#34; src=&#34;https://subject.space/projects-static/nyc-property/&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;Even once I mapped the &lt;a href=&#34;https://www.nyc.gov/site/finance/property/property-assessments.page&#34;&gt;NYC Department of Finance&lt;/a&gt; data, it still wasn&amp;rsquo;t really clear. As I spent more time trying to make sense of the tax process, I was shocked. I truly wasn&amp;rsquo;t expecting New York City to be worse than California&amp;rsquo;s &lt;a href=&#34;https://en.wikipedia.org/wiki/1978_California_Proposition_13&#34;&gt;Proposition 13&lt;/a&gt;. But I think it might be.&lt;/p&gt;
+&lt;h3 id=&#34;how-the-system-works&#34;&gt;How the system works&lt;/h3&gt;
+&lt;p&gt;The paper &lt;a href=&#34;https://www.nyc.gov/site/finance/property/property-tax-rates.page&#34;&gt;tax rates&lt;/a&gt; are huge:&lt;/p&gt;
+&lt;style&gt;
+.class-table {
+  display: flex;
+  width: fit-content;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.class-table .class-column {
+  padding: 0.85em 1.25em;
+}
+
+.class-table .class-column:not(:last-child) {
+  border-right: 1px solid #e5e7eb;
+}
+
+.class-table &gt; .class-column:first-child {
+  background: #f9fafb;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.class-table .class {
+  height: 1.5em;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.4em;
+  white-space: nowrap;
+}
+
+.class-table.double-header .class {
+  height: 2.5em;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.6em;
+  padding-bottom: 0.4em;
+  white-space: nowrap;
+}
+
+.class-table .class-value {
+  color: #111827;
+}
+&lt;/style&gt;
+&lt;div class=&#34;class-table&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Tax rate&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 1&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;19.843%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;12.439%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 3&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;11.108%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 4&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;10.848%&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;But these are actually applied to &amp;ldquo;assessed value&amp;rdquo; that is codified as a &lt;a href=&#34;https://www.nyc.gov/site/finance/property/property-determining-your-assessed-value.page&#34;&gt;percentage of the market value.&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;class-table&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Assessment ratio&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 1&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;6%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;45%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 3&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;45%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 4&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;45%&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Which results in these actual tax rates if applied to the market value.&lt;/p&gt;
+&lt;div class=&#34;class-table&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Tax rate&lt;div class=&#34;sub&#34;&gt;(of market value)&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 1&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;1.1906%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;5.5976%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 3&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;4.9986%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 4&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;4.8618%&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;(Look, I didn&amp;rsquo;t choose to specify tax rates with 5 significant figures — you can blame New York City for that one.)&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s pause here, because what are these tax classes anyway?&lt;/p&gt;
+&lt;div class=&#34;class-table&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Tax classes&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 1&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;one to three unit residential buildings&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;residential buildings with more than 4 units (rentals, condos and co-ops)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 3&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;utility property&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 4&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;commercial non-residential property&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;So this looks like a big issue! New York City, a city with more renters and high-rise dwellers than any other in the United States, forces those living in dense buildings to pay over 4× the property tax of single-family home owners and duplex denizens.&lt;/p&gt;
+&lt;p&gt;Unless&amp;hellip; the &amp;ldquo;market value&amp;rdquo; isn&amp;rsquo;t actually the market value at all. And in New York City, as the Department of Finance (DOF) defines it, &lt;a href=&#34;https://www.nyc.gov/site/finance/property/property-determining-your-market-value.page&#34;&gt;it kind of isn&amp;rsquo;t&lt;/a&gt;.&lt;/p&gt;
+&lt;style&gt;
+/* 2x2 grid for the tax classes */
+.class-table .class-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.class-table .class-grid .class-column {
+  border-right: none;
+}
+
+.class-table .class-grid .class-column:nth-child(odd) {
+  border-right: 1px solid #e5e7eb;
+}
+
+.class-table .class-grid .class-column:nth-child(1),
+.class-table .class-grid .class-column:nth-child(2) {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* Mobile: single column for both tables */
+@media (max-width: 700px) {
+  .class-table {
+    flex-direction: column;
+    width: auto;
+  }
+
+  .class-table &gt; .class-column:first-child {
+    width: auto;
+  }
+
+  .class-table &gt; .class-column:not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  /* drop the empty spacer heading in the label cell */
+  .class-table &gt; .class-column:first-child .class {
+    display: none;
+  }
+
+  .class-table .class-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .class-table .class-grid .class-column:nth-child(odd) {
+    border-right: none;
+  }
+
+  .class-table .class-grid .class-column {
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .class-table .class-grid .class-column:last-child {
+    border-bottom: none;
+  }
+}
+&lt;/style&gt;
+&lt;div class=&#34;class-table&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;&lt;a href=&#34;https://www.nyc.gov/site/finance/property/property-determining-your-market-value.page&#34; target=&#34;_blank&#34;&gt;&#34;Market value&#34; definition&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-grid&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 1&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;&#34;The DOF uses statistical modeling to analyze prices of similar properties (based on factors such as size and location) that sold in your neighborhood in the prior three years.&#34;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;&#34;State law mandates that the DOF value all tax class 2 properties as income-producing, based on their income and expenses. We use a statistical model as a tool to find typical income and expenses for properties similar to yours in terms of size, location, number of units, and age. Then we apply a formula to the income data to get to your market value. The law requires that we value co-ops and condos as if they were rental buildings, even though they are not income-producing.&#34;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 3&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;&#34;The DOF uses the cost of constructing, reproducing, or replacing the building added to the land value.&#34;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 4&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;&#34;The DOF uses your property&#39;s income earning potential and expenses. Estimated annual income is based in part on information you provide on the annual Real Property Income and Expense (RPIE) Filing. Statistical modeling is also used as a tool in this process.&#34;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note the significant difference in methodology between Class 1 and Class 2 properties, where even condos are valued as though they were income producing rental buildings, which are difficult to compare due to different market pressures and financing timelines. This methodological wrinkle has been blamed in recent months for significantly undervaluing hyper-luxury horizontal real estate such as &lt;a href=&#34;https://www.nytimes.com/2026/05/02/nyregion/second-home-tax-nyc.html&#34;&gt;penthouses on Billionaire&amp;rsquo;s Row in Manhattan&lt;/a&gt;, which wouldn&amp;rsquo;t qualify under some pied-a-terre tax proposals. (I believe this has been corrected in the final version.)&lt;/p&gt;
+&lt;p&gt;However, this difference in valuation also has the side effect of helping to equalize the huge discrepancy we just saw in property tax rates between condo owners and single-family-home owners (which are also generally under-valued, just under-valued less).&lt;/p&gt;
+&lt;p&gt;Unfortunately, this discrepancy gets much worse when we look at the way increases in assessed value and limited differently across tax classes.&lt;/p&gt;
+&lt;div class=&#34;class-table double-header&#34;&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Assessment increase cap&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 1&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Assessed value cannot increase more than 6 percent each year or more than 20 percent in five years.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2 (4-10 units)&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Assessed value cannot increase more than 8 percent each year or more than 30 percent in five years.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;class-column&#34;&gt;
+&lt;div class=&#34;class&#34;&gt;Tax class 2 (10+ units)&lt;br /&gt; and tax class 4&lt;/div&gt;
+&lt;div class=&#34;class-value&#34;&gt;Assessed value cannot exceed five-year trailing average.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Over time, especially in parts of the city with rapid growth in property values, this has led many class 1 properties to have assessed values at just 5-20% of their calculated assessed value, which is in turn just 6% of the DOF calculated &amp;ldquo;market value&amp;rdquo;. For example, the townhouse at 495 Madison St in Bed-Stuy, sold a few years ago and now valued at $1,567,000 according to the DOF, has an assessed value of just $6,377. For an entire brownstone.&lt;/p&gt;
+&lt;p&gt;Policy that helps long-time residents stay in their homes is important, and neighborhood stability benefits everyone. But what really shocked me, especially after analyzing &lt;a href=&#34;https://en.wikipedia.org/wiki/1978_California_Proposition_13&#34;&gt;California&lt;/a&gt;, is that these extreme assessment discounts don&amp;rsquo;t disappear with the sale of the property. Instead, the new owner, whether a lucky individual or an anonymous LLC like the property above, inherits the discount. As the neighborhood changes and many long-time homeowners leave (or are &lt;a href=&#34;https://brooklyn.news12.com/bed-stuy-woman-claims-shes-a-victim-of-deed-theft-facing-eviction-from-new-homeowner&#34;&gt;forced to leave&lt;/a&gt;) the investors and petite bourgeoisie who move in will pay the same extremely low rate.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;&lt;iframe src=&#34;https://subject.space/projects-static/nyc-property/?metric=EffectiveTaxRate&amp;filter=1%2C2%2C3%2C4#14.66/40.68823/-73.94482&#34; width=&#34;100%&#34; height=&#34;600px&#34; style=&#34;border: 1px solid black;&#34; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;
+&lt;p&gt;However, this isn&amp;rsquo;t even the complete picture yet. Exemptions, which reduce the taxable value of a building, and abatements, which reduce the tax, are widespread, especially among more recent rental housing, and have seemingly been applied as a patch over this entire convoluted system. Some of the more common tax abatements include the &lt;a href=&#34;https://www.nyc.gov/site/finance/property/benefits-j51.page&#34;&gt;J-51 abatement&lt;/a&gt; (for expanding a building with rental housing, requires units be rent stabilized for years) and the solar abatement for smaller buildings, and a co-op abatement for owner occupied units. Exemptions can include fully tax exempt buildings (like parks and NYCHA projects) as well as the &lt;a href=&#34;https://www.nyc.gov/site/hpd/services-and-information/tax-incentives-421-a.page&#34;&gt;421-a exemption for rental housing construction&lt;/a&gt;. More on this below, when we dive into some case studies.&lt;/p&gt;
+&lt;h3 id=&#34;eight-case-studies&#34;&gt;Eight case studies&lt;/h3&gt;
+&lt;p&gt;What does all of this together really mean? I can&amp;rsquo;t say I have a complete understanding, but it definitely seems that the property tax burden falls disproportionately on those living in larger buildings.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s zoom in even more on Bed-Stuy and look at a few different types of homes and how they are taxed. I chose these arbitrarily, with the only real constraint being the neighborhood and recent sale/rental data.&lt;/p&gt;
+&lt;h4 id=&#34;176-mac-donough-st-a-single-family-brownstone&#34;&gt;176 Mac Donough St, a single-family brownstone&lt;/h4&gt;
+&lt;p&gt;This is 176 Mac Donough St, a 3728 square foot six (!) bedroom single-family brownstone near the Kingston-Throop C station.&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 100%; margin-left: auto; margin-right: auto;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-1.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-1_hu02aa61ae1d9de35cbe238d2676170cb9_264101_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-2.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-2_hu02aa61ae1d9de35cbe238d2676170cb9_383492_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 70%; margin-left: auto; margin-right: auto;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-fp.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/176-fp_hu02aa61ae1d9de35cbe238d2676170cb9_149294_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;It &lt;a href=&#34;https://www.zillow.com/homedetails/176-Mac-Donough-St-Brooklyn-NY-11216/30611154_zpid/?&#34;&gt;sold last year for $2.9 million&lt;/a&gt;. However, the NYC Department of Finance assigns a &amp;ldquo;market value&amp;rdquo; of $2.05 million, based on &amp;ldquo;statistical modeling&amp;rdquo;. Based on this &amp;ldquo;market value&amp;rdquo; and the assessment ratios we saw earlier, the assessed value should be $122,940. Due to the 6%-per-year limit on changes to assessed value for 1-3 unit properties though, the taxable assessed value is just $32,704. On a house that just sold for $2.9 million.&lt;/p&gt;
+&lt;p&gt;With no exemptions or abatements, this assessed value is taxed at the class 1 rate of 19.84% for an annual tax bill of $6,489.48 or &lt;strong&gt;$1.74 per square foot&lt;/strong&gt;. On the actual sale price, this is an effective tax rate of &lt;strong&gt;0.22%&lt;/strong&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;1155-bedford-ave-2r-a-one-bedroom-condo&#34;&gt;1155 Bedford Ave #2R, a one bedroom condo&lt;/h4&gt;
+&lt;p&gt;Now let&amp;rsquo;s take a look at a condo. Here&amp;rsquo;s &lt;strong&gt;1155 Bedford Ave #2R&lt;/strong&gt;, a 624 square foot one bedroom condo near Nostrand Ave on the A and C trains.&lt;/p&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: auto; margin-right: auto;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155_hu02aa61ae1d9de35cbe238d2676170cb9_212956_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155-fp.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/1155-fp_huaf7a4fae9c69f814c75c8953bc1a42ec_119017_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;This condo &lt;a href=&#34;https://www.zillow.com/homedetails/1155-Bedford-Ave-2R-Brooklyn-NY-11216/349961055_zpid/&#34;&gt;sold in 2024 for $741,706&lt;/a&gt;, with a DOF assigned market value of $203,822. The DOF methodology for valuing condos and co-ops is based on estimated income if the building were rental housing, which is &lt;a href=&#34;https://www.nytimes.com/2026/05/02/nyregion/second-home-tax-nyc.html&#34;&gt;notorious for under-valuing condos&lt;/a&gt;. Unlike the single family home though, the assessed value is 45% of the market value, which more than cancels out this methodological difference to give an estimated $91,720 assessed value. Due to the (smaller) limitations on changes in assessed value, the actual taxable assessed value is $77,521 &amp;ndash; more than twice that of the single-family home that is six times the size.&lt;/p&gt;
+&lt;p&gt;With no exemptions or abatements, this assessed value is taxed at the class 2 rate of 12.439% for an annual tax bill of $9,643, or &lt;strong&gt;$15.45 per square foot&lt;/strong&gt;. Per square foot this is &lt;strong&gt;9× the tax!&lt;/strong&gt; The effective tax rate (based on the real sale price) is &lt;strong&gt;1.30%&lt;/strong&gt;, 6× the rate for 176 Mac Donough St.&lt;/p&gt;
+&lt;p&gt;Co-ops and rental apartment buildings, which make up a large amount of NYC&amp;rsquo;s housing stock, are slightly more difficult to pick apart, because the entire building only gets a single tax bill. But we can try.&lt;/p&gt;
+&lt;h4 id=&#34;372-dekalb-ave-5m-a-one-bedroom-co-op&#34;&gt;372 Dekalb Ave #5M, a one bedroom co-op&lt;/h4&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: auto; margin-right: auto;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/372.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/372_hu02aa61ae1d9de35cbe238d2676170cb9_247865_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/372-fp.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/372-fp_hu02aa61ae1d9de35cbe238d2676170cb9_80761_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;372 Dekalb Ave #5M is a 625 square foot co-op unit which &lt;a href=&#34;https://streeteasy.com/building/clinton-mews/5m&#34;&gt;sold in November 2023&lt;/a&gt; for $690,000 in a 78-unit, 89420 square foot building. The &lt;a href=&#34;https://a836-edms.nyc.gov/dctm-rest/repositories/dofedmspts/StatementSearch?bbl=3019330070&amp;amp;stmtDate=20260606&amp;amp;stmtType=SOA&#34;&gt;tax data&lt;/a&gt; for the entire 78-unit building shows that it has a &amp;ldquo;market value&amp;rdquo; of $12,003,000 (likely a huge under-estimate), an assessed value (45%) of $5,401,350 and a taxable assessed value of $4,859,100 (as a large building, there is no limit on increases, but changes are averaged over five years.)&lt;/p&gt;
+&lt;p&gt;There are no exemptions on this value, which leads to a computed tax (12.439%) of $604,423.45. There are some abatements, mostly those provided for an owner-occupied co-op, which reduce the tax bill by $86,824.56 to $517,598.89. This is &lt;strong&gt;$5.79 per square foot&lt;/strong&gt;, over 3× the single-family home tax rate.&lt;/p&gt;
+&lt;p&gt;We don&amp;rsquo;t know how this co-op assigns taxes to individual unit owners, so we have to make an assumption. Assuming that the taxes are distributed proportionally to unit size, we have 625 sq ft / 89420 sq ft total, for an estimated per-unit tax of $3,617.75. This means that the effective tax rate is &lt;strong&gt;0.52%&lt;/strong&gt; &amp;ndash; a lot better than the condo, but still over twice the single-family home.&lt;/p&gt;
+&lt;h4 id=&#34;267-clifton-pl-d1-a-two-bedroom-rental&#34;&gt;267 Clifton Pl #D1, a two bedroom rental&lt;/h4&gt;
+&lt;div class=&#34;multi&#34; style=&#34;width: 80%; margin-left: auto; margin-right: auto;&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/276-1.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/276-1_hu02aa61ae1d9de35cbe238d2676170cb9_246760_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/276-2.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/276-2_hu02aa61ae1d9de35cbe238d2676170cb9_345243_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;Rental buildings are even more difficult, because we don&amp;rsquo;t have an equivalent sales price. But let&amp;rsquo;s take a look anyway at 267 Clifton Pl #D1, a 2-bedroom apartment which &lt;a href=&#34;https://streeteasy.com/building/267-clifton-place-brooklyn/d1&#34;&gt;rented last December for $3600&lt;/a&gt;. The 20-unit, 17,600 square foot apartment building has a DOF-assigned &amp;ldquo;market value&amp;rdquo; of $2,770,000, with an assessed value (45%) of $1,246,500 and a taxable assessed value of $1,199,250.&lt;/p&gt;
+&lt;p&gt;With no exemptions or abatements, this leads to a $149,174.71 annual tax bill, or &lt;strong&gt;$8.48 per square foot&lt;/strong&gt;. Like with the co-op building, we don&amp;rsquo;t really know how this tax is distributed among the units, but if we estimate an even split, that leads to an estimated per-unit tax of $7,459. The tenant of this two-bedroom apartment is paying &lt;strong&gt;more tax than the owner of the six bedroom brownstone&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s summarize this in a table.&lt;/p&gt;
+&lt;style&gt;
+
+:root {
+  --color-text-secondary: #6b6b6b;
+  --color-border-tertiary: rgba(0, 0, 0, 0.15);
+}
+ 
+body {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem 40px;
+}
+ 
+.tg {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr 1fr 1fr;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+ 
+.tg &gt; div {
+  padding: 10px 8px;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+}
+ 
+.rlbl {
+  color: var(--color-text-secondary);
+  font-size: 11.5px;
+}
+ 
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+ 
+.name {
+  font-weight: 500;
+}
+ 
+.sub {
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  margin-top: 2px;
+}
+ 
+.barcell {
+  position: relative;
+  height: 160px;
+  text-align: center;
+  pointer-events: none;
+  touch-action: none;
+}
+ 
+.blabel {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+ 
+.vbar {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  background: black;
+}
+
+.barcell {
+  margin-top: -80px;
+}
+
+.taxsqft {
+    align-self: flex-end;
+}
+
+.barcell2 {
+    margin-top: -110px;
+}
+
+.tg a {
+  color: inherit !important;
+  text-decoration: underline !important;
+}
+&lt;/style&gt;
+&lt;div class=&#34;tg&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;176 Mac Donough St&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Single-family, 3,728 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;1155 Bedford Ave #2R&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Condo, 624 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;372 Dekalb Ave #5M&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Co-op, ~625 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;267 Clifton Pl #D1&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Rental 2BR, ~880 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Sale price&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;a href=&#34;https://www.zillow.com/homedetails/176-Mac-Donough-St-Brooklyn-NY-11216/30611154_zpid/?&#34;&gt;$2,900,000&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;a href=&#34;https://www.zillow.com/homedetails/1155-Bedford-Ave-2R-Brooklyn-NY-11216/349961055_zpid/&#34;&gt;$741,706&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;a href=&#34;https://streeteasy.com/building/clinton-mews/5m&#34;&gt;$690,000&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;a href=&#34;https://streeteasy.com/building/267-clifton-place-brooklyn/d1&#34;&gt;$3,600/mo&lt;/a&gt;&lt;div class=&#34;sub&#34;&gt;rent&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;NYC &#34;market value&#34; methodology&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Comparable sales&lt;div class=&#34;sub&#34;&gt;(71% of sale)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Modeled as rental&lt;div class=&#34;sub&#34;&gt;(27% of sale)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Modeled as rental&lt;div class=&#34;sub&#34;&gt;(building)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Income model&lt;div class=&#34;sub&#34;&gt;(building)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;&#34;Market value&#34;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$2,050,000&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$203,822&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$12,003,000&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$2,770,000&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Assessment ratio&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 6%&lt;div class=&#34;sub&#34;&gt;Class 1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 45%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 45%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 45%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Assessed value&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $122,940&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $91,720&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $5,401,350&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $1,246,500&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Transitional value caps&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;6%/year or 20%/5 years&lt;div class=&#34;sub&#34;&gt;Class 1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;5-yr average&lt;div class=&#34;sub&#34;&gt;Class 2 (&gt; 10 units)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;5-yr average&lt;div class=&#34;sub&#34;&gt;Class 2 (&gt; 10 units)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;5-year average&lt;div class=&#34;sub&#34;&gt;Class 2 (&gt; 10 units)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Taxable assessed&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$32,704&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$77,521&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$4,859,100&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$1,199,250&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Exemptions&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Taxable after exemptions&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $32,704&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $77,521&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $4,859,100&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $1,199,250&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Tax rate&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 19.84%&lt;div class=&#34;sub&#34;&gt;Class 1&lt;/div&gt;&lt;/div&gt; 
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 12.439%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 12.439%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 12.439%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Tax before abatements&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $6,489&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $9,643&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $604,423&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $149,175&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Abatements&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $86,825&lt;div class=&#34;sub&#34;&gt;owner-occupied co-op&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Unit ratio estimation&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; (625 sq&amp;nbsp;ft / 89420 sq&amp;nbsp;ft)&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;/ 20 units&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Annual tax&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= &lt;a href=&#34;https://a836-edms.nyc.gov/dctm-rest/repositories/dofedmspts/StatementSearch?bbl=3018560018&amp;stmtDate=20260606&amp;stmtType=SOA&#34;&gt;$6,489&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= &lt;a href=&#34;https://a836-edms.nyc.gov/dctm-rest/repositories/dofedmspts/StatementSearch?bbl=3018221203&amp;stmtDate=20260606&amp;stmtType=SOA&#34;&gt;$9,643&lt;/a&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;≈ $3,618&lt;div class=&#34;sub&#34;&gt;building = &lt;a href=&#34;https://a836-edms.nyc.gov/dctm-rest/repositories/dofedmspts/StatementSearch?bbl=3019330070&amp;stmtDate=20260606&amp;stmtType=SOA&#34;&gt;$517,599&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;≈ $7,459&lt;div class=&#34;sub&#34;&gt;building = &lt;a href=&#34;https://a836-edms.nyc.gov/dctm-rest/repositories/dofedmspts/StatementSearch?bbl=3017880077&amp;stmtDate=20260606&amp;stmtType=SOA&#34;&gt;$149,175&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Effective tax rate&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;0.22%&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;1.30%&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;0.52%&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;n/a&lt;div class=&#34;sub&#34;&gt;17.3% of rent&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl taxsqft&#34;&gt;Tax per sq ft&lt;/div&gt;
+  &lt;div class=&#34;barcell&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 10px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$1.74&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;barcell&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 87px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$15.45&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;barcell&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 33px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$5.79&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;barcell&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 47.5px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$8.48&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;tax-policy-hacks&#34;&gt;Tax policy hacks&lt;/h3&gt;
+&lt;p&gt;This looks to me like an unjustifiable tax regime that penalizes large residential buildings in the densest city in the United States. Naturally, this has led to housing market issues, including depressing new housing construction. To compensate for this, the city has a number of tax policy schemes that provide exemptions and abatements, including the J-51 abatement that provides a discounted tax bill on recently renovated or expanded apartment buildings, and the 421-a exemption, that removes up to 100% of a newly constructed building&amp;rsquo;s value from the taxroll. These tax discounts are provided to developers in exchange for allocating a percentage of a building&amp;rsquo;s unit as below-market-rate rentals and/or putting their units into the rent stabilization program, often for a limited timespan. The 421-a program has ended, but it was replaced with a similar program called 485-x.&lt;/p&gt;
+&lt;p&gt;This means that many new market-rate rentals have a significant tax advantage over older buildings. Is this unfair? In practice, what this often does is bring the taxation of multi-family buildings into closer alignment with small/single-family houses. Let&amp;rsquo;s compare a few more homes.&lt;/p&gt;
+&lt;div class=&#34;tg&#34;&gt;
+  &lt;div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;283 Decatur St&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Single-family, 3,352 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;191 Spencer St #2A&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Condo, 1,041 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;297 Classon Ave #3R&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Co-op, 700 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;span class=&#34;name&#34;&gt;1134 Fulton St #10WW&lt;/span&gt;&lt;div class=&#34;sub&#34;&gt;Rental, 850 sq ft&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Sale price&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$3,400,000&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$1,100,000&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$825,000&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$3,990/mo&lt;div class=&#34;sub&#34;&gt;rent&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;NYC &#34;market value&#34; methodology&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Comparable sales&lt;div class=&#34;sub&#34;&gt;(56% of sale)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Modeled as rental&lt;div class=&#34;sub&#34;&gt;(21% of sale)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Modeled as rental&lt;div class=&#34;sub&#34;&gt;(building)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;Income model&lt;div class=&#34;sub&#34;&gt;(building)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;&#34;Market value&#34;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$1,893,000&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$231,740&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$2,300,000&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$44,010,000&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Assessment ratio&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 6%&lt;div class=&#34;sub&#34;&gt;Class 1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 45%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 45%&lt;div class=&#34;sub&#34;&gt;Class 2C&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 45%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Assessed value&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $113,580&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $104,283&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $1,035,000&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $19,804,500&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Transitional value caps&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;6%/year or 20%/5 years&lt;div class=&#34;sub&#34;&gt;Class 1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;5-yr average&lt;div class=&#34;sub&#34;&gt;Class 2 (&gt; 10 units)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;8%/year or 30%/5 years&lt;div class=&#34;sub&#34;&gt;Class 2C (&amp;le; 10 units)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;5-yr average&lt;div class=&#34;sub&#34;&gt;Class 2 (&gt; 10 units)&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Taxable assessed&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$33,792&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$98,260&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$261,678&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;$16,588,170&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Exemptions&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $78,494&lt;div class=&#34;sub&#34;&gt;421-a&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $9,955&lt;div class=&#34;sub&#34;&gt;Combat Vet + STAR&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $16,201,117&lt;div class=&#34;sub&#34;&gt;421-a&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Taxable after exemptions&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $33,792&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $19,766&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $251,723&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $387,053&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Tax rate&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 19.84%&lt;div class=&#34;sub&#34;&gt;Class 1&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 12.44%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 12.44%&lt;div class=&#34;sub&#34;&gt;Class 2C&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; 12.44%&lt;div class=&#34;sub&#34;&gt;Class 2&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Tax before abatements&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $6,705&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $2,459&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $31,312&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $48,146&lt;div class=&#34;sub&#34;&gt;building&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Abatements&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $1,076&lt;div class=&#34;sub&#34;&gt;owner-occupied co-op&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;minus; $0&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Unit ratio estimation&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;times; (700 sq&amp;nbsp;ft / 8417 sq&amp;nbsp;ft)&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;/ 182 units&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Annual tax&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $6,705&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;= $2,459&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;approx; $2,515&lt;div class=&#34;sub&#34;&gt;bldg = $30,236&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;&amp;approx; $265&lt;div class=&#34;sub&#34;&gt;bldg = $48,146&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl&#34;&gt;Effective tax rate&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;0.20%&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;0.22%&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;0.30%&lt;/div&gt;
+  &lt;div class=&#34;num&#34;&gt;n/a&lt;div class=&#34;sub&#34;&gt;0.55% of rent&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;rlbl taxsqft&#34;&gt;Tax per sq ft&lt;/div&gt;
+  &lt;div class=&#34;barcell barcell2&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 11.3px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$2.00&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;barcell barcell2&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 13.3px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$2.36&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;barcell barcell2&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 20.2px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$3.59&lt;/div&gt;&lt;/div&gt;
+  &lt;div class=&#34;barcell barcell2&#34;&gt;&lt;div class=&#34;vbar&#34; style=&#34;height: 1.7px;&#34;&gt;&lt;/div&gt;&lt;div class=&#34;blabel&#34;&gt;$0.31&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that 1134 Fulton St, with its almost-complete 421-a tax exemption, pays the smallest per-square-foot tax of any of the eight homes. Again though, we don&amp;rsquo;t know how the owner chooses to allocate/budget the tax bills &amp;ndash; and since the building has commercial tenants as well, their rent could even carry the bulk of the tax cost, making the apartments effectively tax-free for the landlord.&lt;/p&gt;
+&lt;p&gt;None of these properties, even the multi-million dollar brownstone purchased by a holding company as a New York-crashpad for a California-based supermodel, would be subject to the &lt;a href=&#34;https://www.hklaw.com/en/insights/publications/2026/06/new-york-state-enacts-pied-a-terre-tax&#34;&gt;pied-a-terre tax&lt;/a&gt;, at least during Phase 1. Eventually (2028&amp;ndash;) there will be changes to the computation of market value that might make more condos subject to the tax, but is unlikely to affect single-family houses.&lt;/p&gt;
+&lt;p&gt;The whole system feels deeply arbitrary, with stacked layers of policy hacks (market value determination methodology differences, assessment ratios, increase caps, tax abatement programs, etc.) that attempt to smooth out what is actually a deeply lumpy, inequitable reality. I&amp;rsquo;m hardly the &lt;a href=&#34;https://www.nyc.gov/site/propertytaxreform/report/final-report.page&#34;&gt;first one to notice this&lt;/a&gt;, and there have been multiple attempts to &lt;a href=&#34;https://www.nysenate.gov/legislation/bills/2023/A10600&#34;&gt;reform New York City&amp;rsquo;s property tax system&lt;/a&gt;. However, as many vested interests have carved out something that works for them, headwinds are strong.&lt;/p&gt;
+&lt;p&gt;Maybe I&amp;rsquo;ve made a mistake in interpretation or understanding here. If so, &lt;a href=&#34;mailto:logan.williams@alum.mit.edu&#34;&gt;please tell me&lt;/a&gt;. I&amp;rsquo;m not an expert in property taxes, I&amp;rsquo;ve just tried to piece together what I&amp;rsquo;ve read about with what the data shows. I suspect my largest error is having any expectation that the property tax system would be simple or equitable to begin with.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://subject.space/projects-static/nyc-property&#34; target=&#34;_blank&#34;&gt;Take a look at the map and let me know what you think.&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/tax_rate.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/tax_rate_huaf7a4fae9c69f814c75c8953bc1a42ec_1403281_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;Effective tax rate across the city&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/transitional.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/transitional_huaf7a4fae9c69f814c75c8953bc1a42ec_1844674_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;Assessed transitional value ratio&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;div class=&#34;multi&#34;&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/land_use.jpg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/land_use_huaf7a4fae9c69f814c75c8953bc1a42ec_1103740_1800x1800_fit_q75_box.jpg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;Land use type&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/year_built.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/11/i-dont-think-nycs-property-tax-system-makes-much-sense/images/year_built_huaf7a4fae9c69f814c75c8953bc1a42ec_929933_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+        &lt;figcaption&gt;Year built&lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/div&gt;</description>
+    </item>
     
     
     
