@@ -6,9 +6,129 @@
     <description>Recent content on tracks and traces</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 11 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2026 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://exclav.es/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+    <item>
+      <title>FLIP TABLE: storing arbitrary data in iNaturalist</title>
+      <link>https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/</link>
+      <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/</guid>
+      <description>&lt;p&gt;A few weeks ago, my friend &lt;a href=&#34;https://marcos.ac/&#34;&gt;Marcos&lt;/a&gt; ran an event called &lt;a href=&#34;https://fliptable.nyc/&#34;&gt;FLIP TABLE&lt;/a&gt;, celebrating unconventional database technology, including Strava, steganography, encoded number puzzles, and hair.&lt;/p&gt;
+&lt;p&gt;I wanted to do something with iNaturalist. Could a database be made out of species? Or observations of species? What if my to-do list was biodiverse?&lt;/p&gt;
+&lt;p&gt;My FLIP TABLE demo app, &amp;ldquo;&lt;a href=&#34;https://youdidit.bio&#34;&gt;YouDidIt.Bio&lt;/a&gt;&amp;rdquo;* answers all of these questions.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+&lt;video autoplay loop muted style=&#34;max-width: 100%;&#34;&gt;
+&lt;source src=&#34;demo1.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;Every &lt;a href=&#34;https://www.inaturalist.org/observations/1234567&#34;&gt;observation on iNaturalist&lt;/a&gt; has a unique ID, which I have &lt;a href=&#34;https://exclav.es/2022/09/05/inaturalist-shortcode-for-hugo/&#34;&gt;previously used to embed iNaturalist easily into this very blog you are reading now&lt;/a&gt;.&lt;/p&gt;
+
+
+
+
+
+
+&lt;div class=&#34;inaturalist&#34;&gt;
+    &lt;div class=&#34;title&#34;&gt;
+        &lt;div class=&#34;left&#34;&gt;
+             &lt;span&gt;(Octopus)&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;right&#34;&gt;
+                
+            &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;a href=&#34;https://inaturalist-open-data.s3.amazonaws.com/photos/651419458/original.jpg&#34;&gt;
+        &lt;img src=&#34;https://inaturalist-open-data.s3.amazonaws.com/photos/651419458/large.jpg&#34; /&gt;
+    &lt;/a&gt;
+
+    &lt;a href=&#34;https://www.inaturalist.org/observations/357176996&#34; target=&#34;_blank&#34;&gt;
+        &lt;div class=&#34;details&#34;&gt;
+            &lt;div class=&#34;left&#34;&gt;
+                &lt;div class=&#34;date&#34;&gt;2026/04/17 4:08 PM&lt;/div&gt;
+                &lt;div class=&#34;location&#34;&gt;
+                    Pacific Grove, CA, USA&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;right&#34;&gt;
+                &lt;div class=&#34;iconic&#34;&gt;Mollusca&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+
+&lt;/div&gt;
+&lt;p&gt;So, how does it work? An iNaturalist &amp;ldquo;classic project&amp;rdquo; can store an arbitrary number of observations, each with their own unique ID.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/2.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/2_hube99dca77a5fc5bbffeaa65ffbe98b5a_1066684_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;This means, by choosing certain observations to add to a project, we should be able to encode information. However, the API does not specify or allow any order to these observations. The problem therefore became implementing a method of storing arbitrary data in an unordered set of integers.&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+&lt;video autoplay loop muted style=&#34;max-width: 100%;&#34;&gt;
+&lt;source src=&#34;demo2.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;I chose a simple, though not optimal, method of dividing the integers into &amp;ldquo;sequence bits&amp;rdquo; and &amp;ldquo;value bits&amp;rdquo;. The higher sequence bits would allow the values to be ordered correctly when decoding data.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/6.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/6_huaf7a4fae9c69f814c75c8953bc1a42ec_781351_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Not all integers are valid iNaturalist observation IDs &amp;ndash; some have been deleted, or do not allow themselves to be added to projects. This problem can be solved by simply iterating the sequence counter until a value is available. For example, note that in the above image there is no sequence 1186 or 1183.&lt;/p&gt;
+&lt;p&gt;However, some issues might arise when editing. The only edit allowed is to mark a task as completed, which involves changing an &amp;lsquo;f&amp;rsquo; to a &amp;rsquo;t&amp;rsquo;. What if that observation ID isn&amp;rsquo;t available? It&amp;rsquo;s no longer possible to simply increase the sequence count because there are already higher sequence values.&lt;/p&gt;
+&lt;p&gt;YouDidIt.Bio&amp;rsquo;s solution is to interpret anything other than an &amp;lsquo;f&amp;rsquo; as true, and just try other values until we find one that works. It&amp;rsquo;s not guaranteed (there are only 254 possible values) but in practice I haven&amp;rsquo;t run into an issue. You can see that below, as the &amp;lsquo;f&amp;rsquo; is replaced not with a &amp;rsquo;t&amp;rsquo; but with &amp;lsquo;T&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/7.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/7_huaf7a4fae9c69f814c75c8953bc1a42ec_517663_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/8.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/8_huaf7a4fae9c69f814c75c8953bc1a42ec_524479_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Did I mention &lt;a href=&#34;https://youdidit.bio&#34;&gt;anyone can use it&lt;/a&gt;? It&amp;rsquo;s as simple as providing an iNaturalist API key and an iNaturalist &amp;ldquo;classic&amp;rdquo; project ID.&lt;/p&gt;
+
+
+
+&lt;figure&gt;
+    &lt;a href=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/3.jpeg&#34;&gt;
+	    &lt;img src=&#34;https://exclav.es/2026/06/13/flip-table-storing-arbitrary-data-in-inaturalist/3_hu5c7cecd583a5b522dd7b6d412ede99d0_129541_1800x1800_fit_q75_box.jpeg&#34; alt=&#34;&#34; /&gt;
+    &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Go ahead, try it out!&lt;/p&gt;
+&lt;div class=&#34;multi&#34;&gt;
+&lt;video autoplay loop muted style=&#34;max-width: 100%;&#34;&gt;
+&lt;source src=&#34;demo3.mp4&#34; type=&#34;video/mp4&#34;&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;* &amp;ldquo;You did it!&amp;rdquo; is the default title of a newly created Vue app.&lt;/p&gt;
+</description>
+    </item>
     
     
     
@@ -78,7 +198,7 @@
     
 &lt;/figure&gt;
 &lt;/div&gt;
-&lt;p&gt;That&amp;rsquo;s right, it&amp;rsquo;s the tiny condo owner.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s right, it&amp;rsquo;s the owner of the tiny condo.&lt;/p&gt;
 &lt;p&gt;Am I missing something, or is New York City&amp;rsquo;s property tax system pretty wild?&lt;/p&gt;
 &lt;p&gt;After reading so many pieces about Mayor Mamdani&amp;rsquo;s &lt;a href=&#34;https://comptroller.nyc.gov/reports/the-pied-a-terre-tax-and-its-potential-revenues/&#34; target=&#34;_blank&#34;&gt;pied-a-terre tax&lt;/a&gt;, the properties that might fall through the cracks, and the political landscape of New York City&amp;rsquo;s property ownership, I wondered what it looked like overall. I searched for a map of NYC tax assessments and couldn&amp;rsquo;t find something that mapped out the whole city at once, so somehow I decided the best thing to do was &lt;a href=&#34;https://subject.space/projects-static/nyc-property&#34; target=&#34;_blank&#34;&gt;make my own map&lt;/a&gt;. I can&amp;rsquo;t resist a &lt;a href=&#34;https://github.com/mapbox/tippecanoe&#34;&gt;tippecanoe&lt;/a&gt; challenge.&lt;/p&gt;
 &lt;div class=&#34;multi&#34;&gt;
@@ -772,7 +892,7 @@ body {
       <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
       
       <guid>https://exclav.es/2026/05/20/aci-d-trip-report-upper-east-side-brutalism-tour/</guid>
-      <description>&lt;p&gt;Photos from a recent tour with &lt;a href=&#34;https://www.instagram.com/aci_d.club/&#34;&gt;aci-d club&lt;/a&gt; on a blisteringly hot May day.&lt;/p&gt;
+      <description>&lt;p&gt;Photos from a recent tour with &lt;a href=&#34;https://www.instagram.com/aci_d.club/&#34;&gt;aci-d club&lt;/a&gt;, led by &lt;a href=&#34;https://www.instagram.com/liza.t0wn/&#34;&gt;Liza Pagano&lt;/a&gt; on a blisteringly hot May day.&lt;/p&gt;
 &lt;h3 id=&#34;weiss-building-1230-york-avenue&#34;&gt;Weiss Building, 1230 York Avenue&lt;/h3&gt;
 &lt;div class=&#34;multi&#34;&gt;
 &lt;div style=&#34;flex-basis: 31%;&#34;&gt;
@@ -2732,7 +2852,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
         height: 2590px !important;
     }
 &lt;/style&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/ea2813de8e72e679c59b7d3d4f627a0c.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/ea2813de8e72e679c59b7d3d4f627a0c.js&#34;&gt;&lt;/script&gt;
 
 &lt;h2 id=&#34;see-also&#34;&gt;See also&lt;/h2&gt;
 &lt;ul&gt;
@@ -4883,7 +5003,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -5051,7 +5171,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -5205,7 +5325,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -5337,8 +5457,6 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -5356,7 +5474,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -5664,7 +5782,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;div class=&#34;left&#34;&gt;
                 &lt;div class=&#34;date&#34;&gt;2025/07/03 10:24 AM&lt;/div&gt;
                 &lt;div class=&#34;location&#34;&gt;
-                    Jembrana Regency, Bali, Indonesia&lt;/span&gt;
+                    Indonesia&lt;/span&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
@@ -5747,7 +5865,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -5978,7 +6096,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;4 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -6793,7 +6911,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Helicina)&lt;/span&gt;
+            Asian Tramp Snail &lt;span&gt;(Bradybaena similaris)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -6814,7 +6932,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Mollusca&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -7085,7 +7203,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Coelogyne miniata)&lt;/span&gt;
+            orchids &lt;span&gt;(Orchidaceae)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -7387,7 +7505,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Dicots &lt;span&gt;(Magnoliopsida)&lt;/span&gt;
+            dicots &lt;span&gt;(Magnoliopsida)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -7497,7 +7615,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Black-striped Orchard Spider &lt;span&gt;(Leucauge celebesiana)&lt;/span&gt;
+            Black-Striped Orchard Spider &lt;span&gt;(Leucauge celebesiana)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -8347,8 +8465,6 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -8366,7 +8482,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Amphibia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -8454,7 +8570,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Reptilia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -8470,7 +8586,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Common Water Monitor &lt;span&gt;(Varanus salvator)&lt;/span&gt;
+            Two-striped Water Monitor &lt;span&gt;(Varanus salvator bivittatus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -8493,7 +8609,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Reptilia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -8508,7 +8624,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Common Water Monitor &lt;span&gt;(Varanus salvator)&lt;/span&gt;
+            Two-striped Water Monitor &lt;span&gt;(Varanus salvator bivittatus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -8531,7 +8647,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Reptilia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -8766,7 +8882,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Common Lichens &lt;span&gt;(Lecanoromycetes)&lt;/span&gt;
+            common lichens &lt;span&gt;(Lecanoromycetes)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -9022,7 +9138,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Evening Bats &lt;span&gt;(Vespertilionidae)&lt;/span&gt;
+            Bats &lt;span&gt;(Chiroptera)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -9043,7 +9159,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -9058,7 +9174,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Evening Bats &lt;span&gt;(Vespertilionidae)&lt;/span&gt;
+            Bats &lt;span&gt;(Chiroptera)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -9079,7 +9195,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -9268,8 +9384,6 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -9287,7 +9401,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Reptilia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -9383,7 +9497,7 @@ Alas, the dream remains distant, and here in 2025 the bus still makes a schedule
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Reptilia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -9759,7 +9873,7 @@ Dario explored the difference between the old and udpated datasets and made a GI
 
 &lt;figure&gt;
     &lt;a href=&#34;https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/ezgif-3c0ea257a50169.gif&#34;&gt;
-	    &lt;img src=&#34;https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/ezgif-3c0ea257a50169_huc61d84a39343bb46683ae964fecb5c68_1883039_1800x1800_fit_box.gif&#34; alt=&#34;GIF of Costa Rica between 2023 and 2025&#34; /&gt;
+	    &lt;img src=&#34;https://exclav.es/2025/08/20/updates-to-inaturalist-locals-and-tourists/ezgif-3c0ea257a50169_huc61d84a39343bb46683ae964fecb5c68_1883039_1800x1800_fit_box_1.gif&#34; alt=&#34;GIF of Costa Rica between 2023 and 2025&#34; /&gt;
     &lt;/a&gt;
     
 &lt;/figure&gt;
@@ -11101,7 +11215,7 @@ vec2 convert_to_uv(vec2 lng_lat) {
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Scheuchzer&amp;#39;s cottongrass &lt;span&gt;(Eriophorum scheuchzeri)&lt;/span&gt;
+            Scheuchzer&amp;#39;s Cotton-grass &lt;span&gt;(Eriophorum scheuchzeri)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -11823,8 +11937,6 @@ vec2 convert_to_uv(vec2 lng_lat) {
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -11842,7 +11954,7 @@ vec2 convert_to_uv(vec2 lng_lat) {
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -11984,8 +12096,6 @@ vec2 convert_to_uv(vec2 lng_lat) {
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -12003,7 +12113,7 @@ vec2 convert_to_uv(vec2 lng_lat) {
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Fungi&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -12092,7 +12202,7 @@ vec2 convert_to_uv(vec2 lng_lat) {
 &lt;div class=&#34;inaturalist small&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Mushrooms, Bracket Fungi, Puffballs, and Allies &lt;span&gt;(Agaricomycetes)&lt;/span&gt;
+            mushrooms, bracket fungi, puffballs, and allies &lt;span&gt;(Agaricomycetes)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -13215,7 +13325,7 @@ Rafjam B&amp;amp;B, hotel, ★★★★★, excellent place to have car trouble&
 
 &lt;figure&gt;
     &lt;a href=&#34;https://exclav.es/2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/DSCF2976.gif&#34;&gt;
-	    &lt;img src=&#34;https://exclav.es/2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/DSCF2976_hu8db9bf2ea06d22539d6173cb4e788110_874167_1800x1800_fit_box.gif&#34; alt=&#34;Jamaican lizard cuckoo&#34; /&gt;
+	    &lt;img src=&#34;https://exclav.es/2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/DSCF2976_hu8db9bf2ea06d22539d6173cb4e788110_874167_1800x1800_fit_box_1.gif&#34; alt=&#34;Jamaican lizard cuckoo&#34; /&gt;
     &lt;/a&gt;
     
         &lt;figcaption&gt;Jamaican Lizard-Cuckoo&lt;/figcaption&gt;
@@ -13864,7 +13974,7 @@ Hope Gardens, birding/hanging out, ★★★★★&lt;/p&gt;
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-            Cannonball Tree &lt;span&gt;(Couroupita guianensis)&lt;/span&gt;
+            cannonball tree &lt;span&gt;(Couroupita guianensis)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -14019,7 +14129,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
 
 &lt;figure&gt;
     &lt;a href=&#34;https://exclav.es/2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/slower.gif&#34;&gt;
-	    &lt;img src=&#34;https://exclav.es/2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/slower_hu3c016e593545033d2eda90626561a0ea_1261690_1800x1800_fit_box.gif&#34; alt=&#34;a gif showing the advance of bauxite mining&#34; /&gt;
+	    &lt;img src=&#34;https://exclav.es/2024/06/02/trip-report-jamaica-birdwatching-music-and-hiking/images/slower_hu3c016e593545033d2eda90626561a0ea_1261690_1800x1800_fit_box_1.gif&#34; alt=&#34;a gif showing the advance of bauxite mining&#34; /&gt;
     &lt;/a&gt;
     
 &lt;/figure&gt;
@@ -14184,8 +14294,6 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -14203,7 +14311,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -14237,7 +14345,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Aves&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -14314,7 +14422,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Lobelia acuminata)&lt;/span&gt;
+            flowering plants &lt;span&gt;(Angiospermae)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -14335,7 +14443,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -14476,7 +14584,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Artillery Plant &lt;span&gt;(Pilea microphylla)&lt;/span&gt;
+            artillery plant &lt;span&gt;(Pilea microphylla)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -14499,7 +14607,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -14610,7 +14718,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Lantanas &lt;span&gt;(Lantana)&lt;/span&gt;
+            lantanas &lt;span&gt;(Lantana)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -14761,7 +14869,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -15104,7 +15212,7 @@ Unnamed bar with jerk chicken by Jobson Bay, ★★★★&lt;/p&gt;
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Clearweeds &lt;span&gt;(Pilea)&lt;/span&gt;
+            clearweeds &lt;span&gt;(Pilea)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -15265,7 +15373,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;source-code&#34;&gt;Source code&lt;/h2&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/e31a38a81efae86d093da87ef251213e.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/e31a38a81efae86d093da87ef251213e.js&#34;&gt;&lt;/script&gt;
 
 </description>
     </item>
@@ -15811,7 +15919,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -15830,8 +15938,6 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -15849,7 +15955,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -15889,7 +15995,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -15908,8 +16014,6 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -15927,7 +16031,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -15965,7 +16069,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -15986,8 +16090,6 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -16005,7 +16107,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -16043,7 +16145,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -16058,9 +16160,11 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Platanthera)&lt;/span&gt;
+            Lesser butterfly-orchid &lt;span&gt;(Platanthera bifolia)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
+                
+                    ✅
                 
             &lt;/div&gt;
     &lt;/div&gt;
@@ -16079,7 +16183,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;3 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -16132,7 +16236,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
 &lt;div class=&#34;inaturalist&#34;&gt;
     &lt;div class=&#34;title&#34;&gt;
         &lt;div class=&#34;left&#34;&gt;
-             &lt;span&gt;(Galeatae)&lt;/span&gt;
+            Slender Broomrape &lt;span&gt;(Orobanche gracilis)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -16153,7 +16257,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -16191,7 +16295,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -16214,8 +16318,6 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
     &lt;/div&gt;
 
@@ -16233,7 +16335,7 @@ Pablo&amp;rsquo;s Ganja Bar, food, ★★★★&lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Mammalia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -17444,10 +17546,10 @@ In addition to the orchids, I threw in some small suitable plants from the klein
 
 &lt;/div&gt;
 &lt;p&gt;The source code for this shortcode is below. It can be placed in &lt;code&gt;/layouts/shortcodes/&lt;/code&gt;.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/a79bb4b49e388e5cd4e5f2523901fcd0.js?file=inat.html&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/a79bb4b49e388e5cd4e5f2523901fcd0.js?file=inat.html&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;To look nice, it will also require some CSS integration into the theme that is used. A sample set of CSS rules is here:&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/a79bb4b49e388e5cd4e5f2523901fcd0.js?file=inat.css&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/a79bb4b49e388e5cd4e5f2523901fcd0.js?file=inat.css&#34;&gt;&lt;/script&gt;
 
 </description>
     </item>
@@ -20560,7 +20662,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -23236,8 +23338,6 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -23255,7 +23355,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Fungi&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -23689,7 +23789,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -24152,7 +24252,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Grasses &lt;span&gt;(Poaceae)&lt;/span&gt;
+            grasses &lt;span&gt;(Poaceae)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -24280,7 +24380,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Common Lichens &lt;span&gt;(Lecanoromycetes)&lt;/span&gt;
+            common lichens &lt;span&gt;(Lecanoromycetes)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -25360,8 +25460,6 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
-                    ✅
-                
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -25379,7 +25477,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;0 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -28719,7 +28817,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Plantae&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;2 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;1 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -28764,7 +28862,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Clouded Yellow &lt;span&gt;(Colias crocea)&lt;/span&gt;
+            Clouded Yellow &lt;span&gt;(Colias croceus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -29100,7 +29198,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Clouded Yellow &lt;span&gt;(Colias crocea)&lt;/span&gt;
+            Clouded Yellow &lt;span&gt;(Colias croceus)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -29514,7 +29612,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 &lt;div class=&#34;iconic&#34;&gt;Amphibia&lt;/div&gt;
-                &lt;div class=&#34;ids&#34;&gt;6 IDs&lt;/div&gt;
+                &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/a&gt;
@@ -29934,7 +30032,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
     &lt;div class=&#34;inaturalist small&#34;&gt;
         &lt;div class=&#34;title&#34;&gt;
             &lt;div class=&#34;left&#34;&gt;
-            Laburnums &lt;span&gt;(Laburnum)&lt;/span&gt;
+            Laburnum &lt;span&gt;(Laburnum)&lt;/span&gt;
             &lt;/div&gt;
             &lt;div class=&#34;right&#34;&gt;
                 
@@ -30391,7 +30489,7 @@ In addition to the orchids, I threw in some small suitable plants from the klein
                 &lt;/div&gt;
                 &lt;div class=&#34;right&#34;&gt;
                     &lt;div class=&#34;iconic&#34;&gt;Amphibia&lt;/div&gt;
-                    &lt;div class=&#34;ids&#34;&gt;6 IDs&lt;/div&gt;
+                    &lt;div class=&#34;ids&#34;&gt;5 IDs&lt;/div&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/a&gt;
@@ -30897,9 +30995,7 @@ d3.json(&#34;/av1-viz/nodes.json&#34;).then((nodes) =&gt; {
         node.attr(&#34;cy&#34;, (d) =&gt; d.y);
     }
 });
-&lt;/script&gt;&lt;blockquote&gt;
-&lt;/blockquote&gt;
-</description>
+&lt;/script&gt;</description>
     </item>
     
     
@@ -35055,9 +35151,7 @@ return [x + Math.random() - .5, y + Math.random() - .5];
 });
 iterations = 0;
 }
-&lt;/script&gt;&lt;blockquote&gt;
-&lt;/blockquote&gt;
-</description>
+&lt;/script&gt;</description>
     </item>
     
     
@@ -35419,13 +35513,13 @@ server.listen(PORT, function(){
       <pubDate>Sat, 17 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>https://exclav.es/2016/12/17/scraping-noaa-tide-prediction-data-for-the-frisco-bay/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/tides3d.gif&#34; alt=&#34;Tide fluctuation around the &amp;amp;lsquo;Frisco bay&#34;&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/tides3d.gif&#34; alt=&#34;Tide fluctuation around the &amp;lsquo;Frisco bay&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Wrote a little Python (too) late last night to scrape and munge some tide station data from NOAA:&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/bf97f5422ef758b7d941b562419c810b.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/bf97f5422ef758b7d941b562419c810b.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;The result:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/tides.gif&#34; alt=&#34;Tide fluctuation around the &amp;amp;lsquo;Frisco bay&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/tides3d.gif&#34; alt=&#34;Tide fluctuation around the &amp;amp;lsquo;Frisco bay&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/tides.gif&#34; alt=&#34;Tide fluctuation around the &amp;lsquo;Frisco bay&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/tides3d.gif&#34; alt=&#34;Tide fluctuation around the &amp;lsquo;Frisco bay&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -35741,7 +35835,7 @@ PTAToffset = struct.unpack(&amp;#39;f&amp;#39;, reduce(lambda a,b: a+b, [chr(p) 
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;a = [126, 167, 131, 110, 129, 159, 130, 92, 131, 143, 131, 26, 130, 80, 131, 85, 130, 87, 128, 174, 130, 9, 130, 149, 131, 7, 130, 210, 131, 5, 130, 202]
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To solve this I needed to interface with the I2C bus directly, rather than through &lt;code&gt;smbus&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;I ended up using the Python library &lt;a href=&#34;https://python-periphery.readthedocs.io/en/latest/&#34;&gt;python-periphery&lt;/a&gt; to accomplish this, and it worked very well. The test script before sets up the device, following a prescribed set of configuration options published in the datasheet, before reading the data from the sensor in a set of four blocks and saving it using pickle.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/9ec1a7f977695e35196ac4169b85e492.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/9ec1a7f977695e35196ac4169b85e492.js&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
 &lt;p&gt;When I looked at one of the captured images, I saw this:&lt;/p&gt;
@@ -36100,7 +36194,7 @@ PTAToffset = struct.unpack(&amp;#39;f&amp;#39;, reduce(lambda a,b: a+b, [chr(p) 
       
       <guid>https://exclav.es/2016/07/20/scraping-a-dataset-of-images-from-facebook/</guid>
       <description>&lt;p&gt;Working on a project with Python and Selenium to scrape a bunch of images from Facebook. I&amp;rsquo;d never written a scraper or talked to a headless browser before, and found the process pretty fun. I&amp;rsquo;m sure this isn&amp;rsquo;t the best way of extracting a list of Facebook images and their metadata, but it works! (For now.)&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/a6ff8d035f0b57321acb1d446f0fcf99.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/a6ff8d035f0b57321acb1d446f0fcf99.js&#34;&gt;&lt;/script&gt;
 
 </description>
     </item>
@@ -36572,33 +36666,33 @@ db.image_similarity.find({}).sort({&amp;#39;value&amp;#39;: 1}).skip(1).limit(5)
 &lt;p&gt;In this way, the algorithm computes a consistent, unwrapped phase for each pixel. Now, we can simply interpolate phase and magnitude between the two frames, and reconstruct the image from the interpolated pyramid.&lt;/p&gt;
 &lt;h2 id=&#34;the-julia-implementation&#34;&gt;The Julia implementation&lt;/h2&gt;
 &lt;p&gt;Now, let&amp;rsquo;s look at how to implement this algorithm in Julia. First, we will include the libraries we will need, define a new pyramid type that we will use to denote a pyramid containing image phase alone.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=setup.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=setup.jl&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Next, we must load the images that we will be interpolating between (&amp;ldquo;frame_0.jpg&amp;rdquo; and &amp;ldquo;frame_1.jpg&amp;rdquo;), extract just the luminance component by converting the image to &lt;a href=&#34;https://en.wikipedia.org/wiki/Lab_color_space&#34;&gt;Lab color space&lt;/a&gt; and generate a complex steerable pyramid using the &lt;code&gt;ImagePyramid&lt;/code&gt; constructor. Note that unlike traditional complex steerable pyramids, we are using a scale factor &amp;gt; 0.5, which results in a significantly over complete basis. This has been shown to produce significantly higher quality results for this and similar algorithms.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=loading.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=loading.jl&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;This accomplishes the step I have labeled &amp;ldquo;A&amp;rdquo; in the algorithm overview above.&lt;/p&gt;
 &lt;h3 id=&#34;computing-the-phase-difference&#34;&gt;Computing the phase difference&lt;/h3&gt;
 &lt;p&gt;The next significant step, labeled &amp;ldquo;B&amp;rdquo; simply requires computing the difference in phase between each pixel of two pyramids. This looks like the following:&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=phase_difference.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=phase_difference.jl&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;This simply iterates through each level of the two input pyramids, and create a third pyramid (of type &lt;code&gt;PhasePyramid&lt;/code&gt;) which stores the difference in phase.&lt;/p&gt;
 &lt;h3 id=&#34;correcting-the-phase-difference&#34;&gt;Correcting the phase difference&lt;/h3&gt;
 &lt;p&gt;The next step is labeled &amp;ldquo;C,&amp;rdquo; and is the most significant part of the algorithm. Here, we will use phase information from larger spatial scales of the image in order to resolve phase ambiguities at higher levels. Let&amp;rsquo;s take a look.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=shift_correction.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=shift_correction.jl&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Notice that the phase of each level is scaled by the pyramid scale factor, as well as interpolated to match the number of pixels. Also note that anything that hints at ambiguity or inaccuracy (phase shifts too large or phase shifts that don&amp;rsquo;t match larger spatial scales) results in falling back on the phase shift of the larger spatial scale.&lt;/p&gt;
 &lt;h3 id=&#34;adjusting-the-phase-difference&#34;&gt;Adjusting the phase difference&lt;/h3&gt;
 &lt;p&gt;The last significant step in the algorithm, &amp;ldquo;D,&amp;rdquo; requires adjusting the corrected phase to ensure consistency with the original calculated phase delta. Analogous to how we unwrapped the phase in &lt;code&gt;shift_correction&lt;/code&gt;, we will add or subtract factors of 2π in order to produce a phase shift consistent with the original value but as close as possible to the corrected one.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=adjust_phase.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=adjust_phase.jl&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;interpolating-and-blending-pyramids&#34;&gt;Interpolating and blending pyramids&lt;/h3&gt;
 &lt;p&gt;With the new, unwrapped phase difference computed, we are now able to compute the interpolated complex steerable pyramid. The pyramid amplitudes are interpolated linearly between the two pyramids, and the phase is of course the original phase + alpha * the unwrapped phase difference. To avoid ghosting, a single high frequency phase residual is used only.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=blend_and_interpolate.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=blend_and_interpolate.jl&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;rendering-output&#34;&gt;Rendering output&lt;/h3&gt;
 &lt;p&gt;Finally, we produce our output image. Notice that only the luminance channel uses the phase based interpolation method &amp;ndash; simpler, significantly faster linear interpolation suffices for the chrominance channels, as our visual system is far less sensitive to issues like ghosting and sharpness loss in these channels.&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=generate_output.jl&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/14027cab9c57ef5286f7eda3794d1f8b.js?file=generate_output.jl&#34;&gt;&lt;/script&gt;
 
 &lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
 &lt;p&gt;So, does this algorithm work? What do the results look like? To start, let&amp;rsquo;s look at naive (linear) interpolation between two test frames:&lt;/p&gt;
@@ -36626,7 +36720,7 @@ db.image_similarity.find({}).sort({&amp;#39;value&amp;#39;: 1}).skip(1).limit(5)
       <guid>https://exclav.es/2016/07/04/detecting-nearly-duplicate-images-using-wavelet-transforms/</guid>
       <description>&lt;p&gt;&lt;em&gt;n.b. This is a very early draft of this post, expect typos, grammatical errors, factual inaccuracies, etc.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;One of the first things that became obvious while working on Vignette was the need to identify and group nearly duplicate images. Like myself, the friend who donated his photos to this project frequently takes multiple photos of the same scene in quick succession. This is a smart strategy &amp;ndash; storage is cheap and it hedges against focus issues, exposure problems, and motion blur. However, it can make browsing through photos somewhat tedious, and more importantly, can make it easier to lose sight of the larger &amp;ldquo;picture&amp;rdquo; while looking back on a day or experience.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/2016-07-04/duplicates.png&#34; alt=&#34;Several &amp;amp;ldquo;near-duplicate&amp;amp;rdquo; images&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/2016-07-04/duplicates.png&#34; alt=&#34;Several &amp;ldquo;near-duplicate&amp;rdquo; images&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Note, critically, that these duplicate images are not &lt;em&gt;exactly&lt;/em&gt; the same &amp;ndash; there are minor differences in framing/orientation, in exposure, and in white balance. Therefore, we call these images &amp;ldquo;near duplicates.&amp;rdquo; Identifying and grouping these near duplicate images is a non-trivial task.&lt;/p&gt;
 &lt;h2 id=&#34;the-naive-approach-direct-comparison&#34;&gt;The naive approach: direct comparison&lt;/h2&gt;
 &lt;p&gt;A naive approach for comparing near duplicate images might be to look at the pixel values directly. For example, we could calculate the Euclidean distance between two images. (&lt;code&gt;sqrt(sum((A-B)^2)&lt;/code&gt;), where A and B are image vectors.) However, this does not work very well.&lt;/p&gt;
@@ -36744,7 +36838,7 @@ def get_fingerprint(im, ncoeffs=40, level=4):
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Todo:&lt;/strong&gt; expand this section with more details. Make a more formalized training process for this.&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;a-better-approach-image-features&#34;&gt;A better approach: image features&lt;/h2&gt;
 &lt;p&gt;However, this wavelet-based near duplicate image detector still has plenty of room for improvement. Notice that the near duplicate images used as an example at the beginning of the article are actually arranged in several distinct groups.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/2016-07-04/duplicates.png&#34; alt=&#34;Several &amp;amp;ldquo;near-duplicate&amp;amp;rdquo; images&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://exclav.es/images/2016-07-04/duplicates.png&#34; alt=&#34;Several &amp;ldquo;near-duplicate&amp;rdquo; images&#34;&gt;&lt;/p&gt;
 &lt;p&gt;This is because the wavelet-based near duplicate image detector does not recognize the ungrouped images as duplicates. Yet, it is not difficult to argue that at least some of them ought to be considered duplicates of each other.&lt;/p&gt;
 &lt;p&gt;A better method for detecting near-duplicates might be using a feature detector to compare common features between images, and then test for spatial consistency of those features. We will do this next week, using &lt;a href=&#34;https://en.wikipedia.org/wiki/Speeded_up_robust_features&#34;&gt;SURF&lt;/a&gt;, &lt;a href=&#34;http://www.cs.ubc.ca/research/flann/&#34;&gt;FLANN&lt;/a&gt;, and &lt;a href=&#34;https://en.wikipedia.org/wiki/RANSAC&#34;&gt;RANSAC&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -36931,10 +37025,10 @@ def get_fingerprint(im, ncoeffs=40, level=4):
 &lt;p&gt;Good job, Google. Good job.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Code for scraping Planet Labs images:&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/3ddda4bdbd507fc06037931424b8010e.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/3ddda4bdbd507fc06037931424b8010e.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Code for talking with the Google Vision API, based on Google&amp;rsquo;s &lt;a href=&#34;https://github.com/GoogleCloudPlatform/cloud-vision/tree/master/python/text&#34;&gt;Text Detection starter code&lt;/a&gt;:&lt;/p&gt;
-&lt;script type=&#34;application/javascript&#34; src=&#34;https://gist.github.com/loganwilliams/5861ffeaf325516ed9f9a18ed82b161b.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://gist.github.com/loganwilliams/5861ffeaf325516ed9f9a18ed82b161b.js&#34;&gt;&lt;/script&gt;
 
 </description>
     </item>

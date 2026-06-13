@@ -19,8 +19,7 @@ db.images.find({ &#34;location&#34;: { $near: { $geometry: { type: &#34;Point&#3
 <meta property="article:modified_time" content="2016-07-16T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Selected useful Mongodb queries"/>
+    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Selected useful Mongodb queries"/>
 <meta name="twitter:description" content="Group by date:
 db.getCollection(&#39;images&#39;).aggregate( [ { $group: { _id : { month: { $month: &#34;$datetime.utc_timestamp&#34; }, day: { $dayOfMonth: &#34;$datetime.utc_timestamp&#34; }, year: { $year: &#34;$datetime.utc_timestamp&#34; } }, count: { $sum: 1 }, latitude: { $avg: &#34;$latitude&#34;}, longitude: { $avg: &#34;$longitude&#34;}, } } ] ) Creating a 2-D geospatial index on an Earth-spheroid.
 db.images.createIndex({&#34;location&#34;: &#34;2dsphere&#34;}) Finding documents near a point:
