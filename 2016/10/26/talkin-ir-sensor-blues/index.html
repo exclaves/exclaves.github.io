@@ -17,7 +17,8 @@ With the device connected to a Raspberry Pi, and with the Pi configured correctl
 <meta property="article:modified_time" content="2016-10-26T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Talkin&#39; IR sensor blues"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Talkin&#39; IR sensor blues"/>
 <meta name="twitter:description" content="I received the sensor that I purchased from Heimann Sensor a couple weeks ago, and today was able to succesfully read an image off of it. The sensor communicates over I2C, which I have used before, but have never had to dive extremely deeply into. However, in debugging the communication with this sensor, I had to dive quite deeply into the specific timing of the I2C specification.
 With the device connected to a Raspberry Pi, and with the Pi configured correctly for I2C, I was able to see the devices connected with the i2cdetect command."/>
 
@@ -70,7 +71,7 @@ With the device connected to a Raspberry Pi, and with the Pi configured correctl
 <pre tabindex="0"><code>a = [126, 167, 131, 110, 129, 159, 130, 92, 131, 143, 131, 26, 130, 80, 131, 85, 130, 87, 128, 174, 130, 9, 130, 149, 131, 7, 130, 210, 131, 5, 130, 202]
 </code></pre><p>To solve this I needed to interface with the I2C bus directly, rather than through <code>smbus</code>.</p>
 <p>I ended up using the Python library <a href="https://python-periphery.readthedocs.io/en/latest/">python-periphery</a> to accomplish this, and it worked very well. The test script before sets up the device, following a prescribed set of configuration options published in the datasheet, before reading the data from the sensor in a set of four blocks and saving it using pickle.</p>
-<script src="https://gist.github.com/loganwilliams/9ec1a7f977695e35196ac4169b85e492.js"></script>
+<script type="application/javascript" src="https://gist.github.com/loganwilliams/9ec1a7f977695e35196ac4169b85e492.js"></script>
 
 <h3 id="results">Results</h3>
 <p>When I looked at one of the captured images, I saw this:</p>

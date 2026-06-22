@@ -17,7 +17,8 @@ from periphery import I2C import pickle i2c = I2C(&#34;/dev/i2c-1&#34;) device_a
 <meta property="article:modified_time" content="2016-12-13T00:00:00+00:00" />
 
 
-    <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Calibrating images from Heimann thermopile arrays"/>
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Calibrating images from Heimann thermopile arrays"/>
 <meta name="twitter:description" content="After reading an image off a Heimann thermopile array, the pixel values can be converted to temperature readings through the use of calibration parameters stored on the device. To extract the calibration parameters, it is easiest to first read off the entire EEPROM on the thermopile array, as the Python script below does.
 from periphery import I2C import pickle i2c = I2C(&#34;/dev/i2c-1&#34;) device_address = 0x50 query = [I2C.Message([0x00, 0x00]), I2C.Message([0x00]*8000, read=True)] i2c."/>
 
